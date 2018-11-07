@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>My Spells</title>
+	</head>
+
+	<body>
+		<div id="app">
+			<select v-model="selectedSpell">
+				<option v-for="spell in spells" :value="spell.name">{{ spell.name }}</option>
+			</select>
+
+			<div v-for="spell in filterByName()">
+				<div>Learn {{ spell.name }}</div>
+				<br>
+				<learning :data="spell"></learning>
+				<br>
+				<div>{{ spell.description }}</div>
+			</div>
+		</div>
+
+		<script src="https://unpkg.com/vue"></script>
+	    <script src="test.js"></script>
+	</body>
+</html>

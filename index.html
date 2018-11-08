@@ -15,19 +15,19 @@
 
 	<body>
 		<div id="app">
-			<select v-model="selectedSpell">
-				<option v-for="spell in spells" :value="spell.name">{{ spell.name }}</option>
+			<select v-model="selectedId">
+				<option v-for="spell in spells" :value="spell.id">{{ spell.name }}</option>
 			</select>
 			{{ (spells.length / nbrTotalSpells * 100).toFixed(2) }}%
 
 			<div>
 				<button v-for="item, key in display" @click="onlyShow(key)">{{ item.name }}</button>
 			</div>
-			<div v-if="display.learning.show" v-for="spell in filterByName()">
+			<div v-if="display.learning.show" v-for="spell in filterById()">
 				<learning :data="spell"></learning>
 				<br>
 			</div>
-			<div v-if="display.basic.show" v-for="spell in filterByName()">
+			<div v-if="display.basic.show" v-for="spell in filterById()">
 				<basic :data="spell" :lvl="1"></basic>
 				<br>
 				<basic :data="spell" :lvl="2"></basic>
@@ -39,10 +39,10 @@
 					<br>
 				</div>
 			</div>
-			<div v-if="display.edit.show" v-for="spell in filterByName()">
+			<div v-if="display.edit.show" v-for="spell in filterById()">
 				<formspell :data="copyOf(spell)" @post="updateSpell"></formspell>
 			</div>
-			<div v-if="display.new.show" v-for="spell in filterByName()">
+			<div v-if="display.new.show" v-for="spell in filterById()">
 				<formspell :data="copyOf(defaultSpell)" @post="updateSpell"></formspell>
 			</div>
 			<div v-if="display.json.show">

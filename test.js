@@ -162,6 +162,17 @@ const mySpells =
 
 const myTypes = [ "Target unit", "Target point", "Instant", "Passive", "Target unit/point" ];
 
+const defaultSpell = {
+	name: "name",
+	type: "Target unit",
+	targets: ["enemies", "ground", "air"],
+	params: {
+		"Damages": {
+			value: 100
+		}
+	}
+};
+
 Vue.component('formspell', {
 	props: ["data"],
 	data() {
@@ -205,6 +216,12 @@ Vue.component('formspell', {
 				</div>
 			</div>
 			<div>
+				<label for="description">Description</label>
+				<div>
+					<textarea id="description" v-model="data.description" cols="67" rows="5"></textarea>
+				</div>
+			</div>
+			<div>
 				<label for="manacost">Manacost</label>
 				<input id="manacost" type="text" v-model="data.manacost">
 			</div>
@@ -231,8 +248,6 @@ Vue.component('formspell', {
 		</div>
 	`,
 	mounted() {
-		console.log(this.$props.data);
-
 		this.types = myTypes;
 		this.paramsList = this.$props.data.params;
 	},
@@ -374,6 +389,7 @@ const myVue = new Vue({
 		nbrTotalSpells: 251,
 		spells: [],
 		typesSpell: [],
+		defaultSpell: {},
 		display: {
 			"learning": {
 				name: "LEARNING",
@@ -387,6 +403,10 @@ const myVue = new Vue({
 				name: "EDIT",
 				show: false
 			},
+			"new": {
+				name: "NEW",
+				show: false
+			},
 			"json": {
 				name: "JSON",
 				show: false
@@ -395,6 +415,7 @@ const myVue = new Vue({
 	},
 	mounted(){
 	    this.spells = mySpells;
+	    this.defaultSpell = defaultSpell;
 	},
 	methods: {
 		filterByName: function() {
@@ -415,17 +436,51 @@ const myVue = new Vue({
 			return JSON.parse(JSON.stringify(object));
 		},
 		updateSpell: function(newSpell) {
-			var myData = [];
+			var paramsKeys = Object.keys(newSpell.params);
 
-			this.spells.forEach(spell => {
-				if (spell.id == newSpell.id) {
-					myData.push(newSpell);
-				} else {
-					myData.push(spell);
+			paramsKeys.forEach(key => {
+				var myValue = newSpell.params[key].value;
+				if (typeof myValue === 'string' && myValue.indexOf(",") != -1) {
+					newSpell.params[key].value = myValue.split(",");
 				}
-			})
+			});
 
-			this.spells = myData;
-		}
+			if (typeof newSpell.manacost === 'string' && newSpell.manacost.indexOf(",") != -1) {
+				newSpell.manacost = newSpell.manacost.split(",");
+			}
+
+			if (typeof newSpell.cooldown === 'string' && newSpell.cooldown.indexOf(",") != -1) {
+				newSpell.cooldown = newSpell.cooldown.split(",");
+			}
+
+			if ("id" in newSpell) {
+				var myData = [];
+
+				this.spells.forEach(spell => {
+					if (spell.id == newSpell.id) {
+						myData.push(newSpell);
+					} else {
+						myData.push(spell);
+					}
+				})
+
+				this.spells = myData;
+			} else {
+				newSpell.id = this.getNewId();
+
+				this.spells.push(newSpell);
+			}
+		},
+		getNewId: function() {
+			var newId = 0;
+
+			this.spells.forEach(item => {
+				if (item.id > newId) {
+					newId = item.id;
+				}
+			});
+
+			return newId + 1;
+		},
 	},
 });

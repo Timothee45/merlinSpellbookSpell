@@ -42,6 +42,9 @@
 			<div v-if="display.edit.show" v-for="spell in filterByName()">
 				<formspell :data="copyOf(spell)" @post="updateSpell"></formspell>
 			</div>
+			<div v-if="display.new.show" v-for="spell in filterByName()">
+				<formspell :data="copyOf(defaultSpell)" @post="updateSpell"></formspell>
+			</div>
 			<div v-if="display.json.show">
 				<pre>{{ spells }}</pre>
 			</div>

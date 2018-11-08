@@ -1159,7 +1159,7 @@ Vue.component('formspell', {
 	data() {
 		return {
 			types: [],
-			paramsList: {},
+			paramsList: [],
 			newParam: {},
 		}
 	},
@@ -1224,11 +1224,11 @@ Vue.component('formspell', {
 			</div>
 			<div>
 				<label>Params</label>
-				<div v-for="param, key in paramsList">
-					<input type="text" v-model="key">
+				<div v-for="param in paramsList">
+					<input type="text" v-model="param.key">
 					<input type="text" v-model="param.value">
 					<input type="text" v-model="param.temp">
-					<button type="button" @click="removeParam(key)">X</button>
+					<button type="button" @click="removeParam(param.key)">X</button>
 				</div>
 				<div>
 					<input type="text" v-model="newParam.key">
@@ -1242,40 +1242,38 @@ Vue.component('formspell', {
 	`,
 	mounted() {
 		this.types = myTypes;
-		this.paramsList = this.$props.data.params;
+
+		this.convertParamsList();
 	},
 	methods: {
+		convertParamsList: function() {
+			var keyList = Object.keys(this.$props.data.params);
+			var newParamList = [];
+
+			keyList.forEach(key => {
+				var currentParam = this.$props.data.params[key];
+
+				newParamList.push({
+					"key": key,
+					"value": currentParam.value,
+					"temp": currentParam.temp
+				});
+			});
+
+			this.paramsList = newParamList;
+		},
 		submitForm: function() {
-			this.$emit("post", this.$props.data);
+			this.$emit("post", this.$props.data, this.paramsList);
 		},
 		addParam: function() {
 			if (this.newParam.key) {
-				this.paramsList[this.newParam.key] = {
-					"value": this.newParam.value,
-					"temp": this.newParam.temp
-				}
-	
-				this.updatePropParamList();
+				this.paramsList.push(this.newParam);
 	
 				this.resetParamList();
 			}
 		},
 		removeParam: function(deletedKey) {
-			var keyList = Object.keys(this.paramsList);
-			var result = {};
-
-			keyList.forEach(key => {
-				if (key != deletedKey) {
-					result[key] = {
-						"value": this.paramsList[key].value,
-						"temp": this.paramsList[key].temp
-					}
-				}
-			})
-
-			this.paramsList = result;
-
-			this.updatePropParamList();
+			this.paramsList = this.paramsList.filter(param => param.key != deletedKey);
 		},
 		updatePropParamList: function() {
 			this.$props.data.params = this.paramsList;
@@ -1428,15 +1426,26 @@ const myVue = new Vue({
 		copyOf: function(object) {
 			return JSON.parse(JSON.stringify(object));
 		},
-		updateSpell: function(newSpell) {
-			var paramsKeys = Object.keys(newSpell.params);
+		updateSpell: function(newSpell, paramsList) {
+			var newParamList = {};
 
-			paramsKeys.forEach(key => {
-				var myValue = newSpell.params[key].value;
-				if (typeof myValue === 'string' && myValue.indexOf(",") != -1) {
-					newSpell.params[key].value = myValue.split(",");
+			paramsList.forEach(param => {
+				var myNewParam = {};
+
+				if (typeof param.value === 'string' && param.value.indexOf(",") != -1) {
+					myNewParam.value = param.value.split(",");
+				} else {
+					myNewParam.value = param.value;
 				}
+
+				if (param.temp) {
+					myNewParam.temp = param.temp;
+				}
+				
+				newParamList[param.key] = myNewParam;
 			});
+
+			newSpell.params = newParamList;
 
 			if (typeof newSpell.manacost === 'string' && newSpell.manacost.indexOf(",") != -1) {
 				newSpell.manacost = newSpell.manacost.split(",");

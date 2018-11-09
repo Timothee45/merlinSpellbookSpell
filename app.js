@@ -94,7 +94,12 @@ Vue.component('formspell', {
 	`,
 	mounted() {
 		this.types = myTypes;
-    this.mySpell = this.$props.spell;
+    	this.mySpell = this.$props.spell;
+	},
+	watch: {
+		spell() {
+		  this.mySpell = this.$props.spell;
+		}
 	},
 	methods: {
 		submitForm: function() {
@@ -108,10 +113,7 @@ Vue.component('formspell', {
 			}
 		},
 		removeParam: function(index) {
-      this.mySpell.params.splice(index, 1);
-			// this.$props.spell.params = this.$props.spell.params.filter(param => {
-   //      return param.name != deletedName;
-   //    });
+      		this.mySpell.params.splice(index, 1);
 		},
 		resetNewParam: function() {
 			this.newParam = {};
@@ -245,7 +247,8 @@ const myVue = new Vue({
 				name: "JSON",
 				show: false
 			},
-		}
+		},
+		showJson: false,
 	},
 	mounted(){
 	    this.spells = mySpellsLibrary;

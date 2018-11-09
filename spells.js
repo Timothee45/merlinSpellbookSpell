@@ -39,12 +39,12 @@ const mySpellsLibrary =
         "temp": "$$ seconds stunn."
       },
       {
-        "name": "Range",
+        "name": "Cast Range",
         "value": 600,
         "temp": "$$ ranges"
       },
       {
-        "name": "Missile speed ",
+        "name": "Missile Speed ",
         "value": 1100,
         "temp": "$$ ranges/s"
       }
@@ -78,7 +78,7 @@ const mySpellsLibrary =
         ]
       },
       {
-        "name": "Stunn duration",
+        "name": "Stunn Duration",
         "value": [
           1.7,
           2,
@@ -124,7 +124,7 @@ const mySpellsLibrary =
         ]
       },
       {
-        "name": "Cast range",
+        "name": "Cast Range",
         "value": 600,
         "temp": "$$ ranges"
       }
@@ -542,7 +542,7 @@ const mySpellsLibrary =
         "temp": "$$ ranges"
       },
       {
-        "name": "Percentage",
+        "name": "Percentage Treeshold",
         "value": [
           "25",
           "45",
@@ -906,7 +906,7 @@ const mySpellsLibrary =
     ],
     "name": "Blade Fury",
     "ulti": true,
-    "description": "The caster summons some slashes around him that moves in random directions every 0.2 second. The spell is interupted if the caster dies. Theses slashes deals damages to enemies in a line. During that spell the caster get 20% move speed bonus. When the caster attack during this spell duration it summons an additional slash in a random duration.",
+    "description": "The caster summons some slashes around him that moves in random directions every 0.2 second. The spell is interrupted if the caster dies. Theses slashes deals damages to enemies in a line. During that spell the caster get 20% move speed bonus. When the caster attack during this spell duration it summons an additional slash in a random duration.",
     "manacost": [
       "130",
       "150",
@@ -1124,7 +1124,7 @@ const mySpellsLibrary =
         "temp": "$$% move speed"
       },
       {
-        "name": "Area",
+        "name": "Area Detection",
         "value": [
           "2500",
           "3000",
@@ -1155,7 +1155,7 @@ const mySpellsLibrary =
     ],
     "params": [
       {
-        "name": "Minimum Bonus",
+        "name": "Min Bonus",
         "value": "5",
         "temp": "$$%"
       },

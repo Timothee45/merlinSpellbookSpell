@@ -24,18 +24,18 @@
 				<button v-for="item, key in display" @click="onlyShow(key)">{{ item.name }}</button>
 			</div>
 			<div v-if="display.learning.show" v-for="spell in filterById()">
-				<learning :data="spell"></learning>
+				<learning :spell="spell"></learning>
 				<br>
 			</div>
 			<div v-if="display.basic.show" v-for="spell in filterById()">
-				<basic :data="spell" :lvl="1"></basic>
+				<basic :spell="spell" :lvl="1"></basic>
 				<br>
-				<basic :data="spell" :lvl="2"></basic>
+				<basic :spell="spell" :lvl="2"></basic>
 				<br>
-				<basic :data="spell" :lvl="3"></basic>
+				<basic :spell="spell" :lvl="3"></basic>
 				<br>
 				<div v-if="!spell.ulti">
-					<basic :data="spell" :lvl="4"></basic>
+					<basic :spell="spell" :lvl="4"></basic>
 					<br>
 				</div>
 			</div>
@@ -51,6 +51,7 @@
 		</div>
 
 		<script src="https://unpkg.com/vue"></script>
-	    <script src="test.js"></script>
+		<script src="spells.js"></script>
+	    <script src="app.js"></script>
 	</body>
 </html>

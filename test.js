@@ -18,8 +18,9 @@ const mySpells =
       115
     ],
     "cooldown": 8,
-    "params": {
-      "Damages": {
+    "params": [
+      {
+        "name": "Damages",
         "value": [
           90,
           140,
@@ -27,7 +28,8 @@ const mySpells =
           240
         ]
       },
-      "Duration": {
+      {
+        "name": "Duration",
         "value": [
           1,
           1.4,
@@ -36,15 +38,17 @@ const mySpells =
         ],
         "temp": "$$ seconds stunn."
       },
-      "Range": {
+      {
+        "name": "Range",
         "value": 600,
         "temp": "$$ ranges"
       },
-      "Missile speed ": {
+      {
+        "name": "Missile speed ",
         "value": 1100,
         "temp": "$$ ranges/s"
       }
-    }
+    ]
   },
   {
     "id": 2,
@@ -63,8 +67,9 @@ const mySpells =
     ],
     "cooldown": 8,
     "description": "Slams the ground, stunning and damaging nearby enemy land units.",
-    "params": {
-      "Damages": {
+    "params": [
+      {
+        "name": "Damages",
         "value": [
           80,
           130,
@@ -72,7 +77,8 @@ const mySpells =
           230
         ]
       },
-      "Stunn duration": {
+      {
+        "name": "Stunn duration",
         "value": [
           1.7,
           2,
@@ -80,11 +86,12 @@ const mySpells =
           2.6
         ]
       },
-      "Area": {
+      {
+        "name": "Area",
         "value": 350,
         "temp": "$$ ranges"
       }
-    }
+    ]
   },
   {
     "id": 3,
@@ -107,19 +114,21 @@ const mySpells =
       70,
       60
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": [
           4,
           5,
           6
         ]
       },
-      "Cast range": {
+      {
+        "name": "Cast range",
         "value": 600,
         "temp": "$$ ranges"
       }
-    }
+    ]
   },
   {
     "id": 4,
@@ -139,16 +148,19 @@ const mySpells =
       120
     ],
     "cooldown": 12,
-    "params": {
-      "Spell Area ": {
+    "params": [
+      {
+        "name": "Spell Area ",
         "value": 550,
         "temp": "$$ ranges"
       },
-      "Area Explosion": {
+      {
+        "name": "Area Explosion",
         "value": 200,
         "temp": "$$ ranges"
       },
-      "Damages": {
+      {
+        "name": "Damages",
         "value": [
           30,
           40,
@@ -157,15 +169,17 @@ const mySpells =
         ],
         "temp": "$$ per bolt"
       },
-      "Cast Range": {
+      {
+        "name": "Cast Range",
         "value": 750,
         "temp": "$$ ranges"
       },
-      "Bolts Speed": {
+      {
+        "name": "Bolts Speed",
         "value": 950,
         "temp": "$$ ranges/s"
       }
-    }
+    ]
   },
   {
     "id": 5,
@@ -188,12 +202,14 @@ const mySpells =
       120,
       100
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": 18,
         "temp": "$$ seconds"
       },
-      "Fading Time": {
+      {
+        "name": "Fading Time",
         "value": [
           2,
           1.5,
@@ -201,7 +217,7 @@ const mySpells =
         ],
         "temp": "$$ seconds"
       }
-    }
+    ]
   },
   {
     "id": 6,
@@ -212,8 +228,9 @@ const mySpells =
       "self"
     ],
     "description": "The hero get more magic resistance.",
-    "params": {
-      "Magic Reduction": {
+    "params": [
+      {
+        "name": "Magic Reduction",
         "value": [
           20,
           28,
@@ -222,7 +239,7 @@ const mySpells =
         ],
         "temp": "$$%"
       }
-    }
+    ]
   },
   {
     "id": 7,
@@ -245,8 +262,9 @@ const mySpells =
       50
     ],
     "description": "The caster summons a magic arrow that will deals damages to enemies in a line stunning them. The arrow deals more damages and stunn during a bigger duration in function of the distance travelled.",
-    "params": {
-      "Damages": {
+    "params": [
+      {
+        "name": "Damages",
         "value": [
           180,
           240,
@@ -255,7 +273,8 @@ const mySpells =
         ],
         "temp": "$$ per 1000 ranges travelled"
       },
-      "Stunn Duration": {
+      {
+        "name": "Stunn Duration",
         "value": [
           1.3,
           1.8,
@@ -264,18 +283,21 @@ const mySpells =
         ],
         "temp": "$$ per 1000 ranges travelled"
       },
-      "Max Damages": {
+      {
+        "name": "Max Damages",
         "value": 450
       },
-      "Max Stunn Duration": {
+      {
+        "name": "Max Stunn Duration",
         "value": 4.5,
         "temp": "$$ seconds"
       },
-      "Arrow Speed": {
+      {
+        "name": "Arrow Speed",
         "value": 2000,
         "temp": "$$ ranges/s"
       }
-    }
+    ]
   },
   {
     "name": "Arcane Barrage",
@@ -285,8 +307,9 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Damages": {
+    "params": [
+      {
+        "name": "Damages",
         "value": [
           "75",
           "150",
@@ -294,15 +317,17 @@ const mySpells =
           "300"
         ]
       },
-      "Bolt Speed": {
+      {
+        "name": "Bolt Speed",
         "value": "700",
         "temp": "$$ ranges/s"
       },
-      "Area": {
+      {
+        "name": "Area",
         "value": "450",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "description": "The caster throw some bolts to enemies around him that deals damages when it reach their targets.",
     "cooldown": [
       "11",
@@ -326,8 +351,9 @@ const mySpells =
       "allies",
       "self"
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": [
           "6",
           "7",
@@ -336,7 +362,8 @@ const mySpells =
         ],
         "temp": "$$ seconds"
       },
-      "Life Restored": {
+      {
+        "name": "Life Restored",
         "value": [
           "20",
           "40",
@@ -345,11 +372,12 @@ const mySpells =
         ],
         "temp": "$$ hp per attack"
       },
-      "Cast Range": {
+      {
+        "name": "Cast Range",
         "value": "450",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Art of War",
     "description": "The caster places a buff on the target allied or himself that increases the attack speed by 20% for a short duration. Each time the target attacks it restore some life.",
     "manacost": [
@@ -373,8 +401,9 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Armor Malus": {
+    "params": [
+      {
+        "name": "Armor Malus",
         "value": [
           "3",
           "4",
@@ -382,11 +411,12 @@ const mySpells =
           "6"
         ]
       },
-      "Area of Effect": {
+      {
+        "name": "Area of Effect",
         "value": "750",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Aura of Blight",
     "description": "Decreases the ennemies around armor.",
     "id": 10
@@ -398,12 +428,14 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Cast Range": {
+    "params": [
+      {
+        "name": "Cast Range",
         "value": "900",
         "temp": "$$ ranges"
       },
-      "Distance Max": {
+      {
+        "name": "Distance Max",
         "value": [
           "500",
           "600",
@@ -412,11 +444,12 @@ const mySpells =
         ],
         "temp": "$$ ranges"
       },
-      "Move Speed": {
+      {
+        "name": "Move Speed",
         "value": "1300",
         "temp": "$$ ranges/s"
       }
-    },
+    ],
     "name": "Backward Flux",
     "description": "The caster forces an enemy to moves backward for a short duration.",
     "manacost": [
@@ -440,8 +473,9 @@ const mySpells =
       "air",
       "self"
     ],
-    "params": {
-      "Regeneration": {
+    "params": [
+      {
+        "name": "Regeneration",
         "value": [
           "2",
           "3",
@@ -450,15 +484,17 @@ const mySpells =
         ],
         "temp": "$$ hp/s per enemy around"
       },
-      "Detection Area": {
+      {
+        "name": "Detection Area",
         "value": "400",
         "temp": "$$ ranges"
       },
-      "Hero Bonus": {
+      {
+        "name": "Hero Bonus",
         "value": "50",
         "temp": "$$%"
       }
-    },
+    ],
     "name": "Bad Blood",
     "description": "The caster get an increased hp regenearation in function of the number of enemies around. The regeneration is increased when the target is a hero.",
     "id": 12
@@ -470,12 +506,13 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Cast Range": {
+    "params": [
+      {
+        "name": "Cast Range",
         "value": "300",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Balance Forces",
     "ulti": true,
     "description": "The caster balance his current life with the target opponent current life. The final amount of life for each targets of the spell is calculated by adding the amount of current life from the caster and the targets and by dividing this amount by 2.",
@@ -498,12 +535,14 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Cast Range": {
+    "params": [
+      {
+        "name": "Cast Range",
         "value": "700",
         "temp": "$$ ranges"
       },
-      "Percentage": {
+      {
+        "name": "Percentage",
         "value": [
           "25",
           "45",
@@ -511,7 +550,8 @@ const mySpells =
         ],
         "temp": "$$% distance as damages"
       },
-      "Duration": {
+      {
+        "name": "Duration",
         "value": [
           "7",
           "8",
@@ -520,11 +560,12 @@ const mySpells =
         ],
         "temp": "$$ seconds"
       },
-      "Speed Max": {
+      {
+        "name": "Speed Max",
         "value": "800",
         "temp": "$$ ranges/s"
       }
-    },
+    ],
     "name": "Bane of Havoc",
     "ulti": true,
     "description": "The caster places a buff on a target that will damage it in function of the distance travelled.",
@@ -548,8 +589,9 @@ const mySpells =
       "air",
       "allies"
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": [
           "3",
           "3.5",
@@ -558,11 +600,13 @@ const mySpells =
         ],
         "temp": "$$ seconds"
       },
-      "Cast Range": {
+      {
+        "name": "Cast Range",
         "value": "650",
         "temp": "$$ ranges"
       },
-      "Move Speed Reduction": {
+      {
+        "name": "Move Speed Reduction",
         "value": [
           "25",
           "35",
@@ -571,11 +615,12 @@ const mySpells =
         ],
         "temp": "$$%"
       },
-      "Bonus Magic Damages": {
+      {
+        "name": "Bonus Magic Damages",
         "value": "45",
         "temp": "$$%"
       }
-    },
+    ],
     "name": "Banish",
     "description": "Turns a non-mechanical unit ethereal and slows its movement speed for a short duration. Ethereal creatures cannot attack, but they can cast spells and certain spells cast upon them will have a greater effect. ",
     "cooldown": [
@@ -599,8 +644,9 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Damages Bonus": {
+    "params": [
+      {
+        "name": "Damages Bonus",
         "value": [
           "30",
           "40",
@@ -608,7 +654,7 @@ const mySpells =
           "60"
         ]
       }
-    },
+    ],
     "name": "Bash",
     "description": "Gives 15% chance that an attack will do bonus damage and stuns an opponent for 1 second.",
     "id": 16
@@ -621,8 +667,9 @@ const mySpells =
       "allies",
       "self"
     ],
-    "params": {
-      "Bonus Attack Speed": {
+    "params": [
+      {
+        "name": "Bonus Attack Speed",
         "value": [
           "60",
           "120",
@@ -630,7 +677,7 @@ const mySpells =
         ],
         "temp": "$$%"
       }
-    },
+    ],
     "name": "Battle Trance",
     "ulti": true,
     "description": "Add some attack speed to every allied heroes on the map during 14 seconds.",
@@ -653,8 +700,9 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Percentage Damages": {
+    "params": [
+      {
+        "name": "Percentage Damages",
         "value": [
           "4",
           "5",
@@ -662,7 +710,8 @@ const mySpells =
         ],
         "temp": "$$% of his current life"
       },
-      "Duration": {
+      {
+        "name": "Duration",
         "value": [
           "10",
           "12",
@@ -670,7 +719,7 @@ const mySpells =
         ],
         "temp": "$$ seconds"
       }
-    },
+    ],
     "name": "Bear Strength",
     "ulti": true,
     "description": "The caster get a percentage of his current life as damages during a short duration.",
@@ -689,12 +738,14 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Cast Range": {
+    "params": [
+      {
+        "name": "Cast Range",
         "value": "300",
         "temp": "$$ ranges"
       },
-      "Damages": {
+      {
+        "name": "Damages",
         "value": [
           "50",
           "80",
@@ -702,11 +753,12 @@ const mySpells =
         ],
         "temp": "$$ damages/s"
       },
-      "Area": {
+      {
+        "name": "Area",
         "value": "400",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Black Hole",
     "ulti": true,
     "description": "The caster traps any enemies in an area dealing damages to them over the time. During this duration enemies are disabled. Maximum channel duration 4 seconds.",
@@ -729,16 +781,19 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Area": {
+    "params": [
+      {
+        "name": "Area",
         "value": "325",
         "temp": "$$ ranges"
       },
-      "Casting Range": {
+      {
+        "name": "Casting Range",
         "value": "1100",
         "temp": "$$ ranges"
       },
-      "Move Speed Reduction": {
+      {
+        "name": "Move Speed Reduction",
         "value": [
           "15",
           "20",
@@ -747,7 +802,8 @@ const mySpells =
         ],
         "temp": "$$%"
       },
-      "Attack Speed Reduction": {
+      {
+        "name": "Attack Speed Reduction",
         "value": [
           "25",
           "30",
@@ -756,7 +812,7 @@ const mySpells =
         ],
         "temp": "$$%"
       }
-    },
+    ],
     "name": "Black Moon",
     "description": "The caster summons a moon at the target location that slows the enemies in the area. Duration 15 seconds.",
     "manacost": [
@@ -780,8 +836,9 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Damages": {
+    "params": [
+      {
+        "name": "Damages",
         "value": [
           "20",
           "30",
@@ -789,7 +846,8 @@ const mySpells =
           "50"
         ]
       },
-      "Duration": {
+      {
+        "name": "Duration",
         "value": [
           "0.9",
           "1.1",
@@ -798,11 +856,12 @@ const mySpells =
         ],
         "temp": "$$ seconds stunn"
       },
-      "Move Speed": {
+      {
+        "name": "Move Speed",
         "value": "120",
         "temp": "$$ ranges/s"
       }
-    },
+    ],
     "name": "Blackout Kick",
     "description": "The caster has 17% chance to stunn the attacked enemy dealing damages and pushing it backward during a short duration.",
     "id": 21
@@ -814,16 +873,19 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": "6",
         "temp": "$$ seconds"
       },
-      "Distance Waves": {
+      {
+        "name": "Distance Waves",
         "value": "1100",
         "temp": "$$ ranges"
       },
-      "Damages": {
+      {
+        "name": "Damages",
         "value": [
           "40",
           "60",
@@ -831,15 +893,17 @@ const mySpells =
         ],
         "temp": "$$ per slash"
       },
-      "Area Slash": {
+      {
+        "name": "Area Slash",
         "value": "62.5",
         "temp": "$$ ranges"
       },
-      "Slash Speed": {
+      {
+        "name": "Slash Speed",
         "value": "1400",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Blade Fury",
     "ulti": true,
     "description": "The caster summons some slashes around him that moves in random directions every 0.2 second. The spell is interupted if the caster dies. Theses slashes deals damages to enemies in a line. During that spell the caster get 20% move speed bonus. When the caster attack during this spell duration it summons an additional slash in a random duration.",
@@ -863,8 +927,9 @@ const mySpells =
       "allies",
       "self"
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": [
           "4",
           "5",
@@ -873,11 +938,12 @@ const mySpells =
         ],
         "temp": "$$ seconds"
       },
-      "Cast Range": {
+      {
+        "name": "Cast Range",
         "value": "550",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Blessed Life",
     "description": "The target become magic immune during a short duration.",
     "manacost": [
@@ -899,12 +965,13 @@ const mySpells =
     "targets": [
       "none"
     ],
-    "params": {
-      "Delay": {
+    "params": [
+      {
+        "name": "Delay",
         "value": "0.33",
         "temp": "$$ second"
       }
-    },
+    ],
     "name": "Blink",
     "description": "A short distance teleportation that allows the caster to move in and out of combat. Maximum distance 1200 ranges.",
     "manacost": "70",
@@ -924,8 +991,9 @@ const mySpells =
       "air",
       "allies"
     ],
-    "params": {
-      "Hero Percentage": {
+    "params": [
+      {
+        "name": "Hero Percentage",
         "value": [
           "10",
           "20",
@@ -934,7 +1002,8 @@ const mySpells =
         ],
         "temp": "$$% max life"
       },
-      "Unit Percentage": {
+      {
+        "name": "Unit Percentage",
         "value": [
           "10",
           "15",
@@ -943,7 +1012,7 @@ const mySpells =
         ],
         "temp": "$$% max life"
       }
-    },
+    ],
     "name": "Blood Bath",
     "description": "When the hero kills a unit it restores a percentage of the dead unit max life. Does not works agains buildings and mechanic units.",
     "id": 25
@@ -958,8 +1027,9 @@ const mySpells =
       "organics",
       "non buildings"
     ],
-    "params": {
-      "Regeneration": {
+    "params": [
+      {
+        "name": "Regeneration",
         "value": [
           "10",
           "15",
@@ -968,11 +1038,12 @@ const mySpells =
         ],
         "temp": "$$% of the unit current life"
       },
-      "Cast Range": {
+      {
+        "name": "Cast Range",
         "value": "250",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Blood Pact",
     "description": "Destroy an allied unit to regenerate a proportion of the sacrified unit's current life.",
     "manacost": [
@@ -998,12 +1069,14 @@ const mySpells =
       "self",
       "organics"
     ],
-    "params": {
-      "Cast Range": {
+    "params": [
+      {
+        "name": "Cast Range",
         "value": "500",
         "temp": "$$ ranges"
       },
-      "Attack Speed Bonus": {
+      {
+        "name": "Attack Speed Bonus",
         "value": [
           "10",
           "20",
@@ -1012,7 +1085,8 @@ const mySpells =
         ],
         "temp": "$$%"
       },
-      "Move Speed Bonus": {
+      {
+        "name": "Move Speed Bonus",
         "value": [
           "10",
           "15",
@@ -1021,7 +1095,7 @@ const mySpells =
         ],
         "temp": "$$%"
       }
-    },
+    ],
     "name": "Blood Rage",
     "description": "The caster increases the allied target move and attack speed during 20 seconds.",
     "manacost": [
@@ -1038,8 +1112,9 @@ const mySpells =
     "targets": [
       "self"
     ],
-    "params": {
-      "Bonus": {
+    "params": [
+      {
+        "name": "Bonus",
         "value": [
           "11",
           "22",
@@ -1048,7 +1123,8 @@ const mySpells =
         ],
         "temp": "$$% move speed"
       },
-      "Area": {
+      {
+        "name": "Area",
         "value": [
           "2500",
           "3000",
@@ -1057,7 +1133,8 @@ const mySpells =
         ],
         "temp": "$$ ranges"
       },
-      "Life Treeshold": {
+      {
+        "name": "Life Treeshold",
         "value": [
           "25",
           "30",
@@ -1066,7 +1143,7 @@ const mySpells =
         ],
         "temp": "$$% of max life"
       }
-    },
+    ],
     "name": "Blood Thirst",
     "description": "When an enemy has les than a certain amount of life of life the hero get an increased movespeed.",
     "id": 28
@@ -1076,12 +1153,14 @@ const mySpells =
     "targets": [
       "self"
     ],
-    "params": {
-      "Minimum Bonus": {
+    "params": [
+      {
+        "name": "Minimum Bonus",
         "value": "5",
         "temp": "$$%"
       },
-      "Max Bonus": {
+      {
+        "name": "Max Bonus",
         "value": [
           "15",
           "30",
@@ -1090,7 +1169,7 @@ const mySpells =
         ],
         "temp": "$$%"
       }
-    },
+    ],
     "name": "Bloodlust",
     "description": "The caster get a random bonus of move and attack speed during 6 seconds.",
     "manacost": [
@@ -1114,12 +1193,14 @@ const mySpells =
       "ground",
       "air"
     ],
-    "params": {
-      "Area": {
+    "params": [
+      {
+        "name": "Area",
         "value": "400",
         "temp": "$$ ranges"
       },
-      "Life Regeneration": {
+      {
+        "name": "Life Regeneration",
         "value": [
           "15",
           "20",
@@ -1128,10 +1209,11 @@ const mySpells =
         ],
         "temp": "$$ hp/unit"
       },
-      "Max Units": {
+      {
+        "name": "Max Units",
         "value": "14"
       }
-    },
+    ],
     "name": "Bloody Slam",
     "description": "The caster regenerates life in function of the number of enemies around him. Maximum 14 units.",
     "manacost": [
@@ -1150,16 +1232,14 @@ const myTypes = [ "Target unit", "Target point", "Instant", "Passive", "Target u
 const defaultSpell = {
 	type: "Target unit",
 	targets: ["enemies", "ground", "air"],
-	params: {
-	}
+	params: [],
 };
 
 Vue.component('formspell', {
-	props: ["data"],
+	props: ["spell"],
 	data() {
 		return {
 			types: [],
-			paramsList: [],
 			newParam: {},
 		}
 	},
@@ -1167,71 +1247,71 @@ Vue.component('formspell', {
 		<div>
 			<div>
 				<label for="name">Name</label>
-				<input id="name" type="text" v-model="data.name">
+				<input id="name" type="text" v-model="spell.name">
 			</div>
 				<div>
 					<label for="ulti">Ulti:</label>
-					<input type="checkbox" id="ulti" v-model="data.ulti">
+					<input type="checkbox" id="ulti" v-model="spell.ulti">
 				</div>
 			<div>
 				<label for="type">Type</label>
-				<select id="type" v-model="data.type">
+				<select id="type" v-model="spell.type">
 					<option v-for="type in types">{{ type }}</option>
 				</select>
 			</div>
 			<div>
 				<label for="targets">Targets</label>
 				<div>
-					<input type="checkbox" id="enemies" value="enemies" v-model="data.targets">
+					<input type="checkbox" id="enemies" value="enemies" v-model="spell.targets">
 					<label for="enemies">Enemies</label>
-					<input type="checkbox" id="allies" value="allies" v-model="data.targets">
+					<input type="checkbox" id="allies" value="allies" v-model="spell.targets">
 					<label for="allies">Allies</label>
-					<input type="checkbox" id="self" value="self" v-model="data.targets">
+					<input type="checkbox" id="self" value="self" v-model="spell.targets">
 					<label for="self">Self</label>
-					<input type="checkbox" id="none" value="none" v-model="data.targets">
+					<input type="checkbox" id="none" value="none" v-model="spell.targets">
 					<label for="none">None</label>
 				</div>
-					<input type="checkbox" id="heroes" value="heroes" v-model="data.targets">
+					<input type="checkbox" id="heroes" value="heroes" v-model="spell.targets">
 					<label for="heroes">Heroes</label>
-					<input type="checkbox" id="nonheroes" value="non heroes" v-model="data.targets">
+					<input type="checkbox" id="nonheroes" value="non heroes" v-model="spell.targets">
 					<label for="nonheroes">Non Heroes</label>
-					<input type="checkbox" id="buildings" value="buildings" v-model="data.targets">
+					<input type="checkbox" id="buildings" value="buildings" v-model="spell.targets">
 					<label for="buildings">Buildings</label>
-					<input type="checkbox" id="organics" value="organics" v-model="data.targets">
+					<input type="checkbox" id="organics" value="organics" v-model="spell.targets">
 					<label for="organics">Organics</label>
 				<div>
 				</div>
 				<div>
-					<input type="checkbox" id="air" value="air" v-model="data.targets">
+					<input type="checkbox" id="air" value="air" v-model="spell.targets">
 					<label for="air">Air</label>
-					<input type="checkbox" id="ground" value="ground" v-model="data.targets">
+					<input type="checkbox" id="ground" value="ground" v-model="spell.targets">
 					<label for="ground">Ground</label>
 				</div>
 			</div>
 			<div>
 				<label for="description">Description</label>
 				<div>
-					<textarea id="description" v-model="data.description" cols="67" rows="5"></textarea>
+					<textarea id="description" v-model="spell.description" cols="67" rows="5"></textarea>
 				</div>
 			</div>
 			<div>
 				<label for="manacost">Manacost</label>
-				<input id="manacost" type="text" v-model="data.manacost">
+				<input id="manacost" type="text" v-model="spell.manacost">
 			</div>
 			<div>
 				<label for="cooldown">Cooldown</label>
-				<input id="cooldown" type="text" v-model="data.cooldown">
+				<input id="cooldown" type="text" v-model="spell.cooldown">
 			</div>
 			<div>
 				<label>Params</label>
-				<div v-for="param in paramsList">
-					<input type="text" v-model="param.key">
+				<div v-for="param in this.$props.spell.params">
+					<input type="text" v-model="param.name">
 					<input type="text" v-model="param.value">
 					<input type="text" v-model="param.temp">
-					<button type="button" @click="removeParam(param.key)">X</button>
+					<button type="button" @click="removeParam(param.name)">X</button>
 				</div>
 				<div>
-					<input type="text" v-model="newParam.key">
+					<input type="text" v-model="newParam.name">
 					<input type="text" v-model="newParam.value">
 					<input type="text" v-model="newParam.temp">
 					<button type="button" @click="addParam">+</button>
@@ -1242,43 +1322,24 @@ Vue.component('formspell', {
 	`,
 	mounted() {
 		this.types = myTypes;
-
-		this.convertParamsList();
 	},
 	methods: {
-		convertParamsList: function() {
-			var keyList = Object.keys(this.$props.data.params);
-			var newParamList = [];
-
-			keyList.forEach(key => {
-				var currentParam = this.$props.data.params[key];
-
-				newParamList.push({
-					"key": key,
-					"value": currentParam.value,
-					"temp": currentParam.temp
-				});
-			});
-
-			this.paramsList = newParamList;
-		},
 		submitForm: function() {
-			this.$emit("post", this.$props.data, this.paramsList);
+			this.$emit("post", this.$props.spell);
 		},
 		addParam: function() {
-			if (this.newParam.key) {
-				this.paramsList.push(this.newParam);
+			if (this.newParam.name) {
+				this.$props.spell.params.push(this.newParam);
 	
-				this.resetParamList();
+				this.resetNewParam();
 			}
 		},
-		removeParam: function(deletedKey) {
-			this.paramsList = this.paramsList.filter(param => param.key != deletedKey);
+		removeParam: function(deletedName) {
+			this.$props.spell.params = this.$props.spell.params.filter(param => {
+        return param.name != deletedName;
+      });
 		},
-		updatePropParamList: function() {
-			this.$props.data.params = this.paramsList;
-		},
-		resetParamList: function() {
+		resetNewParam: function() {
 			this.newParam = {};
 		},
 	},
@@ -1302,16 +1363,20 @@ Vue.component('learning', {
 			<div>{{ data.description }}|n</div>
 			<div v-if="data.manacost">{{ renderMana(data) }}</div>
 			<div v-if="data.cooldown">{{ renderCooldown(data) }}|n</div>
-			<div v-for="param, key in data.params">|cff00d619{{ key + '|r: ' + renderParam(param) }}</div>
+			<div v-for="param in data.params">{{ renderParam(param) }}</div>
 		</div>`,
 	methods: {
 		renderParam: function(param) {
+      var result = '|cff00d619' + param.name + '|r:';
+
 			var template = param.temp ? param.temp : "$$";
 			if (Array.isArray(param.value)) {
-				return template.replace("$$", (param.value).join('/'));
+				result += template.replace("$$", (param.value).join('/'));
 			} else {
-				return template.replace("$$", param.value);
+				result += template.replace("$$", param.value);
 			}
+
+      return result;
 		},
 		renderMana: function(data) {
 			var result = "|cff00C2ECManacost|r: ";
@@ -1347,17 +1412,21 @@ Vue.component('basic', {
 			</div>
 			<br>
 			<div>{{ data.description }}|n</div>
-			<div v-for="param, key in data.params">|cff00d619{{ key + '|r: ' + renderParam(param, lvl) }}</div>
+			<div v-for="param, key in data.params">{{ renderParam(param, lvl) }}</div>
 			<div v-if="data.cooldown">|n{{ renderCooldown(data, lvl) }}</div>
 		</div>`,
 	methods: {
 		renderParam: function(param, lvl) {
-			var template = param.temp ? param.temp : "$$";
-			if (Array.isArray(param.value)) {
-				return template.replace("$$", param.value[(lvl - 1)]);
-			} else {
-				return template.replace("$$", param.value);
-			}
+      var result = '|cff00d619' + param.name + '|r:';
+
+      var template = param.temp ? param.temp : "$$";
+      if (Array.isArray(param.value)) {
+        result += template.replace("$$", param.value[(lvl - 1)]);
+      } else {
+        result += template.replace("$$", param.value);
+      }
+
+      return result;
 		},
 		renderCooldown: function(data, lvl) {
 			var result = "|cffFFFF00Cooldown|r: ";
@@ -1406,6 +1475,7 @@ const myVue = new Vue({
 	},
 	mounted(){
 	    this.spells = mySpells;
+
 	    this.defaultSpell = defaultSpell;
 	},
 	methods: {
@@ -1426,26 +1496,12 @@ const myVue = new Vue({
 		copyOf: function(object) {
 			return JSON.parse(JSON.stringify(object));
 		},
-		updateSpell: function(newSpell, paramsList) {
-			var newParamList = {};
-
-			paramsList.forEach(param => {
-				var myNewParam = {};
-
-				if (typeof param.value === 'string' && param.value.indexOf(",") != -1) {
-					myNewParam.value = param.value.split(",");
-				} else {
-					myNewParam.value = param.value;
-				}
-
-				if (param.temp) {
-					myNewParam.temp = param.temp;
-				}
-				
-				newParamList[param.key] = myNewParam;
-			});
-
-			newSpell.params = newParamList;
+		updateSpell: function(newSpell) {
+      newSpell.params.forEach(param => {
+        if (typeof param.value === 'string' && param.value.indexOf(",") != -1) {
+          param.value = param.value.split(",");
+        }
+      });
 
 			if (typeof newSpell.manacost === 'string' && newSpell.manacost.indexOf(",") != -1) {
 				newSpell.manacost = newSpell.manacost.split(",");

@@ -40,10 +40,10 @@
 				</div>
 			</div>
 			<div v-if="display.edit.show" v-for="spell in filterById()">
-				<formspell :data="copyOf(spell)" @post="updateSpell"></formspell>
+				<formspell :spell="copyOf(spell)" @post="updateSpell"></formspell>
 			</div>
 			<div v-if="display.new.show" v-for="spell in filterById()">
-				<formspell :data="copyOf(defaultSpell)" @post="updateSpell"></formspell>
+				<formspell :spell="copyOf(defaultSpell)" @post="updateSpell"></formspell>
 			</div>
 			<div v-if="display.json.show">
 				<pre>{{ spells }}</pre>

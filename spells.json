@@ -17,8 +17,9 @@
       115
     ],
     "cooldown": 8,
-    "params": {
-      "Damages": {
+    "params": [
+      {
+        "name": "Damages",
         "value": [
           90,
           140,
@@ -26,7 +27,8 @@
           240
         ]
       },
-      "Duration": {
+      {
+        "name": "Duration",
         "value": [
           1,
           1.4,
@@ -35,15 +37,17 @@
         ],
         "temp": "$$ seconds stunn."
       },
-      "Range": {
+      {
+        "name": "Range",
         "value": 600,
         "temp": "$$ ranges"
       },
-      "Missile speed ": {
+      {
+        "name": "Missile speed ",
         "value": 1100,
         "temp": "$$ ranges/s"
       }
-    }
+    ]
   },
   {
     "id": 2,
@@ -62,8 +66,9 @@
     ],
     "cooldown": 8,
     "description": "Slams the ground, stunning and damaging nearby enemy land units.",
-    "params": {
-      "Damages": {
+    "params": [
+      {
+        "name": "Damages",
         "value": [
           80,
           130,
@@ -71,7 +76,8 @@
           230
         ]
       },
-      "Stunn duration": {
+      {
+        "name": "Stunn duration",
         "value": [
           1.7,
           2,
@@ -79,11 +85,12 @@
           2.6
         ]
       },
-      "Area": {
+      {
+        "name": "Area",
         "value": 350,
         "temp": "$$ ranges"
       }
-    }
+    ]
   },
   {
     "id": 3,
@@ -106,19 +113,21 @@
       70,
       60
     ],
-    "params": {
-      "Stunn duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": [
           4,
           5,
           6
         ]
       },
-      "Cast range": {
+      {
+        "name": "Cast range",
         "value": 600,
         "temp": "$$ ranges"
       }
-    }
+    ]
   },
   {
     "id": 4,
@@ -138,16 +147,19 @@
       120
     ],
     "cooldown": 12,
-    "params": {
-      "Spell Area ": {
+    "params": [
+      {
+        "name": "Spell Area ",
         "value": 550,
         "temp": "$$ ranges"
       },
-      "Area Explosion": {
+      {
+        "name": "Area Explosion",
         "value": 200,
         "temp": "$$ ranges"
       },
-      "Damages": {
+      {
+        "name": "Damages",
         "value": [
           30,
           40,
@@ -156,15 +168,17 @@
         ],
         "temp": "$$ per bolt"
       },
-      "Cast Range": {
+      {
+        "name": "Cast Range",
         "value": 750,
         "temp": "$$ ranges"
       },
-      "Bolts Speed": {
+      {
+        "name": "Bolts Speed",
         "value": 950,
         "temp": "$$ ranges/s"
       }
-    }
+    ]
   },
   {
     "id": 5,
@@ -187,12 +201,14 @@
       120,
       100
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": 18,
         "temp": "$$ seconds"
       },
-      "Fading Time": {
+      {
+        "name": "Fading Time",
         "value": [
           2,
           1.5,
@@ -200,7 +216,7 @@
         ],
         "temp": "$$ seconds"
       }
-    }
+    ]
   },
   {
     "id": 6,
@@ -211,8 +227,9 @@
       "self"
     ],
     "description": "The hero get more magic resistance.",
-    "params": {
-      "Magic Reduction": {
+    "params": [
+      {
+        "name": "Magic Reduction",
         "value": [
           20,
           28,
@@ -221,7 +238,7 @@
         ],
         "temp": "$$%"
       }
-    }
+    ]
   },
   {
     "id": 7,
@@ -244,8 +261,9 @@
       50
     ],
     "description": "The caster summons a magic arrow that will deals damages to enemies in a line stunning them. The arrow deals more damages and stunn during a bigger duration in function of the distance travelled.",
-    "params": {
-      "Damages": {
+    "params": [
+      {
+        "name": "Damages",
         "value": [
           180,
           240,
@@ -254,7 +272,8 @@
         ],
         "temp": "$$ per 1000 ranges travelled"
       },
-      "Stunn Duration": {
+      {
+        "name": "Stunn Duration",
         "value": [
           1.3,
           1.8,
@@ -263,18 +282,21 @@
         ],
         "temp": "$$ per 1000 ranges travelled"
       },
-      "Max Damages": {
+      {
+        "name": "Max Damages",
         "value": 450
       },
-      "Max Stunn Duration": {
+      {
+        "name": "Max Stunn Duration",
         "value": 4.5,
         "temp": "$$ seconds"
       },
-      "Arrow Speed": {
+      {
+        "name": "Arrow Speed",
         "value": 2000,
         "temp": "$$ ranges/s"
       }
-    }
+    ]
   },
   {
     "name": "Arcane Barrage",
@@ -284,8 +306,9 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Damages": {
+    "params": [
+      {
+        "name": "Damages",
         "value": [
           "75",
           "150",
@@ -293,15 +316,17 @@
           "300"
         ]
       },
-      "Bolt Speed": {
+      {
+        "name": "Bolt Speed",
         "value": "700",
         "temp": "$$ ranges/s"
       },
-      "Area": {
+      {
+        "name": "Area",
         "value": "450",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "description": "The caster throw some bolts to enemies around him that deals damages when it reach their targets.",
     "cooldown": [
       "11",
@@ -325,8 +350,9 @@
       "allies",
       "self"
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": [
           "6",
           "7",
@@ -335,7 +361,8 @@
         ],
         "temp": "$$ seconds"
       },
-      "Life Restored": {
+      {
+        "name": "Life Restored",
         "value": [
           "20",
           "40",
@@ -344,11 +371,12 @@
         ],
         "temp": "$$ hp per attack"
       },
-      "Cast Range": {
+      {
+        "name": "Cast Range",
         "value": "450",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Art of War",
     "description": "The caster places a buff on the target allied or himself that increases the attack speed by 20% for a short duration. Each time the target attacks it restore some life.",
     "manacost": [
@@ -372,8 +400,9 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Armor Malus": {
+    "params": [
+      {
+        "name": "Armor Malus",
         "value": [
           "3",
           "4",
@@ -381,11 +410,12 @@
           "6"
         ]
       },
-      "Area of Effect": {
+      {
+        "name": "Area of Effect",
         "value": "750",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Aura of Blight",
     "description": "Decreases the ennemies around armor.",
     "id": 10
@@ -397,12 +427,14 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Cast Range": {
+    "params": [
+      {
+        "name": "Cast Range",
         "value": "900",
         "temp": "$$ ranges"
       },
-      "Distance Max": {
+      {
+        "name": "Distance Max",
         "value": [
           "500",
           "600",
@@ -411,11 +443,12 @@
         ],
         "temp": "$$ ranges"
       },
-      "Move Speed": {
+      {
+        "name": "Move Speed",
         "value": "1300",
         "temp": "$$ ranges/s"
       }
-    },
+    ],
     "name": "Backward Flux",
     "description": "The caster forces an enemy to moves backward for a short duration.",
     "manacost": [
@@ -439,8 +472,9 @@
       "air",
       "self"
     ],
-    "params": {
-      "Regeneration": {
+    "params": [
+      {
+        "name": "Regeneration",
         "value": [
           "2",
           "3",
@@ -449,15 +483,17 @@
         ],
         "temp": "$$ hp/s per enemy around"
       },
-      "Detection Area": {
+      {
+        "name": "Detection Area",
         "value": "400",
         "temp": "$$ ranges"
       },
-      "Hero Bonus": {
+      {
+        "name": "Hero Bonus",
         "value": "50",
         "temp": "$$%"
       }
-    },
+    ],
     "name": "Bad Blood",
     "description": "The caster get an increased hp regenearation in function of the number of enemies around. The regeneration is increased when the target is a hero.",
     "id": 12
@@ -469,12 +505,13 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Cast Range": {
+    "params": [
+      {
+        "name": "Cast Range",
         "value": "300",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Balance Forces",
     "ulti": true,
     "description": "The caster balance his current life with the target opponent current life. The final amount of life for each targets of the spell is calculated by adding the amount of current life from the caster and the targets and by dividing this amount by 2.",
@@ -497,12 +534,14 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Cast Range": {
+    "params": [
+      {
+        "name": "Cast Range",
         "value": "700",
         "temp": "$$ ranges"
       },
-      "Percentage": {
+      {
+        "name": "Percentage",
         "value": [
           "25",
           "45",
@@ -510,7 +549,8 @@
         ],
         "temp": "$$% distance as damages"
       },
-      "Duration": {
+      {
+        "name": "Duration",
         "value": [
           "7",
           "8",
@@ -519,11 +559,12 @@
         ],
         "temp": "$$ seconds"
       },
-      "Speed Max": {
+      {
+        "name": "Speed Max",
         "value": "800",
         "temp": "$$ ranges/s"
       }
-    },
+    ],
     "name": "Bane of Havoc",
     "ulti": true,
     "description": "The caster places a buff on a target that will damage it in function of the distance travelled.",
@@ -547,8 +588,9 @@
       "air",
       "allies"
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": [
           "3",
           "3.5",
@@ -557,11 +599,13 @@
         ],
         "temp": "$$ seconds"
       },
-      "Cast Range": {
+      {
+        "name": "Cast Range",
         "value": "650",
         "temp": "$$ ranges"
       },
-      "Move Speed Reduction": {
+      {
+        "name": "Move Speed Reduction",
         "value": [
           "25",
           "35",
@@ -570,11 +614,12 @@
         ],
         "temp": "$$%"
       },
-      "Bonus Magic Damages": {
+      {
+        "name": "Bonus Magic Damages",
         "value": "45",
         "temp": "$$%"
       }
-    },
+    ],
     "name": "Banish",
     "description": "Turns a non-mechanical unit ethereal and slows its movement speed for a short duration. Ethereal creatures cannot attack, but they can cast spells and certain spells cast upon them will have a greater effect. ",
     "cooldown": [
@@ -598,8 +643,9 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Damages Bonus": {
+    "params": [
+      {
+        "name": "Damages Bonus",
         "value": [
           "30",
           "40",
@@ -607,7 +653,7 @@
           "60"
         ]
       }
-    },
+    ],
     "name": "Bash",
     "description": "Gives 15% chance that an attack will do bonus damage and stuns an opponent for 1 second.",
     "id": 16
@@ -620,8 +666,9 @@
       "allies",
       "self"
     ],
-    "params": {
-      "Bonus Attack Speed": {
+    "params": [
+      {
+        "name": "Bonus Attack Speed",
         "value": [
           "60",
           "120",
@@ -629,7 +676,7 @@
         ],
         "temp": "$$%"
       }
-    },
+    ],
     "name": "Battle Trance",
     "ulti": true,
     "description": "Add some attack speed to every allied heroes on the map during 14 seconds.",
@@ -652,8 +699,9 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Percentage Damages": {
+    "params": [
+      {
+        "name": "Percentage Damages",
         "value": [
           "4",
           "5",
@@ -661,7 +709,8 @@
         ],
         "temp": "$$% of his current life"
       },
-      "Duration": {
+      {
+        "name": "Duration",
         "value": [
           "10",
           "12",
@@ -669,7 +718,7 @@
         ],
         "temp": "$$ seconds"
       }
-    },
+    ],
     "name": "Bear Strength",
     "ulti": true,
     "description": "The caster get a percentage of his current life as damages during a short duration.",
@@ -688,12 +737,14 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Cast Range": {
+    "params": [
+      {
+        "name": "Cast Range",
         "value": "300",
         "temp": "$$ ranges"
       },
-      "Damages": {
+      {
+        "name": "Damages",
         "value": [
           "50",
           "80",
@@ -701,11 +752,12 @@
         ],
         "temp": "$$ damages/s"
       },
-      "Area": {
+      {
+        "name": "Area",
         "value": "400",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Black Hole",
     "ulti": true,
     "description": "The caster traps any enemies in an area dealing damages to them over the time. During this duration enemies are disabled. Maximum channel duration 4 seconds.",
@@ -728,16 +780,19 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Area": {
+    "params": [
+      {
+        "name": "Area",
         "value": "325",
         "temp": "$$ ranges"
       },
-      "Casting Range": {
+      {
+        "name": "Casting Range",
         "value": "1100",
         "temp": "$$ ranges"
       },
-      "Move Speed Reduction": {
+      {
+        "name": "Move Speed Reduction",
         "value": [
           "15",
           "20",
@@ -746,7 +801,8 @@
         ],
         "temp": "$$%"
       },
-      "Attack Speed Reduction": {
+      {
+        "name": "Attack Speed Reduction",
         "value": [
           "25",
           "30",
@@ -755,7 +811,7 @@
         ],
         "temp": "$$%"
       }
-    },
+    ],
     "name": "Black Moon",
     "description": "The caster summons a moon at the target location that slows the enemies in the area. Duration 15 seconds.",
     "manacost": [
@@ -779,8 +835,9 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Damages": {
+    "params": [
+      {
+        "name": "Damages",
         "value": [
           "20",
           "30",
@@ -788,7 +845,8 @@
           "50"
         ]
       },
-      "Duration": {
+      {
+        "name": "Duration",
         "value": [
           "0.9",
           "1.1",
@@ -797,11 +855,12 @@
         ],
         "temp": "$$ seconds stunn"
       },
-      "Move Speed": {
+      {
+        "name": "Move Speed",
         "value": "120",
         "temp": "$$ ranges/s"
       }
-    },
+    ],
     "name": "Blackout Kick",
     "description": "The caster has 17% chance to stunn the attacked enemy dealing damages and pushing it backward during a short duration.",
     "id": 21
@@ -813,16 +872,19 @@
       "ground",
       "air"
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": "6",
         "temp": "$$ seconds"
       },
-      "Distance Waves": {
+      {
+        "name": "Distance Waves",
         "value": "1100",
         "temp": "$$ ranges"
       },
-      "Damages": {
+      {
+        "name": "Damages",
         "value": [
           "40",
           "60",
@@ -830,15 +892,17 @@
         ],
         "temp": "$$ per slash"
       },
-      "Area Slash": {
+      {
+        "name": "Area Slash",
         "value": "62.5",
         "temp": "$$ ranges"
       },
-      "Slash Speed": {
+      {
+        "name": "Slash Speed",
         "value": "1400",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Blade Fury",
     "ulti": true,
     "description": "The caster summons some slashes around him that moves in random directions every 0.2 second. The spell is interupted if the caster dies. Theses slashes deals damages to enemies in a line. During that spell the caster get 20% move speed bonus. When the caster attack during this spell duration it summons an additional slash in a random duration.",
@@ -862,8 +926,9 @@
       "allies",
       "self"
     ],
-    "params": {
-      "Duration": {
+    "params": [
+      {
+        "name": "Duration",
         "value": [
           "4",
           "5",
@@ -872,11 +937,12 @@
         ],
         "temp": "$$ seconds"
       },
-      "Cast Range": {
+      {
+        "name": "Cast Range",
         "value": "550",
         "temp": "$$ ranges"
       }
-    },
+    ],
     "name": "Blessed Life",
     "description": "The target become magic immune during a short duration.",
     "manacost": [
@@ -892,5 +958,270 @@
       "19"
     ],
     "id": 23
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "none"
+    ],
+    "params": [
+      {
+        "name": "Delay",
+        "value": "0.33",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Blink",
+    "description": "A short distance teleportation that allows the caster to move in and out of combat. Maximum distance 1200 ranges.",
+    "manacost": "70",
+    "cooldown": [
+      "12",
+      "10",
+      "8",
+      "6"
+    ],
+    "id": 24
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Hero Percentage",
+        "value": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ],
+        "temp": "$$% max life"
+      },
+      {
+        "name": "Unit Percentage",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$% max life"
+      }
+    ],
+    "name": "Blood Bath",
+    "description": "When the hero kills a unit it restores a percentage of the dead unit max life. Does not works agains buildings and mechanic units.",
+    "id": 25
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "non heroes",
+      "organics",
+      "non buildings"
+    ],
+    "params": [
+      {
+        "name": "Regeneration",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$% of the unit current life"
+      },
+      {
+        "name": "Cast Range",
+        "value": "250",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Blood Pact",
+    "description": "Destroy an allied unit to regenerate a proportion of the sacrified unit's current life.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": [
+      "55",
+      "50",
+      "45",
+      "40"
+    ],
+    "id": 26
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self",
+      "organics"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Attack Speed Bonus",
+        "value": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Move Speed Bonus",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Blood Rage",
+    "description": "The caster increases the allied target move and attack speed during 20 seconds.",
+    "manacost": [
+      "80",
+      "85",
+      "90",
+      "95"
+    ],
+    "cooldown": "10",
+    "id": 27
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Bonus",
+        "value": [
+          "11",
+          "22",
+          "33",
+          "44"
+        ],
+        "temp": "$$% move speed"
+      },
+      {
+        "name": "Area",
+        "value": [
+          "2500",
+          "3000",
+          "3500",
+          "4000"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Life Treeshold",
+        "value": [
+          "25",
+          "30",
+          "35",
+          "40"
+        ],
+        "temp": "$$% of max life"
+      }
+    ],
+    "name": "Blood Thirst",
+    "description": "When an enemy has les than a certain amount of life of life the hero get an increased movespeed.",
+    "id": 28
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Minimum Bonus",
+        "value": "5",
+        "temp": "$$%"
+      },
+      {
+        "name": "Max Bonus",
+        "value": [
+          "15",
+          "30",
+          "45",
+          "60"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Bloodlust",
+    "description": "The caster get a random bonus of move and attack speed during 6 seconds.",
+    "manacost": [
+      "80",
+      "90",
+      "100",
+      "110"
+    ],
+    "cooldown": [
+      "35",
+      "30",
+      "25",
+      "20"
+    ],
+    "id": 29
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "400",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Life Regeneration",
+        "value": [
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "temp": "$$ hp/unit"
+      },
+      {
+        "name": "Max Units",
+        "value": "14"
+      }
+    ],
+    "name": "Bloody Slam",
+    "description": "The caster regenerates life in function of the number of enemies around him. Maximum 14 units.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": "12",
+    "id": 30
   }
 ]

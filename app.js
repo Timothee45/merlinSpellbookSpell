@@ -1,4 +1,4 @@
-const myTypes = [ "Target unit", "Target point", "Instant", "Passive", "Target unit/point" ];
+const myTypes = [ "Target unit", "Target point", "Instant", "Passive", "Target unit/point", "Autocast" ];
 
 const defaultSpell = {
 	type: "Target unit",

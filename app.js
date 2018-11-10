@@ -90,8 +90,8 @@ Vue.component('formspell', {
 				</div>
 			</div>
 			<div>
-				<label>Danger</label>
-				<input type="text" v-model="mySpell.danger">
+				<label for="danger">Danger</label>
+				<input type="text" id="danger" v-model="mySpell.danger">
 			</div>
 			<button type="button" @click="submitForm()">Valider</button>
 		</div>

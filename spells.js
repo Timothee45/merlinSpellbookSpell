@@ -4261,5 +4261,1071 @@ const mySpellsLibrary =
       "7"
     ],
     "id": 101
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Hero Duration",
+        "value": [
+          "1",
+          "1.5",
+          "2",
+          "2.5"
+        ],
+        "temp": "$$ seconds trap"
+      },
+      {
+        "name": "Creep Duration",
+        "value": [
+          "2",
+          "2.5",
+          "3",
+          "3.5"
+        ],
+        "temp": "$$ seconds trap"
+      }
+    ],
+    "danger": "",
+    "name": "Glaciation",
+    "description": "Trap an enemy in the ice. During that duration the target can't move and takes 70 damages/s.",
+    "manacost": [
+      "130",
+      "140",
+      "150",
+      "160"
+    ],
+    "cooldown": [
+      "10",
+      "9",
+      "8",
+      "7"
+    ],
+    "id": 102
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "Global"
+      },
+      {
+        "name": "Life Restaured",
+        "value": [
+          "200",
+          "400",
+          "600"
+        ],
+        "temp": "$$ hp"
+      }
+    ],
+    "name": "God Blessing",
+    "description": "Heals every allied heroes of your team.",
+    "ulti": true,
+    "manacost": [
+      "160",
+      "235",
+      "310"
+    ],
+    "cooldown": [
+      "100",
+      "90",
+      "80"
+    ],
+    "id": 103
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "300",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages Cleaved",
+        "value": [
+          "25",
+          "35",
+          "45",
+          "55"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Great Cleave",
+    "description": "The hero strikes with such force that he damages multiple enemies with his attack.",
+    "id": 104
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Armor Bonus",
+        "value": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ]
+      },
+      {
+        "name": "Life Bonus",
+        "value": [
+          "150",
+          "300",
+          "450",
+          "600"
+        ],
+        "temp": "$$ hp"
+      }
+    ],
+    "name": "Great Fortitude",
+    "description": "Increases permanently the caster's armor and life.",
+    "id": 105
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "1000",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Speed",
+        "value": "700",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Fly Time",
+        "value": "1",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "150",
+          "200",
+          "250"
+        ]
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          "1.5",
+          "2",
+          "2.5"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Growing Hell",
+    "description": "The caster summons some trees around him that will impale enemies around stunning them during a short duration and damaging them.",
+    "manacost": [
+      "150",
+      "225",
+      "300"
+    ],
+    "cooldown": [
+      "150",
+      "140",
+      "130"
+    ],
+    "id": 106,
+    "ulti": true
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Damages Bonus",
+        "value": [
+          "30",
+          "60",
+          "90"
+        ]
+      }
+    ],
+    "name": "Growing Power",
+    "ulti": true,
+    "description": "Gives a permanent bonus to the hero damages. ",
+    "id": 107
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Damage Bonus",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ]
+      },
+      {
+        "name": "Area",
+        "value": "600",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Growl",
+    "description": "The caster increases the damages of nearby allied units during 12 seconds. Half the bonus to non hero units.",
+    "manacost": [
+      "110",
+      "115",
+      "120",
+      "125"
+    ],
+    "cooldown": "30",
+    "id": 108
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Life Limit",
+        "value": "25",
+        "temp": "$$% maximumlife"
+      },
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "6",
+          "8",
+          "10"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Periode Verification",
+        "value": "0.05",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Guardian Angel",
+    "description": "The caster places a buff on the target unit that reset periodically his life. If the target's life goes below the limit the life is reset to the limit. If during the verification duration the target takes too much damages, it still can die.",
+    "manacost": [
+      "110",
+      "125",
+      "140",
+      "155"
+    ],
+    "cooldown": [
+      "22",
+      "21",
+      "20",
+      "19"
+    ],
+    "id": 109
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "750",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bonus Move Speed",
+        "value": [
+          "4",
+          "6",
+          "8",
+          "10"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Haste",
+    "description": "Increases the movement speed of nearby allies units.",
+    "id": 110
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "2500",
+          "3000",
+          "3500"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Casting Delay",
+        "value": "1.5",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "180",
+          "280",
+          "380"
+        ]
+      },
+      {
+        "name": "Bullet Speed",
+        "value": "3000",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Stunn Duration",
+        "value": "0.5",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Headshot",
+    "ulti": true,
+    "description": "The caster send a bullet to the targeted unit dealing a massive amount of damages ministunning it.",
+    "manacost": [
+      "175",
+      "225",
+      "275"
+    ],
+    "cooldown": [
+      "30",
+      "25",
+      "20"
+    ],
+    "id": 111
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Heal",
+        "value": [
+          "100",
+          "150",
+          "200",
+          "225"
+        ],
+        "temp": "$$ hp"
+      },
+      {
+        "name": "Nbr Max Targets",
+        "value": [
+          "6",
+          "8",
+          "10",
+          "12"
+        ]
+      },
+      {
+        "name": "Area Search",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "1200",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Healing Wave",
+    "description": "The target summon a bolt that bounces between targets healing each units touched.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": [
+      "14",
+      "12",
+      "10",
+      "8"
+    ],
+    "id": 112
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "enemies"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ range"
+      },
+      {
+        "name": "Damages Restaurations",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$% damages dealt"
+      }
+    ],
+    "name": "Heartstopper Curse",
+    "description": "The caster places a buff that slow the target by 20% and allow the allies to regenerate a percentage of the damages dealts to the target.",
+    "manacost": [
+      "100",
+      "105",
+      "110",
+      "115"
+    ],
+    "cooldown": "20",
+    "id": 113
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Radius Search",
+        "value": "2500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "110",
+          "190",
+          "270",
+          "350"
+        ]
+      },
+      {
+        "name": "Missile Speed",
+        "value": "850",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Heat Seeker Missiles",
+    "description": "The caster send a rocket to 2 random visibles heroes around him dealing damages.",
+    "manacost": [
+      "80",
+      "100",
+      "120",
+      "140"
+    ],
+    "cooldown": [
+      "16",
+      "15",
+      "14",
+      "13"
+    ],
+    "id": 114
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Mana Drain",
+        "value": [
+          "20",
+          "40",
+          "60"
+        ],
+        "temp": "$$ mana per pulses"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "100",
+          "140",
+          "180"
+        ],
+        "temp": "$$ damages per pulse"
+      },
+      {
+        "name": "Period Damages",
+        "value": "1",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Hell Nova",
+    "description": "The caster deals damages to enemies around him over the time when it is activated but drains some mana points per seconds too.",
+    "ulti": true,
+    "id": 115
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "4.5",
+          "5"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Hell in a Cell",
+    "ulti": true,
+    "description": "The caster blocks every units in an area during a short duration. Units are completly disables during that periode of time. Only the caster can move in the area. The caster get maximum moves speed bonus and can go throught units.",
+    "manacost": [
+      "150",
+      "225",
+      "300"
+    ],
+    "cooldown": [
+      "130",
+      "120",
+      "110"
+    ],
+    "id": 116
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "Globals"
+      },
+      {
+        "name": "Area",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "90",
+          "140",
+          "190",
+          "240"
+        ]
+      },
+      {
+        "name": "Missile Speed",
+        "value": "1800",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Hellfire Canon",
+    "description": "The caster throw a bolt to a target location. When the bolt reaches the target location it explodes dealing damages to the enemies in the target area.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": [
+      "20",
+      "18",
+      "16",
+      "14"
+    ],
+    "id": 117
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "750",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "70",
+          "90",
+          "110"
+        ],
+        "temp": "$$ damages/s"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "8",
+          "10",
+          "12"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Wave Speed",
+        "value": "900",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Hemoplague",
+    "ulti": true,
+    "description": "The caster summons a nova of plague that deals damages to enemies around during a short duration.",
+    "manacost": [
+      "140",
+      "200",
+      "260"
+    ],
+    "cooldown": [
+      "100",
+      "90",
+      "80"
+    ],
+    "id": 118
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Duration For Hero",
+        "value": [
+          "1.5",
+          "2",
+          "2.5",
+          "3"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration For Creep",
+        "value": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Hex",
+    "description": "Transforms an enemy unit into a random critter, disabling special abilities.",
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "cooldown": [
+      "12",
+      "11",
+      "10",
+      "9"
+    ],
+    "id": 119
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          "90",
+          "130",
+          "170",
+          "210"
+        ]
+      },
+      {
+        "name": "Nbr Enemies",
+        "value": [
+          "5",
+          "7",
+          "9",
+          "11"
+        ]
+      },
+      {
+        "name": "Regeneration",
+        "value": [
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "temp": "$$ hp per bolt"
+      },
+      {
+        "name": "Area",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bolt Speed",
+        "value": "500",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Holy Bolts",
+    "description": "The caster deals damages to a random number of enemies around him, healing him.",
+    "manacost": [
+      "100",
+      "120",
+      "140",
+      "160"
+    ],
+    "cooldown": [
+      "30",
+      "28",
+      "26",
+      "24"
+    ],
+    "id": 120
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "850",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "6",
+          "8"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Area",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Push Speed",
+        "value": "750",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Holy Persuasion",
+    "ulti": true,
+    "description": "Places a buff on a target unit that pushes away from him any enemies during a short duration.",
+    "manacost": [
+      "150",
+      "180",
+      "210"
+    ],
+    "cooldown": "60",
+    "id": 121
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Restauration",
+        "value": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "temp": "$$% of max life"
+      }
+    ],
+    "name": "Holy Seal",
+    "description": "When the caster is damaged it has 20% chances to restores a percentage of his max life.",
+    "id": 122
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "30",
+          "40",
+          "50",
+          "60"
+        ],
+        "temp": "$$ per shard"
+      },
+      {
+        "name": "Shard Speed",
+        "value": "900",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Ice Shards",
+    "description": "The caster places a buff on himself that will send ice shards to enemies around him each time it attacks. Last 6 seconds.",
+    "manacost": [
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "cooldown": [
+      "11",
+      "9",
+      "8",
+      "7"
+    ],
+    "id": 123
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "1.5",
+          "2",
+          "2.5",
+          "3"
+        ],
+        "temp": "$$% of target max life"
+      }
+    ],
+    "name": "Illness",
+    "description": "The enemies around the caster will loose a percentage of their max hp/sec.",
+    "id": 124
+  },
+  {
+    "type": "Instant",
+    "targets": [],
+    "params": [
+      {
+        "name": "Number of Images",
+        "value": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "name": "Spawn Delay",
+        "value": "0.5",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Illusions Storm",
+    "ulti": true,
+    "description": "Creates some illusions of the hero that deals 100% damages but takes 200% damages.",
+    "cooldown": [
+      "100",
+      "90",
+      "80"
+    ],
+    "manacost": [
+      "160",
+      "240",
+      "320"
+    ],
+    "id": 125
+  },
+  {
+    "type": "Target unit/point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "250",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Distance",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "60",
+          "120",
+          "180",
+          "240"
+        ]
+      },
+      {
+        "name": "Wave Duration",
+        "value": "0.33",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Fly Time",
+        "value": "1",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          "1",
+          "1.3",
+          "1.6",
+          "1.9"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Impale",
+    "description": "The caster shoots spiked tendrils out in a straight line, dealing damage and hurling enemy ground units into the air in their wake.",
+    "manacost": [
+      "100",
+      "115",
+      "130",
+      "145"
+    ],
+    "cooldown": "9",
+    "id": 126
   }
 ]

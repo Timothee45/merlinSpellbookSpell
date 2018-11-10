@@ -2660,5 +2660,1606 @@ const mySpellsLibrary =
     "name": "Devastating Hit",
     "description": "Gives a chance to deals twice the normal damage on an attack.",
     "id": 63
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "air",
+      "ground"
+    ],
+    "params": [
+      {
+        "name": "Manacost",
+        "value": [
+          "200",
+          "280",
+          "360"
+        ],
+        "temp": "$$ mana points per attack"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "200",
+          "300",
+          "400"
+        ]
+      },
+      {
+        "name": "Missile Speed",
+        "value": "3500",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Laser Beam",
+    "ulti": true,
+    "description": "When activated deals a massive amount of damages each attacks to to attacked unit.",
+    "id": 64
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "organics"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "150",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bonus Gold",
+        "value": [
+          "25",
+          "50",
+          "75",
+          "100"
+        ],
+        "temp": "$$ when the target dies"
+      },
+      {
+        "name": "Life Lost",
+        "value": [
+          "5",
+          "7",
+          "9",
+          "11"
+        ],
+        "temp": "$$ hp/s"
+      }
+    ],
+    "name": "Devour",
+    "description": "The caster eat an enemy removing slowly his life to regenerate himself. Heals 50% of the life removed to the target. Maximum digestion time 4 minutes. Steals 50% of the life lost by the target.",
+    "danger": "Does not work against Arthas.",
+    "cooldown": [
+      "80",
+      "70",
+      "60",
+      "50"
+    ],
+    "manacost": [
+      "50",
+      "60",
+      "70",
+      "80"
+    ],
+    "id": 65
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "ground",
+      "air",
+      "enemies"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          "15",
+          "25",
+          "35",
+          "45"
+        ],
+        "temp": ""
+      }
+    ],
+    "name": "Dissuasive Protection",
+    "description": "When the caster is attacked, he deals damages to the attacking unit.",
+    "id": 66
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "5",
+          "6"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Bonus Regeneration",
+        "value": [
+          "20",
+          "25",
+          "30"
+        ],
+        "temp": "$$ hp/s"
+      }
+    ],
+    "name": "Divine Defense",
+    "ulti": true,
+    "description": "The caster increases the armor to the maximum of allied units around him and gives a better life regeneration during a short duration.",
+    "manacost": [
+      "120",
+      "140",
+      "160"
+    ],
+    "cooldown": [
+      "90",
+      "80",
+      "70"
+    ],
+    "id": 67
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Duration",
+        "value": "12",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damages Bonus",
+        "value": [
+          "100",
+          "200",
+          "300",
+          "400"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Divine Power",
+    "description": "The caster get a big damage bonus for one attack.",
+    "manacost": [
+      "80",
+      "100",
+      "120",
+      "140"
+    ],
+    "cooldown": "10",
+    "id": 68
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "non heroes",
+      "organics"
+    ],
+    "params": [],
+    "name": "Domination",
+    "description": "Convert a targeted creep.",
+    "manacost": [
+      "110",
+      "125",
+      "140",
+      "155"
+    ],
+    "cooldown": [
+      "70",
+      "65",
+      "60",
+      "55"
+    ],
+    "danger": "Does not work against Arthas.",
+    "id": 69
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          "40",
+          "60",
+          "80"
+        ],
+        "temp": "$$ damages/s"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "12",
+          "13",
+          "14"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Doom",
+    "ulti": true,
+    "description": "Marks a target unit for the manifestation of a Demon. The afflicted unit cannot cast spells and will take damage per second during a short duration.",
+    "manacost": [
+      "180",
+      "255",
+      "330"
+    ],
+    "cooldown": [
+      "140",
+      "130",
+      "120"
+    ],
+    "id": 70
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Basic Damages",
+        "value": [
+          "60",
+          "80",
+          "100",
+          "120"
+        ]
+      },
+      {
+        "name": "Damages Over The Time",
+        "value": [
+          "20",
+          "40",
+          "60",
+          "80"
+        ],
+        "temp": "$$ damages/s"
+      },
+      {
+        "name": "Cast Range",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Speed",
+        "value": "1500",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Distance",
+        "value": "1100",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "125",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Dragon Salve",
+    "description": "The caster send a wave of fire that deals damages to enemies in a line. The units affected takes damages over the time during 5 seconds.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": [
+      "8",
+      "7",
+      "9",
+      "5"
+    ],
+    "id": 71
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "90",
+          "170",
+          "250",
+          "330"
+        ]
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          "1.3",
+          "1.5",
+          "1.7",
+          "1.9"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Dream Coil",
+    "description": "The caster places a buff on the target ally. After 3 seconds the buff is removed causing an explosion that deals damages to enemies around the target stunning them during a short duration.",
+    "manacost": [
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "cooldown": "9",
+    "id": 72
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Probability",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$% chances"
+      }
+    ],
+    "name": "Drunken Haze",
+    "description": "When the caster is damaged by attacks or spells, he has a chance to avoid the damages.",
+    "id": 73
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Max Range",
+        "value": [
+          "600",
+          "700",
+          "800",
+          "900"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Speed",
+        "value": "1400",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Area",
+        "value": "125",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          "1.25",
+          "1.5",
+          "1.75",
+          "2"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "90",
+          "150",
+          "210",
+          "270"
+        ]
+      }
+    ],
+    "name": "Earth Pikes",
+    "description": "The caster moves hidden to the target location under the ground causing the creation of a destructive wave. The wave throws the enemies it encounters in the air during 1 second. When they lands the enemies are stunned during a short duration and damaged.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": "11",
+    "id": 74
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          "110",
+          "160",
+          "210",
+          "260"
+        ]
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Area",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Speed",
+        "value": "900",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Earthshock",
+    "description": "The caster slams the ground dealing damages to enemies around pushing them away and slowing them during 3 seconds.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": "10",
+    "id": 75
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Damages/Heal",
+        "value": [
+          "75",
+          "125",
+          "175",
+          "225"
+        ]
+      },
+      {
+        "name": "Cast Range",
+        "value": "950",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Speed",
+        "value": "1200",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Area",
+        "value": "125",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Distance",
+        "value": "1100",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Elune's Blessing",
+    "description": "The caster throw a wave in a direction that deals damages to enemies it encounters and heal allied.",
+    "manacost": [
+      "110",
+      "120",
+      "130",
+      "140"
+    ],
+    "cooldown": [
+      "11",
+      "10",
+      "9",
+      "8"
+    ],
+    "id": 76
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "700",
+          "850",
+          "1000"
+        ],
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Elven Swap",
+    "ulti": true,
+    "description": "The caster swap his position with a target unit.",
+    "manacost": [
+      "140",
+      "170",
+      "200"
+    ],
+    "cooldown": "45",
+    "id": 77
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Empowering Movement",
+    "description": "Give to an allied a maximum movespeed bonus during a short duration.",
+    "manacost": [
+      "110",
+      "120",
+      "130",
+      "140"
+    ],
+    "cooldown": "12",
+    "id": 78
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "100",
+          "175",
+          "225",
+          "300"
+        ]
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          "1.5",
+          "1.6",
+          "1.7",
+          "1.8"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Glove Speed",
+        "value": "1100",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Explosion Area",
+        "value": "300",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Enchanted Glove",
+    "description": "Throw a metal glove to the targeted enemy. When the glove reaches the target it explodes dealing damages to enemies around stunning them for a short duration.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": "7",
+    "id": 79
+  },
+  {
+    "type": "Autocast",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "temp": "$$% as current mana"
+      }
+    ],
+    "name": "Energic Missile",
+    "description": "Add to the damages of the attacking unit a percentage of his current mana as magic damages.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "danger": "Orb effect does not stack.",
+    "id": 80
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [],
+    "name": "Enrage",
+    "description": "The caster get a huge attackspeed bonus for a short number of attacks. If the caster attacks a certain number of times the buff is lost. Last 15 seconds.",
+    "manacost": [
+      "80",
+      "85",
+      "90",
+      "95"
+    ],
+    "cooldown": "15",
+    "id": 81
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Duration",
+        "value": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "1500",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Ensnare",
+    "description": "Causes a target enemy unit to be bound to the ground so that it cannot move for a short duration. Air units that are ensnared can be attacked as though they were land units.",
+    "cooldown": [
+      "12",
+      "11",
+      "10",
+      "9"
+    ],
+    "manacost": [
+      "55",
+      "65",
+      "75",
+      "85"
+    ],
+    "id": 82
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": "60",
+        "temp": "$$ per second"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "5",
+          "6"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Area",
+        "value": "550",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Entangling Roots",
+    "ulti": true,
+    "description": "The caster blocks any enemies around him with some roots during a short duration dealing over the time.",
+    "manacost": [
+      "150",
+      "180",
+      "210"
+    ],
+    "cooldown": [
+      "90",
+      "85",
+      "80"
+    ],
+    "id": 83
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          "5",
+          "10",
+          "15",
+          "20"
+        ],
+        "temp": "$$ damages per second"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "8",
+          "10",
+          "12",
+          "14"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": [
+          "10",
+          "11",
+          "12",
+          "13"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Envenomed Spears",
+    "description": "Deals poison damage per second and slow move speed of the attacked unit during a short duration.",
+    "danger": "Buff placers does not stask.",
+    "id": 84
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Probability",
+        "value": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ],
+        "temp": "$$% chances"
+      }
+    ],
+    "name": "Evasion",
+    "description": "Gives a percent chance to avoid attacks.",
+    "id": 85
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "800",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "1",
+          "1.75",
+          "2.5",
+          "3.25"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": [
+          "10",
+          "12",
+          "14",
+          "16"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Eye of Dalaran",
+    "description": "When an enemy around casts a spell it becomes silenced and slowed during a short duration.",
+    "id": 86
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "5",
+          "6"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Area",
+        "value": "600",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "False Promise",
+    "description": "The caster places a buff on neaby allied that increases their max life by 10 000 Hp during a short duration.",
+    "ulti": true,
+    "manacost": [
+      "140",
+      "160",
+      "180"
+    ],
+    "cooldown": [
+      "160",
+      "150",
+      "140"
+    ],
+    "id": 87
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "Globals"
+      },
+      {
+        "name": "Mana Regeneration Bonus",
+        "value": [
+          "0.75",
+          "0.95",
+          "1.15",
+          "1.35"
+        ],
+        "temp": "$$x basic regeneration"
+      },
+      {
+        "name": "Additional Bonus",
+        "value": [
+          "0.5",
+          "1",
+          "1.5",
+          "2"
+        ],
+        "temp": "$$ mana points/s"
+      }
+    ],
+    "name": "Fast Mind Aura",
+    "description": "Gives additional mana regeneration to any friendly units. And gives you an additional bonus.",
+    "id": 88
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "750",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damage Reduction",
+        "value": [
+          "11",
+          "22",
+          "33",
+          "44"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Fear",
+    "description": "Decreases the enemies around damages.",
+    "id": 89
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Damage Bonus",
+        "value": [
+          "60",
+          "80",
+          "100"
+        ]
+      },
+      {
+        "name": "Life Steal",
+        "value": [
+          "40",
+          "60",
+          "80"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Feeding Frenzy",
+    "ulti": true,
+    "description": "Increases the damages of the hero and gives a big lifesteal during 15 seconds.",
+    "manacost": [
+      "90",
+      "110",
+      "130"
+    ],
+    "cooldown": [
+      "80",
+      "70",
+      "60"
+    ],
+    "id": 90
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Attack Rate Bonus",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Damages Bonus",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Ferocity",
+    "description": "Increases the target allied or yourself damages and attack rate during 12 seconds.",
+    "manacost": [
+      "110",
+      "120",
+      "130",
+      "140"
+    ],
+    "cooldown": "25",
+    "id": 91
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Move Speed Bonus",
+        "value": [
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Attack Speed Bonus",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Fervor",
+    "description": "When the hero casts a spell it get extra move and attack speed for 6 seconds.",
+    "id": 92
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "650",
+          "700",
+          "750"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "250",
+          "400",
+          "550"
+        ]
+      },
+      {
+        "name": "Damages Delay",
+        "value": "0.25",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Finger of Death",
+    "description": "A lightning bolt of energy deals a massive amount of damages to the targeted unit.",
+    "manacost": [
+      "200",
+      "240",
+      "280"
+    ],
+    "cooldown": [
+      "120",
+      "110",
+      "100"
+    ],
+    "id": 93
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "ground",
+      "air",
+      "enemies"
+    ],
+    "params": [
+      {
+        "name": "Tree Attack Damages",
+        "value": [
+          "40",
+          "50",
+          "60"
+        ],
+        "temp": ""
+      },
+      {
+        "name": "Tree Attack Time",
+        "value": [
+          "1",
+          "0.9",
+          "0.8"
+        ],
+        "temp": "$$ second"
+      },
+      {
+        "name": "Area",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bolts Speed",
+        "value": "800",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Forest Spirits",
+    "ulti": true,
+    "description": "The caster enchant some trees around him to have some help to beat enemies. During 7 seconds every period of time the trees will attack a random enemy.",
+    "manacost": [
+      "120",
+      "160",
+      "200"
+    ],
+    "cooldown": [
+      "60",
+      "55",
+      "50"
+    ],
+    "id": 94
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "250",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Move Speed Bonus",
+        "value": [
+          "5",
+          "10",
+          "15",
+          "20"
+        ],
+        "temp": "$$% of the target move speed"
+      }
+    ],
+    "name": "Fracture",
+    "description": "Destroy an allied unit to get a percentage of it's current movespeed last 5 seconds.",
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "cooldown": [
+      "55",
+      "50",
+      "45",
+      "40"
+    ],
+    "id": 95
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Armor Bonus",
+        "value": [
+          "3",
+          "6",
+          "9",
+          "12"
+        ]
+      },
+      {
+        "name": "Armor Duration",
+        "value": "30",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Attack Speed Slow",
+        "value": "30",
+        "temp": "$$%"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": "30",
+        "temp": "$$%"
+      }
+    ],
+    "name": "Frost Armor",
+    "description": "The caster places a shield of ice that increases the target armor and slow the movement of attacking unit during 3 seconds.",
+    "manacost": [
+      "70",
+      "75",
+      "80",
+      "85"
+    ],
+    "cooldown": "5",
+    "id": 96
+  },
+  {
+    "type": "Autocast",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": [
+          "11",
+          "22",
+          "33",
+          "44"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Hero Duration",
+        "value": "1.5",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Creep Duration",
+        "value": "5",
+        "temp": "$$ seconds"
+      }
+    ],
+    "description": "Adds a cold effect to each attack, causing bonus damage and slowing a target enemy unit's attacks and movement.",
+    "name": "Frost Arrows",
+    "manacost": "12",
+    "danger": "Orb effect does not stack.",
+    "id": 97
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "75",
+          "150",
+          "225",
+          "300"
+        ]
+      },
+      {
+        "name": "Slow Duration",
+        "value": "3",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": "50",
+        "temp": "$$%"
+      },
+      {
+        "name": "Attack Speed Slow",
+        "value": "25",
+        "temp": "$$%"
+      }
+    ],
+    "name": "Frost Nova",
+    "description": "Blasts enemy units around a target enemy unit with a wave of damaging frost that slows movement and attack rate.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": [
+      "8",
+      "7",
+      "6",
+      "5"
+    ],
+    "id": 98
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Nbr Slashes",
+        "value": [
+          "4",
+          "6",
+          "8"
+        ]
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "100",
+          "120",
+          "140"
+        ],
+        "temp": "$$ damages per slash"
+      },
+      {
+        "name": "Area Bounce",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Slash Speed",
+        "value": "1100",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Slash Area",
+        "value": "62.5",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Slash Distance",
+        "value": "1200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Periode Slashes",
+        "value": "0.3",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Furious Slashes",
+    "ulti": true,
+    "description": "The caster slashes random enemies in an area. Each time a wave is released dealing damages to enemies in a line.",
+    "manacost": [
+      "150",
+      "225",
+      "300"
+    ],
+    "cooldown": [
+      "120",
+      "110",
+      "100"
+    ],
+    "id": 99
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Fade Time",
+        "value": "0.6",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Backstab Damages",
+        "value": [
+          "30",
+          "50",
+          "70",
+          "90"
+        ]
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Ghost Hunt",
+    "description": "Allows the caster to become invisible for a set amount of time. When the caster attacks a unit to break invisibility, he will deal bonus damage.",
+    "manacost": [
+      "75",
+      "80",
+      "85",
+      "90"
+    ],
+    "cooldown": "15",
+    "id": 100
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "ground",
+      "air",
+      "enemies"
+    ],
+    "params": [
+      {
+        "name": "Duration",
+        "value": "40",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Cast Range",
+        "value": "Globals"
+      },
+      {
+        "name": "Shade Life",
+        "value": [
+          "100",
+          "125",
+          "150",
+          "175"
+        ],
+        "temp": "$$hp"
+      },
+      {
+        "name": "Shade Move Speed",
+        "value": [
+          "220",
+          "250",
+          "280",
+          "310"
+        ],
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Ghost Recon",
+    "description": "The caster send an invisible ghost to the target location. The ghost detects invisible units and has vision.",
+    "manacost": [
+      "80",
+      "90",
+      "100",
+      "110"
+    ],
+    "cooldown": [
+      "13",
+      "11",
+      "9",
+      "7"
+    ],
+    "id": 101
   }
 ]

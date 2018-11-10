@@ -21,10 +21,10 @@ Vue.component('formspell', {
 				<label for="name">Name</label>
 				<input id="name" type="text" v-model="mySpell.name">
 			</div>
-				<div>
-					<label for="ulti">Ulti:</label>
-					<input type="checkbox" id="ulti" v-model="mySpell.ulti">
-				</div>
+			<div>
+				<label for="ulti">Ulti:</label>
+				<input type="checkbox" id="ulti" v-model="mySpell.ulti">
+			</div>
 			<div>
 				<label for="type">Type</label>
 				<select id="type" v-model="mySpell.type">
@@ -89,6 +89,10 @@ Vue.component('formspell', {
 					<button type="button" @click="addParam">+</button>
 				</div>
 			</div>
+			<div>
+				<label>Danger</label>
+				<input type="text" v-model="mySpell.danger">
+			</div>
 			<button type="button" @click="submitForm()">Valider</button>
 		</div>
 	`,
@@ -140,6 +144,7 @@ Vue.component('learning', {
 			<div v-if="spell.manacost">{{ renderMana(spell) }}</div>
 			<div v-if="spell.cooldown">{{ renderCooldown(spell) }}|n</div>
 			<div v-for="param in spell.params">{{ renderParam(param) }}</div>
+			<div v-if="spell.danger">|n|cffFF0000{{ spell.danger }}|r</div>
 		</div>`,
 	methods: {
 		renderParam: function(param) {
@@ -190,6 +195,7 @@ Vue.component('basic', {
 			<div>{{ spell.description }}|n</div>
 			<div v-for="param, key in spell.params">{{ renderParam(param, lvl) }}</div>
 			<div v-if="spell.cooldown">|n{{ renderCooldown(spell, lvl) }}</div>
+			<div v-if="spell.danger">|n|cffFF0000{{ spell.danger }}|r</div>
 		</div>`,
 	methods: {
 		renderParam: function(param, lvl) {
@@ -222,7 +228,7 @@ const myVue = new Vue({
 	el: "#app",
 	data: {
 		selectedId: 1,
-		nbrTotalSpells: 251,
+		nbrTotalSpells: 252,
 		spells: [],
 		typesSpell: [],
 		defaultSpell: {},

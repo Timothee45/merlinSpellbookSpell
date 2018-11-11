@@ -83,7 +83,7 @@ Vue.component('formspell', {
 					<button type="button" @click="removeParam(index)">X</button>
 				</div>
 				<div>
-					<input type="text" v-model="newParam.name">
+					<input type="text" id="paramName" v-model="newParam.name">
 					<input type="text" v-model="newParam.value">
 					<input type="text" v-model="newParam.temp">
 					<button type="button" @click="addParam">+</button>
@@ -114,6 +114,8 @@ Vue.component('formspell', {
 				this.mySpell.params.push(this.newParam);
 	
 				this.resetNewParam();
+
+				document.getElementById("paramName").focus();
 			}
 		},
 		removeParam: function(index) {

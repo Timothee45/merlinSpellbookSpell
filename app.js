@@ -67,12 +67,12 @@ Vue.component('formspell', {
 				</div>
 			</div>
 			<div>
-				<label for="manacost">Manacost</label>
-				<input id="manacost" type="text" v-model="mySpell.manacost">
-			</div>
-			<div>
 				<label for="cooldown">Cooldown</label>
 				<input id="cooldown" type="text" v-model="mySpell.cooldown">
+			</div>
+			<div>
+				<label for="manacost">Manacost</label>
+				<input id="manacost" type="text" v-model="mySpell.manacost">
 			</div>
 			<div>
 				<label>Params</label>
@@ -230,8 +230,9 @@ const myVue = new Vue({
 	el: "#app",
 	data: {
 		selectedId: 1,
-		nbrTotalSpells: 252,
+		nbrTotalSpells: 253,
 		spells: [],
+		nbrNewSpells: 0,
 		typesSpell: [],
 		defaultSpell: {},
 		display: {
@@ -312,6 +313,8 @@ const myVue = new Vue({
 				newSpell.id = this.getNewId();
 
 				this.spells.push(newSpell);
+
+				this.nbrNewSpells++;
 			}
 		},
 		getNewId: function() {

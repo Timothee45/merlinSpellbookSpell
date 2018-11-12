@@ -5437,6 +5437,11 @@ const mySpellsLibrary = [
         "name": "Infernal Move Speed",
         "value": "320",
         "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Infernal Attack Rate",
+        "value": "1.5",
+        "temp": "$$ seconds"
       }
     ],
     "name": "Inferno",
@@ -7348,6 +7353,16 @@ const mySpellsLibrary = [
           "375"
         ],
         "temp": "$$ hp"
+      },
+      {
+        "name": "Ward Attack Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Ward Attack Rate",
+        "value": "1.5",
+        "temp": "$$ seconds"
       }
     ],
     "name": "Plant Serpent Ward",
@@ -7365,5 +7380,1058 @@ const mySpellsLibrary = [
       "5"
     ],
     "id": 177
+  },
+  {
+    "type": "Autocast",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "organics"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          "12",
+          "16",
+          "20",
+          "24"
+        ],
+        "temp": "$$ damages per second"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Attack Speed Slow",
+        "value": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration Heroes",
+        "value": "2.5",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Duration Creeps",
+        "value": "5",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Poison Attack",
+    "description": "Add poison damages to the caster attack, dealing damages over the time and slowing the target.",
+    "manacost": "20",
+    "danger": "Orb effect does not stacks.",
+    "id": 178
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "organics"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": "6",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Flask Speed",
+        "value": "900",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Area Explosion",
+        "value": "300",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "35",
+          "40",
+          "45",
+          "50"
+        ],
+        "temp": "$$ damages per second"
+      }
+    ],
+    "name": "Poisonous Flask",
+    "description": "The caster throw a flask of poisonous liquid to a target enemy. When it reaches the target, it explodes adding a buff to the primary target and the units around, slowing their move speed and damaging them over the time.",
+    "manacost": [
+      "85",
+      "90",
+      "95",
+      "100"
+    ],
+    "cooldown": [
+      "14",
+      "13",
+      "12",
+      "11"
+    ],
+    "id": 179
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          "80",
+          "140",
+          "200",
+          "260"
+        ]
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": [
+          "25",
+          "35",
+          "45",
+          "55"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Cast Range",
+        "value": "950",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Speed",
+        "value": "1100",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Wave Area",
+        "value": "125",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Distance",
+        "value": "1100",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Poisonous Gale",
+    "description": "The caster throw a wave in a direction that deals damages to enemies in a line slowing them during 5 seconds.",
+    "manacost": [
+      "110",
+      "115",
+      "120",
+      "125"
+    ],
+    "cooldown": [
+      "14",
+      "12",
+      "10",
+      "8"
+    ],
+    "id": 180
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Detection Area",
+        "value": "350",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Move Speed Bonus",
+        "value": [
+          "20",
+          "30",
+          "40"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Life Regeneration",
+        "value": [
+          "3",
+          "5",
+          "7"
+        ],
+        "temp": "$$% of max life per second"
+      },
+      {
+        "name": "Interval Detection",
+        "value": "0.2",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Predator Hunt",
+    "ulti": true,
+    "description": "When the caster has no enemies around he get a regeneration and a move speed bonus. Building and creeps are counting like enemies that can interrupt the spell.",
+    "id": 181
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Bonus Life",
+        "value": [
+          "100",
+          "200",
+          "300"
+        ],
+        "temp": "$$ hp"
+      },
+      {
+        "name": "Duration",
+        "value": "12",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Fury Swipes Proc Chance",
+        "value": "30",
+        "temp": "$$%"
+      },
+      {
+        "name": "Fury Swipes Damages Coeff",
+        "value": "2",
+        "temp": "$$x normal damages"
+      }
+    ],
+    "name": "Primal Instinct",
+    "ulti": true,
+    "description": "Transforms the hero into a powerful beast that moves with constant maximum move speed and has more hit points. The beast has a melee attack with 1.5 default attack rate and a Fury Swipes ability.",
+    "manacost": [
+      "110",
+      "130",
+      "150"
+    ],
+    "cooldown": [
+      "110",
+      "90",
+      "70"
+    ],
+    "id": 182
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Percentage Damages",
+        "value": [
+          "20",
+          "40",
+          "60",
+          "80"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Punishing Blow",
+    "description": "When the caster attacks he has 20% chances to deals to enemies around a percentage of his attack damages.",
+    "id": 183
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ],
+        "temp": "$$ damages per second"
+      },
+      {
+        "name": "Heal",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ],
+        "temp": "$$ hp per second"
+      }
+    ],
+    "name": "Purifying Flames",
+    "description": "The caster places a buff on the targeted unit that heals him if it is an allied or damages him if it is an enemy, during 8 seconds.",
+    "cooldown": "10",
+    "manacost": [
+      "110",
+      "120",
+      "130",
+      "140"
+    ],
+    "id": 184
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Bonus Gold",
+        "value": [
+          "8",
+          "12",
+          "16",
+          "20"
+        ]
+      }
+    ],
+    "name": "Gold Fever",
+    "description": "When the hero kills a unit it get a bonus of gold. If it's a hero the bonus is multiplied by 3 and if it's a building by 2.",
+    "id": 185
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1000",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Speed",
+        "value": "1200",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Wave Distance",
+        "value": "900",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "125",
+        "temp": "$$ ranges per waves"
+      }
+    ],
+    "name": "Raging Crows",
+    "description": "The caster throw 3 waves in a target directions that deals damages to enemies in a line.",
+    "manacost": [
+      "95",
+      "105",
+      "115",
+      "125"
+    ],
+    "cooldown": "9",
+    "id": 186
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area Heal",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Periode Heal",
+        "value": "1",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Bolt Speed",
+        "value": "650",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "30",
+          "40",
+          "50",
+          "60"
+        ],
+        "temp": "$$ damages/s"
+      },
+      {
+        "name": "Heal",
+        "value": [
+          "40",
+          "50",
+          "60",
+          "70"
+        ],
+        "temp": "$$ hp per bolt"
+      }
+    ],
+    "name": "Rainbow Leech",
+    "description": "Places a buff on the target enemy that slows his move speed, deals damages and heals allies unit around over the time. Last 6 seconds.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": [
+      "15",
+      "14",
+      "13",
+      "12"
+    ],
+    "id": 187
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "Global"
+      },
+      {
+        "name": "Delay",
+        "value": [
+          "6",
+          "5",
+          "4",
+          "3"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Recall",
+    "description": "The target moves to the caster location after a short duration.",
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "cooldown": [
+      "50",
+      "45",
+      "40",
+      "35"
+    ],
+    "id": 188
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "950",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Base Damages",
+        "value": [
+          "25",
+          "50",
+          "75",
+          "100"
+        ]
+      },
+      {
+        "name": "Bonus Damages",
+        "value": [
+          "1",
+          "1.3",
+          "1.6",
+          "1.9"
+        ],
+        "temp": "$$x the caster's Intelligence"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "1400",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Red Lightning Shot",
+    "description": "The caster throw a bolt to the target enemy that deals damages to a target in function of the caster's intelligence.",
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "cooldown": "6",
+    "id": 189
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Refleted Damages",
+        "value": [
+          "7",
+          "10",
+          "13",
+          "16"
+        ],
+        "temp": "$$% of the damages taken"
+      }
+    ],
+    "name": "Reflect",
+    "description": "When this hero is damaged it reflect a part of the damages taken on enemies around. The targets within 250 Aoe will takes 30% extra damages.",
+    "id": 190
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Regeneration",
+        "value": [
+          "16",
+          "22",
+          "28",
+          "34"
+        ],
+        "temp": "$$ hp/s"
+      }
+    ],
+    "name": "Regeneration",
+    "description": "The caster places a buff on the targeted allied that regenerates his life during 10 seconds.",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "cooldown": "12",
+    "id": 191
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [],
+    "name": "Reincarnation",
+    "ulti": true,
+    "description": "When killed, the hero will come back to life after 7 seconds. ",
+    "manacost": "140",
+    "cooldown": [
+      "240",
+      "180",
+      "120"
+    ],
+    "id": 192
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Bonus Strength",
+        "value": [
+          "13",
+          "26",
+          "39"
+        ]
+      }
+    ],
+    "name": "Reinforcement",
+    "ulti": true,
+    "description": "Gives a permanent bonus to Strength. ",
+    "id": 193
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bonus Magic Resistance",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Heal",
+        "value": [
+          "5",
+          "7",
+          "9",
+          "11"
+        ],
+        "temp": "$$ hp/s"
+      }
+    ],
+    "name": "Repel",
+    "description": "The caster places a buff that increases the target magic resistance and regeneration during 8 seconds.",
+    "cooldown": [
+      "18",
+      "17",
+      "16",
+      "15"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 194
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          "0.6",
+          "0.75",
+          "0.9"
+        ],
+        "temp": "$$x life lost"
+      }
+    ],
+    "name": "Rest in Peace",
+    "ulti": true,
+    "description": "The caster blocks the target enemy during 1.5 seconds, after that delay the target is damaged in function of the life lost.",
+    "manacost": [
+      "140",
+      "180",
+      "220"
+    ],
+    "cooldown": "110",
+    "id": 195
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Casting Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Mana Restored",
+        "value": [
+          "75",
+          "150",
+          "225",
+          "300"
+        ],
+        "temp": "$$ mana points"
+      }
+    ],
+    "name": "Restore Chakra",
+    "description": "Restore the man of a target allied or yourself.",
+    "manacost": [
+      "70",
+      "80",
+      "90",
+      "100"
+    ],
+    "cooldown": [
+      "10",
+      "9",
+      "8",
+      "7"
+    ],
+    "id": 196
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "ground",
+      "air",
+      "enemies",
+      "allies",
+      "non heroes"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "900",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Nbr Corpses",
+        "value": [
+          "4",
+          "6",
+          "8"
+        ]
+      },
+      {
+        "name": "Bonus Life",
+        "value": [
+          "100",
+          "200",
+          "300"
+        ],
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Resurrection",
+    "ulti": true,
+    "description": "Brings back to life the corpses of random nearby units and increases their total life.",
+    "manacost": [
+      "200",
+      "300",
+      "400"
+    ],
+    "cooldown": [
+      "110",
+      "100",
+      "90"
+    ],
+    "id": 197
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "cast Range",
+        "value": "900",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Delay",
+        "value": [
+          "7",
+          "6",
+          "5",
+          "4"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Retreat",
+    "description": "The target moves to his fountain after a short duration.",
+    "manacost": [
+      "110",
+      "120",
+      "130",
+      "140"
+    ],
+    "cooldown": [
+      "60",
+      "55",
+      "50",
+      "45"
+    ],
+    "id": 198
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "ground",
+      "air",
+      "enemies"
+    ],
+    "params": [
+      {
+        "name": "Probability",
+        "value": [
+          "5",
+          "10",
+          "15",
+          "20"
+        ],
+        "temp": "$$% chances"
+      }
+    ],
+    "name": "Return",
+    "description": "The hero has a chance to return the damage taken to the damaging unit. Can't return the buildings damages.",
+    "id": 199
+  },
+  {
+    "type": "Passive",
+    "targets": [],
+    "params": [
+      {
+        "name": "Duration",
+        "value": [
+          "8",
+          "10",
+          "12"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Attack Rate",
+        "temp": "$$ seconds",
+        "value": "1.35"
+      },
+      {
+        "name": "Attack Range",
+        "temp": "$$ ranges",
+        "value": "550"
+      }
+    ],
+    "name": "Revenge",
+    "ulti": true,
+    "description": "When the caster dies he summons a familiar that deals the same damages, has a ranged attack, has the same life and 20% movespeed bonus to defeat his enemies during a short duration.",
+    "id": 200
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1000",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "80",
+          "120",
+          "160",
+          "200"
+        ],
+        "temp": ""
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          "1.",
+          "1.4",
+          "1.6",
+          "1.8"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Wave Speed",
+        "value": "1600",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Wave Distance",
+        "value": "1300",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "125",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Rift",
+    "description": "The caster throw a wave in a direction that deals damages to enemies it encounters stunning them during a short duration.",
+    "manacost": [
+      "100",
+      "105",
+      "110",
+      "115"
+    ],
+    "cooldown": "10",
+    "id": 201
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Armor Bonus",
+        "value": [
+          "2.5",
+          "4",
+          "5.5",
+          "7"
+        ]
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          "0.6",
+          "1",
+          "1.4",
+          "1.8"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Rugged Tenacity",
+    "description": "The hero get an extra armor bonus. And has 25% chance to stunn a unit that attack below 450 ranges during a short duration.",
+    "id": 202
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "Global"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "6",
+          "8",
+          "10"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Bonus Move Speed",
+        "value": "200",
+        "temp": "$$%"
+      }
+    ],
+    "name": "Run For Victory",
+    "ulti": true,
+    "description": "Increases the caster's and his allies move speed during a short duration.",
+    "manacost": [
+      "100",
+      "110",
+      "120"
+    ],
+    "cooldown": [
+      "80",
+      "70",
+      "60"
+    ],
+    "id": 203
   }
 ]

@@ -190,6 +190,7 @@ Vue.component('basic', {
 	props: ["spell", "lvl"],
 	template: `
 		<div>
+			<br>
 			<div>
 				<strong>{{ spell.name + " - [Lvl " + lvl + "]" }}</strong>
 			</div>
@@ -229,8 +230,8 @@ Vue.component('basic', {
 const myVue = new Vue({
 	el: "#app",
 	data: {
-		selectedId: 1,
-		nbrTotalSpells: 253,
+		selectedId: 3,
+		nbrTotalSpells: 254,
 		spells: [],
 		nbrNewSpells: 0,
 		typesSpell: [],
@@ -263,6 +264,8 @@ const myVue = new Vue({
 	    this.spells = mySpellsLibrary;
 
 	    this.defaultSpell = defaultSpell;
+
+	    this.orderSpells();
 	},
 	methods: {
 		filterById: function() {
@@ -315,6 +318,10 @@ const myVue = new Vue({
 				this.spells.push(newSpell);
 
 				this.nbrNewSpells++;
+
+				this.orderSpells();
+
+				this.selectedId = newSpell.id;
 			}
 		},
 		getNewId: function() {
@@ -327,6 +334,16 @@ const myVue = new Vue({
 			});
 
 			return newId + 1;
+		},
+		orderSpells: function() {
+			this.spells.sort(this.compare);
+		},
+		compare: function(a,b) {
+		  if (a.name < b.name)
+		    return -1;
+		  if (a.name > b.name)
+		    return 1;
+		  return 0;
 		},
 	},
 });

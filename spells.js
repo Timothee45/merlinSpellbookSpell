@@ -1,98 +1,5 @@
 const mySpellsLibrary = [
   {
-    "id": 1,
-    "type": "Target unit",
-    "ulti": false,
-    "targets": [
-      "enemies",
-      "ground",
-      "air"
-    ],
-    "name": "Thunderbolt",
-    "description": "The caster throw a bolt that will deals damages to a target stunning it for a short duration.",
-    "manacost": [
-      100,
-      105,
-      110,
-      115
-    ],
-    "cooldown": 8,
-    "params": [
-      {
-        "name": "Damages",
-        "value": [
-          90,
-          140,
-          190,
-          240
-        ]
-      },
-      {
-        "name": "Duration",
-        "value": [
-          1,
-          1.4,
-          1.8,
-          2.2
-        ],
-        "temp": "$$ seconds stunn."
-      },
-      {
-        "name": "Cast Range",
-        "value": 600,
-        "temp": "$$ ranges"
-      },
-      {
-        "name": "Missile Speed ",
-        "value": 1100,
-        "temp": "$$ ranges/s"
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "type": "Instant",
-    "ulti": false,
-    "targets": [
-      "enemies",
-      "ground"
-    ],
-    "name": "War Stomp",
-    "manacost": [
-      90,
-      100,
-      110,
-      120
-    ],
-    "cooldown": 8,
-    "description": "Slams the ground, stunning and damaging nearby enemy land units.",
-    "params": [
-      {
-        "name": "Damages",
-        "value": [
-          80,
-          130,
-          180,
-          230
-        ]
-      },
-      {
-        "name": "Stunn Duration",
-        "value": [
-          1.7,
-          2,
-          2.3,
-          2.6
-        ]
-      },
-      {
-        "name": "Area",
-        "value": 350,
-        "temp": "$$ ranges"
-      }
-    ]
-  },
-  {
     "id": 3,
     "name": "Absolution",
     "type": "Target unit",
@@ -1424,7 +1331,8 @@ const mySpellsLibrary = [
       "55",
       "65"
     ],
-    "id": 34
+    "id": 34,
+    "danger": "Orb effect does not stack."
   },
   {
     "type": "Target point",
@@ -2518,14 +2426,15 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Demolisher Missile",
-    "description": "The caster burns the target on attacks dealing damages over the time during 8 seconds. The buff stack indefinitly and are independant. |n|cffff0000Orb effect does not stack.|r",
+    "description": "The caster burns the target on attacks dealing damages over the time during 8 seconds. The buff stack indefinitly and are independant.",
     "manacost": [
       "40",
       "50",
       "60",
       "70"
     ],
-    "id": 59
+    "id": 59,
+    "danger": "Orb effect does not stack."
   },
   {
     "type": "Target unit",
@@ -2659,42 +2568,6 @@ const mySpellsLibrary = [
     "name": "Devastating Hit",
     "description": "Gives a chance to deals twice the normal damage on an attack.",
     "id": 63
-  },
-  {
-    "type": "Instant",
-    "targets": [
-      "enemies",
-      "air",
-      "ground"
-    ],
-    "params": [
-      {
-        "name": "Manacost",
-        "value": [
-          "200",
-          "280",
-          "360"
-        ],
-        "temp": "$$ mana points per attack"
-      },
-      {
-        "name": "Damages",
-        "value": [
-          "200",
-          "300",
-          "400"
-        ]
-      },
-      {
-        "name": "Missile Speed",
-        "value": "3500",
-        "temp": "$$ ranges/s"
-      }
-    ],
-    "name": "Laser Beam",
-    "ulti": true,
-    "description": "When activated deals a massive amount of damages each attacks to to attacked unit.",
-    "id": 64
   },
   {
     "type": "Target unit",
@@ -4353,6 +4226,26 @@ const mySpellsLibrary = [
   {
     "type": "Passive",
     "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Bonus Gold",
+        "value": [
+          "8",
+          "12",
+          "16",
+          "20"
+        ]
+      }
+    ],
+    "name": "Gold Fever",
+    "description": "When the hero kills a unit it get a bonus of gold. If it's a hero the bonus is multiplied by 3 and if it's a building by 2.",
+    "id": 185
+  },
+  {
+    "type": "Passive",
+    "targets": [
       "enemies",
       "ground",
       "air"
@@ -5328,6 +5221,35 @@ const mySpellsLibrary = [
     "id": 126
   },
   {
+    "type": "Autocast",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          "24",
+          "28",
+          "32"
+        ],
+        "temp": "$$% of the distance"
+      }
+    ],
+    "name": "Impetus",
+    "ulti": true,
+    "description": "The caster add some damages to his attack equal to a percentage of the distance between the caster and his target.",
+    "manacost": [
+      "40",
+      "55",
+      "70"
+    ],
+    "danger": "Orb effect does not stack.",
+    "id": 204
+  },
+  {
     "type": "Target unit",
     "targets": [
       "enemies",
@@ -5795,6 +5717,42 @@ const mySpellsLibrary = [
     "name": "Lacerate",
     "description": "Each times the hero attacks an organic unit it removes 1 armor during a short duration.",
     "id": 136
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "air",
+      "ground"
+    ],
+    "params": [
+      {
+        "name": "Manacost",
+        "value": [
+          "200",
+          "280",
+          "360"
+        ],
+        "temp": "$$ mana points per attack"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "200",
+          "300",
+          "400"
+        ]
+      },
+      {
+        "name": "Missile Speed",
+        "value": "3500",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Laser Beam",
+    "ulti": true,
+    "description": "When activated deals a massive amount of damages each attacks to to attacked unit.",
+    "id": 64
   },
   {
     "type": "Target unit",
@@ -7724,26 +7682,6 @@ const mySpellsLibrary = [
     "id": 184
   },
   {
-    "type": "Passive",
-    "targets": [
-      "self"
-    ],
-    "params": [
-      {
-        "name": "Bonus Gold",
-        "value": [
-          "8",
-          "12",
-          "16",
-          "20"
-        ]
-      }
-    ],
-    "name": "Gold Fever",
-    "description": "When the hero kills a unit it get a bonus of gold. If it's a hero the bonus is multiplied by 3 and if it's a building by 2.",
-    "id": 185
-  },
-  {
     "type": "Target point",
     "targets": [
       "enemies",
@@ -8433,5 +8371,98 @@ const mySpellsLibrary = [
       "60"
     ],
     "id": 203
+  },
+  {
+    "id": 1,
+    "type": "Target unit",
+    "ulti": false,
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "name": "Thunderbolt",
+    "description": "The caster throw a bolt that will deals damages to a target stunning it for a short duration.",
+    "manacost": [
+      100,
+      105,
+      110,
+      115
+    ],
+    "cooldown": 8,
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          90,
+          140,
+          190,
+          240
+        ]
+      },
+      {
+        "name": "Duration",
+        "value": [
+          1,
+          1.4,
+          1.8,
+          2.2
+        ],
+        "temp": "$$ seconds stunn."
+      },
+      {
+        "name": "Cast Range",
+        "value": 600,
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Missile Speed ",
+        "value": 1100,
+        "temp": "$$ ranges/s"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "Instant",
+    "ulti": false,
+    "targets": [
+      "enemies",
+      "ground"
+    ],
+    "name": "War Stomp",
+    "manacost": [
+      90,
+      100,
+      110,
+      120
+    ],
+    "cooldown": 8,
+    "description": "Slams the ground, stunning and damaging nearby enemy land units.",
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          80,
+          130,
+          180,
+          230
+        ]
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          1.7,
+          2,
+          2.3,
+          2.6
+        ]
+      },
+      {
+        "name": "Area",
+        "value": 350,
+        "temp": "$$ ranges"
+      }
+    ]
   }
 ]

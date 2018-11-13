@@ -29,14 +29,10 @@
 			</div>
 			<div v-if="display.basic.show" v-for="spell in filterById()">
 				<basic :spell="spell" :lvl="1"></basic>
-				<br>
 				<basic :spell="spell" :lvl="2"></basic>
-				<br>
 				<basic :spell="spell" :lvl="3"></basic>
-				<br>
 				<div v-if="!spell.ulti">
 					<basic :spell="spell" :lvl="4"></basic>
-					<br>
 				</div>
 			</div>
 			<div v-if="display.edit.show" v-for="spell in filterById()">

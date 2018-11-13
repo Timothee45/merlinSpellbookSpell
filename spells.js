@@ -5236,6 +5236,11 @@ const mySpellsLibrary = [
           "32"
         ],
         "temp": "$$% of the distance"
+      },
+      {
+        "name": "Cast Range",
+        "value": "550",
+        "temp": "$$ ranges"
       }
     ],
     "name": "Impetus",
@@ -8371,6 +8376,828 @@ const mySpellsLibrary = [
       "60"
     ],
     "id": 203
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Regeneration",
+        "value": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "temp": "$$% maximum life per second"
+      },
+      {
+        "name": "Rune Move Speed",
+        "value": "220",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Rune Maximum Life",
+        "value": [
+          "100",
+          "150",
+          "200",
+          "250"
+        ],
+        "temp": "$$ hp"
+      },
+      {
+        "name": "Area Regeneration",
+        "value": "500",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Rune of Life",
+    "description": "The caster summons a rune of life that will heal the allied units around equals to a percentage of their life. Duration 12 seconds. You can sacrifice the rune to restore a big amount of life to a target.",
+    "cooldown": "25",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "id": 205
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Armor Bonus",
+        "value": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ]
+      },
+      {
+        "name": "Life Regeneration",
+        "value": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ],
+        "temp": "$$ hp/s"
+      }
+    ],
+    "name": "Runical Armor",
+    "description": "Increases your armor and life regeneration.",
+    "id": 206
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Heal",
+        "value": [
+          "100",
+          "150",
+          "200",
+          "250"
+        ],
+        "temp": "$$ hp"
+      }
+    ],
+    "name": "Sacred Fire",
+    "description": "Heals a target allied or yourself.",
+    "cooldown": [
+      "9",
+      "8.5",
+      "8",
+      "7.5"
+    ],
+    "manacost": [
+      "85",
+      "95",
+      "105",
+      "115"
+    ],
+    "id": 207
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Attack Speed Bonus",
+        "value": [
+          "15",
+          "25",
+          "35",
+          "45"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Area",
+        "value": "750",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Savagery Aura",
+    "description": "Increases the attack speed of nearby allies units.",
+    "id": 208
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Max Armor Bonus",
+        "value": [
+          "7",
+          "10",
+          "13",
+          "16"
+        ]
+      },
+      {
+        "name": "Period Update",
+        "value": "0.25",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Seal of Protection",
+    "description": "The hero get an armor bous in function of the missing life.",
+    "id": 209
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "750",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Armor Bonus",
+        "value": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      }
+    ],
+    "name": "Seal of Wrath",
+    "description": "Increases the allied armor around.",
+    "id": 210
+  },
+  {
+    "type": "Autocast",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "buildings"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages Bonus",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ]
+      }
+    ],
+    "name": "Searing Arrows",
+    "description": "Increases the damage of the hero's attack by adding fire.",
+    "manacost": "8",
+    "danger": "Orb effect does not stack.",
+    "id": 211
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": "15",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Period Damages",
+        "value": "3",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damages Over the Time",
+        "value": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ],
+        "temp": "$$ damages per period"
+      },
+      {
+        "name": "Initial Damages",
+        "value": [
+          "50",
+          "70",
+          "90",
+          "110"
+        ]
+      },
+      {
+        "name": "Bolt Speed",
+        "value": "1200",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": "50",
+        "temp": "$$%"
+      }
+    ],
+    "name": "Shadow Strike",
+    "description": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has it's movement speed slowed for a short duration. Every 3 seconds the target regain slowly his move speed.",
+    "cooldown": [
+      "9",
+      "8",
+      "7",
+      "6"
+    ],
+    "manacost": [
+      "75",
+      "85",
+      "95",
+      "105"
+    ],
+    "id": 212
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1300",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Starting Armor Bonus/Malus",
+        "value": [
+          "1",
+          "3",
+          "5"
+        ]
+      }
+    ],
+    "name": "Shadow Word",
+    "description": "The caster places a buff on units in an area that increases or decreases their armor. Last 15 seconds. If the unit is an enemy the spells palces a malus of armor.",
+    "cooldown": [
+      "80",
+      "70",
+      "60"
+    ],
+    "manacost": [
+      "150",
+      "200",
+      "250"
+    ],
+    "id": 213
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Base Damages",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ]
+      },
+      {
+        "name": "Maximum Damages Bonus",
+        "value": [
+          "30",
+          "40",
+          "50",
+          "60"
+        ]
+      }
+    ],
+    "name": "Sharp Blade",
+    "description": "When the caster attacks he add a random amount of physical damages to his attack. Does not works against buildings.",
+    "id": 214
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Nbr Sheeps",
+        "value": [
+          "10",
+          "15",
+          "20"
+        ]
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "50",
+          "70",
+          "90"
+        ],
+        "temp": "$$ damages per slam"
+      },
+      {
+        "name": "Period Sheep Slam",
+        "value": "1",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Area Slam",
+        "value": "200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Sheeps Speed",
+        "value": "400",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Number Max Bounces",
+        "value": "5",
+        "temp": "$$ per sheep"
+      }
+    ],
+    "name": "Sheep Chop",
+    "ulti": true,
+    "description": "The caster summons some sheeps around him that will bounces in random direction. Every 400 ranges moved they will slam the ground, dealing damages to enemies when they lands.",
+    "cooldown": [
+      "80",
+      "80",
+      "75"
+    ],
+    "manacost": [
+      "120",
+      "160",
+      "180"
+    ],
+    "id": 215
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Distance",
+        "value": "800",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Speed",
+        "value": "1050",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Wave Area",
+        "value": "125",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "75",
+          "140",
+          "205",
+          "270"
+        ]
+      }
+    ],
+    "name": "Shockwave",
+    "description": "A wave of force that ripples out from the Hero, causing damage to land units in a line.",
+    "cooldown": "8",
+    "manacost": "100",
+    "id": 216
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "800",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Silence",
+    "description": "Stops all enemies in a target area from casting spells.",
+    "cooldown": "15",
+    "manacost": [
+      "75",
+      "80",
+      "85",
+      "90"
+    ],
+    "id": 217
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Invulnerability Duration",
+        "value": "2",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Sleep",
+    "description": "The unit is turned into sleep during a short duration. During that time the unit can't attack and move. If the unit is damaged after the invulnerability the unit wake up.",
+    "cooldown": [
+      "20",
+      "18",
+      "16",
+      "14"
+    ],
+    "manacost": [
+      "120",
+      "130",
+      "140",
+      "150"
+    ],
+    "id": 218
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Slow",
+    "description": "The target is slowed during 12 seconds.",
+    "cooldown": [
+      "20",
+      "18",
+      "16",
+      "14"
+    ],
+    "manacost": [
+      "90",
+      "105",
+      "120",
+      "135"
+    ],
+    "id": 219
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Life Stolen",
+        "value": [
+          "50",
+          "100",
+          "150",
+          "200"
+        ],
+        "temp": "$$ hp"
+      }
+    ],
+    "name": "Soul Drain",
+    "description": "Steals some life to a target enemy.",
+    "cooldown": [
+      "10",
+      "9",
+      "8",
+      "7"
+    ],
+    "manacost": [
+      "95",
+      "105",
+      "115",
+      "125"
+    ],
+    "id": 220
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area Blast",
+        "value": "350",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Blast Damages",
+        "value": [
+          "100",
+          "140",
+          "180",
+          "220"
+        ],
+        "temp": ""
+      },
+      {
+        "name": "Move Speed Bonus",
+        "value": [
+          "4",
+          "8",
+          "12",
+          "16"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Soul Reaper",
+    "description": "Increases the move speed of the caster. Every 5 seconds the caser summons a blast that deals damages to enemies around him.",
+    "id": 221
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "5",
+          "10",
+          "15"
+        ],
+        "temp": "$$ damages per soul"
+      },
+      {
+        "name": "Heal",
+        "value": [
+          "5",
+          "10",
+          "15"
+        ],
+        "temp": "$$ hp per soul"
+      },
+      {
+        "name": "Area",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Soul Speed",
+        "value": "600",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Souls Projection",
+    "description": "The caster send a soul to a target unit for each units around it. if the target is an ally it will restore some life or damage if it's an enemy.",
+    "cooldown": [
+      "80",
+      "75",
+      "70"
+    ],
+    "manacost": [
+      "150",
+      "175",
+      "200"
+    ],
+    "id": 222
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Nbr Minions",
+        "value": [
+          "3",
+          "5",
+          "7",
+          "9"
+        ]
+      },
+      {
+        "name": "Life",
+        "value": "375",
+        "temp": "$$ hp"
+      },
+      {
+        "name": "Damages",
+        "value": "19 - 40"
+      },
+      {
+        "name": "Armor",
+        "value": "0"
+      },
+      {
+        "name": "Move Speed",
+        "value": "290",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Attack Range",
+        "value": "450",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Spawn Shadow Minions",
+    "description": "The caster destroy a target unit to spawn some Shadow minions that will fight for you during 35 seconds.",
+    "danger": "Does not work against Arthas.",
+    "cooldown": [
+      "22",
+      "20",
+      "18",
+      "16"
+    ],
+    "manacost": [
+      "80",
+      "90",
+      "100",
+      "110"
+    ],
+    "id": 223
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Damages Blocked",
+        "value": [
+          "12",
+          "24",
+          "36",
+          "48"
+        ]
+      },
+      {
+        "name": "Minimum Damages",
+        "value": "0"
+      }
+    ],
+    "name": "Spiked Carapace",
+    "ulti": true,
+    "description": "Reduces all damages from attacks on the hero.",
+    "id": 224
   },
   {
     "id": 1,

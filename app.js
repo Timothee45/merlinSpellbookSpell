@@ -6,6 +6,58 @@ const defaultSpell = {
 	params: [],
 };
 
+const addStruct = `
+		local $name$ $variable$ = $name$.allocate()
+
+		set $variable$.caster = U
+		set $variable$.target = U1
+		set $variable$.lvl = lvl
+		set $variable$.duration = 0
+
+		set .$staticVariable$T = .$staticVariable$T + 1
+		set .$staticVariable$[.$staticVariable$T] = $variable$
+
+		if .$staticVariable$T == 1 then
+			call TimerStart(.T, INTERVAL, true, function $name$.update)
+		endif
+`;
+
+const addStructSingle = `
+		local $name$ $variable$
+		local boolean found = false
+		local integer I = 1
+
+		loop
+			exitwhen I > .$staticVariable$T
+			set $variable$ = .$staticVariable$[I]
+
+			if $variable$.target == U1 then
+				set I = .$staticVariable$T
+				set found = true
+
+				set $variable$.duration = 0
+			endif
+
+			set I = I + 1
+		endloop
+
+		if not(found) then
+			set $variable$ = $name$.allocate()
+
+			set $variable$.caster = U
+			set $variable$.target = U1
+			set $variable$.lvl = lvl
+			set $variable$.duration = 0
+
+			set .$staticVariable$T = .$staticVariable$T + 1
+			set .$staticVariable$[.$staticVariable$T] = $variable$
+
+			if .$staticVariable$T == 1 then
+				call TimerStart(.T, INTERVAL, true, function $name$.update)
+			endif
+		endif
+`;
+
 const basicTemplate = `
 Private struct $name$
 	static $name$ array $staticVariable$
@@ -52,20 +104,7 @@ Private struct $name$
 	endmethod
 
 	static method add$name$ takes unit U, unit U1, real lvl returns nothing
-		local $name$ $variable$ = $name$.allocate()
-
-		set $variable$.caster = U
-		set $variable$.target = U1
-		set $variable$.lvl = lvl
-		set $variable$.duration = 0
-
-		set .$staticVariable$T = .$staticVariable$T + 1
-		set .$staticVariable$[.$staticVariable$T] = $variable$
-
-		if .$staticVariable$T == 1 then
-			call TimerStart(.T, INTERVAL, true, function $name$.update)
-		endif
-
+	$addStruct$
 	endmethod
 endstruct
 `;
@@ -74,19 +113,27 @@ Vue.component('struct', {
 	data() {
 		return {
 			structCode: "",
-			name: "Buff",
+			name: "",
 			variable: "",
 			staticVariable: "",
+			singleAddStruct: false,
 		}
 	},
 	template: `
 		<div>
 			<div>
-				<label for="name-struct">Nom Structure</label>
-				<input type="text" id="name-struct" v-model="name">
+				<div>
+					<label for="name-struct">Nom Structure</label>
+					<input type="text" id="name-struct" v-model="name">
+				</div>
+				<div>
+					<label for="single">Single Structure : </label>
+					<input type="checkbox" id="single" v-model="singleAddStruct">
+				</div>
+
 				<button type="button" @click="generateStruct">Valider</button>
 			</div>
-			<textarea cols="75" rows="35">{{ structCode }}</textarea>
+			<textarea cols="80" rows="35">{{ structCode }}</textarea>
 		</div>
 	`,
 	mounted() {
@@ -97,12 +144,20 @@ Vue.component('struct', {
 			this.staticVariable = this.name.substr(0, 1);
 			this.variable = this.staticVariable.toLowerCase();
 
-			this.structCode = this.renderTemplate(basicTemplate);
+			this.renderTemplate();
 		},
-		renderTemplate: function(template) {
-			return template.replace(/\$name\$/g, this.name)
-						.replace(/\$variable\$/g, this.variable)
-						.replace(/\$staticVariable\$/g, this.staticVariable);
+		renderTemplate: function() {
+			var customTemplate = basicTemplate;
+
+			if (this.singleAddStruct) {
+				customTemplate = customTemplate.replace(/\$addStruct\$/g, addStructSingle);
+			} else {
+				customTemplate = customTemplate.replace(/\$addStruct\$/g, addStruct);
+			}
+
+			this.structCode = customTemplate.replace(/\$name\$/g, this.name)
+								.replace(/\$variable\$/g, this.variable)
+								.replace(/\$staticVariable\$/g, this.staticVariable);
 		},
 	},
 });

@@ -395,7 +395,7 @@ const myVue = new Vue({
 		display: {
 			"learning": {
 				name: "LEARNING",
-				show: false,
+				show: true,
 			},
 			"basic": {
 				name: "BASIC",
@@ -415,7 +415,7 @@ const myVue = new Vue({
 			},
 			"struct": {
 				name: "STRUCT",
-				show: true
+				show: false
 			},
 		},
 		showJson: false,

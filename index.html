@@ -46,7 +46,10 @@
 					<button @click="showJson = !showJson">SHOW</button>
 				</div>
 				<pre v-show="showJson">{{ spells }}</pre>
-				<textarea cols="75" rows="40">const mySpellsLibrary = {{ spells }}</textarea>
+				<textarea cols="75" rows="35">const mySpellsLibrary = {{ spells }}</textarea>
+			</div>
+			<div v-if="display.struct.show">
+				<struct></struct>
 			</div>
 		</div>
 

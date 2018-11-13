@@ -6,6 +6,107 @@ const defaultSpell = {
 	params: [],
 };
 
+const basicTemplate = `
+Private struct $name$
+	static $name$ array $staticVariable$
+	static integer $staticVariable$T = 0
+	static timer T = null
+
+	unit caster
+	unit target
+	real lvl
+	real duration
+
+	private method onDestroy takes nothing returns nothing
+		set .caster = null
+		set .target = null
+
+	endmethod
+
+	static method update takes nothing returns nothing
+		local $name$ $variable$
+		local integer I = 0
+
+		loop
+			set I = I + 1
+			set $variable$ = .$staticVariable$[I]
+
+			set $variable$.duration = $variable$.duration + INTERVAL
+
+			if $variable$.duration >= DURATION or not(isAlive($variable$.target)) then
+				call $variable$.destroy()
+
+				set .$staticVariable$[I] = .$staticVariable$[.$staticVariable$T]
+				set .$staticVariable$T = .$staticVariable$T - 1
+				set I = I - 1
+			endif
+
+			exitwhen I >= .$staticVariable$T
+		endloop
+
+		if .$staticVariable$T <= 0 then
+			call PauseTimer(.T)
+			set .$staticVariable$T = 0
+		endif
+
+	endmethod
+
+	static method add$name$ takes unit U, unit U1, real lvl returns nothing
+		local $name$ $variable$ = $name$.allocate()
+
+		set $variable$.caster = U
+		set $variable$.target = U1
+		set $variable$.lvl = lvl
+		set $variable$.duration = 0
+
+		set .$staticVariable$T = .$staticVariable$T + 1
+		set .$staticVariable$[.$staticVariable$T] = $variable$
+
+		if .$staticVariable$T == 1 then
+			call TimerStart(.T, INTERVAL, true, function $name$.update)
+		endif
+
+	endmethod
+endstruct
+`;
+
+Vue.component('struct', {
+	data() {
+		return {
+			structCode: "",
+			name: "Buff",
+			variable: "",
+			staticVariable: "",
+		}
+	},
+	template: `
+		<div>
+			<div>
+				<label for="name-struct">Nom Structure</label>
+				<input type="text" id="name-struct" v-model="name">
+				<button type="button" @click="generateStruct">Valider</button>
+			</div>
+			<textarea cols="75" rows="35">{{ structCode }}</textarea>
+		</div>
+	`,
+	mounted() {
+		this.structCode = basicTemplate;
+	},
+	methods: {
+		generateStruct: function() {
+			this.staticVariable = this.name.substr(0, 1);
+			this.variable = this.staticVariable.toLowerCase();
+
+			this.structCode = this.renderTemplate(basicTemplate);
+		},
+		renderTemplate: function(template) {
+			return template.replace(/\$name\$/g, this.name)
+						.replace(/\$variable\$/g, this.variable)
+						.replace(/\$staticVariable\$/g, this.staticVariable);
+		},
+	},
+});
+
 Vue.component('formspell', {
 	props: ["spell"],
 	data() {
@@ -239,7 +340,7 @@ const myVue = new Vue({
 		display: {
 			"learning": {
 				name: "LEARNING",
-				show: true,
+				show: false,
 			},
 			"basic": {
 				name: "BASIC",
@@ -256,6 +357,10 @@ const myVue = new Vue({
 			"json": {
 				name: "JSON",
 				show: false
+			},
+			"struct": {
+				name: "STRUCT",
+				show: true
 			},
 		},
 		showJson: false,

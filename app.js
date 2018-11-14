@@ -526,7 +526,7 @@ Vue.component('heroes', {
 				for (var j = 0; j < keyNumber; j++) {
 					myHero[keyList[j]] = lineDetail[j];
 				}
-
+				myHero.id = j;
 				finalHeroArray.push(myHero);
 			}
 

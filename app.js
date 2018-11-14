@@ -471,7 +471,7 @@ Vue.component('heroes', {
 					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.regenLife"></td>
 					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.mana"></td>
 					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.regenMana"></td>
-					<td v-if="result" class="hero-cell">{{ renderBuy(newHero) }}</td>
+					<td v-if="result" class="hero-cell"></td>
 				</tr>
 			</tbody>
 		</table>
@@ -530,6 +530,7 @@ Vue.component('heroes', {
 				finalHeroArray.push(myHero);
 			}
 
+			this.heroes = finalHeroArray;
 			console.log(finalHeroArray);
 		}
 	},

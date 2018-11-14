@@ -36,6 +36,7 @@ const addStructSingle = `
 				set found = true
 
 				set $variable$.duration = 0
+				set $variable$.lvl = lvl
 			endif
 
 			set I = I + 1
@@ -383,6 +384,157 @@ Vue.component('basic', {
 	},
 });
 
+Vue.component('heroes', {
+	template: `
+	<div>
+		<label for="attr">Attributes</label>
+		<input type="checkbox" id="attr" v-model="attr">
+		<label for="para">Paramètres</label>
+		<input type="checkbox" id="para" v-model="params">
+		<label for="result">Resultat</label>
+		<input type="checkbox" id="result" v-model="result">
+		<table style="margin-top: 10px;">
+			<thead>
+				<tr>
+					<th>N°</th>
+					<th>Type</th>
+					<th>Name</th>
+					<th>Histoire</th>
+					<th v-if="attr">Capacité Main</th>
+					<th v-if="attr">Agilité</th>
+					<th v-if="attr">Intelligence</th>
+					<th v-if="attr">Force</th>
+					<th v-if="attr">+ Agilité</th>
+					<th v-if="attr">+ Intelligence</th>
+					<th v-if="attr">+ Force</th>
+					<th v-if="params">Vitesse</th>
+					<th v-if="params">Dégats</th>
+					<th v-if="params">Vitesse Attk</th>
+					<th v-if="params">Armure</th>
+					<th v-if="params">Vie</th>
+					<th v-if="params">Regen Vie</th>
+					<th v-if="params">Mana</th>
+					<th v-if="params">Regen Mana</th>
+					<th v-if="result">Buy Message</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="hero, index in heroes">
+					<td class="hero-cell">{{ index + 1 }}</td>
+					<td class="hero-cell"><input type="text" v-model="hero.type"></td>
+					<td class="hero-cell"><input type="text" v-model="hero.name"></td>
+					<td class="hero-cell"><input type="text" v-model="hero.story"></td>
+					<td v-if="attr" class="hero-cell">
+						<select v-model="hero.mainAttribute">
+							<option v-for="att in attributes">{{ att }}</option>
+						</select>
+					</td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.baseAgi"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.baseInt"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.baseStr"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.bonusAgi"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.bonusInt"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.bonusStr"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.moveSpeed"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.damages"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.attackRate"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.armor"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.life"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.regenLife"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.mana"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.regenMana"></td>
+					<td v-if="result" class="hero-cell">{{ renderBuy(hero) }}</td>
+				</tr>
+				<tr>
+					<td class="hero-cell">
+						<button @click="addHero">+</button>
+					</td>
+					<td class="hero-cell"><input type="text" v-model="newHero.type"></td>
+					<td class="hero-cell"><input type="text" v-model="newHero.name"></td>
+					<td class="hero-cell"><input type="text" v-model="newHero.story"></td>
+					<td v-if="attr" class="hero-cell">
+						<select v-model="newHero.mainAttribute">
+							<option v-for="att in attributes">{{ att }}</option>
+						</select>
+					</td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.baseAgi"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.baseInt"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.baseStr"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.bonusAgi"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.bonusInt"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.bonusStr"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.moveSpeed"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.damages"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.attackRate"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.armor"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.life"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.regenLife"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.mana"></td>
+					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.regenMana"></td>
+					<td v-if="result" class="hero-cell">{{ renderBuy(newHero) }}</td>
+				</tr>
+			</tbody>
+		</table>
+		<textarea type="textarea" cols="60" rows="20" v-model="importHeroes"></textarea>
+		<button @click="importDatas">+</button>
+	</div>`,
+	data() {
+		return {
+			attr: true,
+			params: true,
+			result: false,
+			heroes: [],
+			newHero: {},
+			importHeroes: "",
+			attributes: ["Agility", "Intelligence", "Strength"],
+		}
+	},
+	mounted() {
+		this.heroes = defaultHeroes;
+	},
+	methods: {
+		renderBuy: function(hero) {
+			return "Buy |cff00d619" + hero.name + "|r the |cffFF0000" + hero.type + "|r";
+		},
+		addHero: function() {
+			this.newHero.id = this.getNewId();
+			this.heroes.push(this.newHero);
+			this.newHero = {};
+		},
+		getNewId: function() {
+			var newId = 0;
+
+			this.heroes.forEach(hero => {
+				if (hero.id > newId) {
+					newId = hero.id;
+				}
+			});
+
+			return newId + 1;
+		},
+		importDatas: function() {
+			var dataLines = this.importHeroes.split("\n");
+			var keyList = dataLines[0].split("\t");
+			var keyNumber = keyList.length;
+			var linesNumber = dataLines.length;
+			var finalHeroArray = [];
+
+			for (var i = 1; i < linesNumber; i++) {
+				var lineDetail = dataLines[i].split("\t");
+				var myHero = {};
+
+				for (var j = 0; j < keyNumber; j++) {
+					myHero[keyList[j]] = lineDetail[j];
+				}
+
+				finalHeroArray.push(myHero);
+			}
+
+			console.log(finalHeroArray);
+		}
+	},
+});
+
 const myVue = new Vue({
 	el: "#app",
 	data: {
@@ -392,10 +544,11 @@ const myVue = new Vue({
 		nbrNewSpells: 0,
 		typesSpell: [],
 		defaultSpell: {},
+		heroes: [],
 		display: {
 			"learning": {
 				name: "LEARNING",
-				show: true,
+				show: false,
 			},
 			"basic": {
 				name: "BASIC",
@@ -416,6 +569,10 @@ const myVue = new Vue({
 			"struct": {
 				name: "STRUCT",
 				show: false
+			},
+			"heroes": {
+				name: "HEROES",
+				show: true
 			},
 		},
 		showJson: false,

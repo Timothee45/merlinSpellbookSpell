@@ -1,0 +1,8 @@
+body {
+	margin: 10px;
+}
+
+.hero-cell {
+	border: 1px solid black; 
+	border-collapse: collapse;
+}

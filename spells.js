@@ -9200,6 +9200,27 @@ const mySpellsLibrary = [
     "id": 224
   },
   {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Bonus Life",
+        "value": [
+          "150",
+          "300",
+          "450",
+          "600"
+        ],
+        "temp": "$$ hp"
+      }
+    ],
+    "name": "Strength of Arm",
+    "description": "Increases the hero maximum life.",
+    "id": 225
+  },
+  {
     "id": 1,
     "type": "Target unit",
     "ulti": false,

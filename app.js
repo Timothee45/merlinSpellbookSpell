@@ -60,7 +60,7 @@ const addStructSingle = `
 `;
 
 const basicTemplate = `
-Private struct $name$
+private struct $name$
 	static $name$ array $staticVariable$
 	static integer $staticVariable$T = 0
 	static timer T = null
@@ -408,6 +408,7 @@ Vue.component('heroes', {
 					<th v-if="attr">+ Intelligence</th>
 					<th v-if="attr">+ Force</th>
 					<th v-if="params">Vitesse</th>
+					<th v-if="params">Type d'attaque</th>
 					<th v-if="params">Dégats</th>
 					<th v-if="params">Vitesse Attk</th>
 					<th v-if="params">Armure</th>
@@ -436,6 +437,11 @@ Vue.component('heroes', {
 					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.bonusInt"></td>
 					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.bonusStr"></td>
 					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.moveSpeed"></td>
+					<td v-if="params" class="hero-cell">
+						<select v-model="hero.typeAttk">
+							<option v-for="typ in typesAttack">{{ typ }}</option>
+						</select>
+					</td>
 					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.damages"></td>
 					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.attackRate"></td>
 					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.armor"></td>
@@ -464,6 +470,11 @@ Vue.component('heroes', {
 					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.bonusInt"></td>
 					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.bonusStr"></td>
 					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.moveSpeed"></td>
+					<td v-if="params" class="hero-cell">
+						<select v-model="newHero.typeAttk">
+							<option v-for="typ in typesAttack">{{ typ }}</option>
+						</select>
+					</td>
 					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.damages"></td>
 					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.attackRate"></td>
 					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.armor"></td>
@@ -477,6 +488,7 @@ Vue.component('heroes', {
 		</table>
 		<textarea type="textarea" cols="60" rows="20" v-model="importHeroes"></textarea>
 		<button @click="importDatas">+</button>
+		<textarea type="textarea" cols="60" rows="20">{{ heroes }}</textarea>
 	</div>`,
 	data() {
 		return {
@@ -487,6 +499,7 @@ Vue.component('heroes', {
 			newHero: {},
 			importHeroes: "",
 			attributes: ["Agility", "Intelligence", "Strength"],
+			typesAttack: ["Melee", "Ranged"],
 		}
 	},
 	mounted() {
@@ -494,23 +507,11 @@ Vue.component('heroes', {
 	},
 	methods: {
 		renderBuy: function(hero) {
-			return "Buy |cff00d619" + hero.name + "|r the |cffFF0000" + hero.type + "|r";
+			return "Choose |cff7300e6" + hero.name + "|r the |cff00cc00" + hero.type + "|r";
 		},
 		addHero: function() {
-			this.newHero.id = this.getNewId();
 			this.heroes.push(this.newHero);
 			this.newHero = {};
-		},
-		getNewId: function() {
-			var newId = 0;
-
-			this.heroes.forEach(hero => {
-				if (hero.id > newId) {
-					newId = hero.id;
-				}
-			});
-
-			return newId + 1;
 		},
 		importDatas: function() {
 			var dataLines = this.importHeroes.split("\n");
@@ -526,11 +527,10 @@ Vue.component('heroes', {
 				for (var j = 0; j < keyNumber; j++) {
 					myHero[keyList[j]] = lineDetail[j];
 				}
-				myHero.id = j;
 				finalHeroArray.push(myHero);
 			}
 
-			this.heroes = finalHeroArray;
+			//this.heroes = finalHeroArray;
 			console.log(finalHeroArray);
 		}
 	},
@@ -540,7 +540,7 @@ const myVue = new Vue({
 	el: "#app",
 	data: {
 		selectedId: 3,
-		nbrTotalSpells: 255,
+		nbrTotalSpells: 256,
 		spells: [],
 		nbrNewSpells: 0,
 		typesSpell: [],
@@ -549,7 +549,7 @@ const myVue = new Vue({
 		display: {
 			"learning": {
 				name: "LEARNING",
-				show: false,
+				show: true,
 			},
 			"basic": {
 				name: "BASIC",
@@ -573,7 +573,7 @@ const myVue = new Vue({
 			},
 			"heroes": {
 				name: "HEROES",
-				show: true
+				show: false
 			},
 		},
 		showJson: false,

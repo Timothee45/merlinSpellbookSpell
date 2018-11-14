@@ -5903,6 +5903,37 @@ const mySpellsLibrary = [
   {
     "type": "Passive",
     "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Life Regeneration",
+        "value": [
+          "2",
+          "3.5",
+          "5",
+          "6.5"
+        ],
+        "temp": "$$ hp/s"
+      },
+      {
+        "name": "Mana Regeneration",
+        "value": [
+          "4",
+          "6.5",
+          "9",
+          "11.5"
+        ],
+        "temp": "$$ mana points/s"
+      }
+    ],
+    "name": "Life Essence",
+    "description": "When the hero kills an enemy it get an increased life and mana regeneration during 6 seconds. Multiple kills causes the buffs to stask. If the hero kill a hero he get 10 times the bonus on both life and mana regeneration.",
+    "id": 235
+  },
+  {
+    "type": "Passive",
+    "targets": [
       "enemies",
       "air",
       "ground"
@@ -9200,6 +9231,161 @@ const mySpellsLibrary = [
     "id": 224
   },
   {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": " Period Star Summon",
+        "value": "0.5",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Area",
+        "value": "750",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Fall Duration",
+        "value": "0.8",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "70",
+          "90",
+          "110"
+        ],
+        "temp": "$$ damages per star"
+      }
+    ],
+    "name": "Starfall",
+    "ulti": true,
+    "cooldown": [
+      "70",
+      "65",
+      "60"
+    ],
+    "manacost": [
+      "120",
+      "170",
+      "220"
+    ],
+    "description": "The caster summons a starfall around him during 3 seconds. Last 2 seconds more during the night.",
+    "id": 226
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Area",
+        "value": "250",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Distance",
+        "value": "1200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Speed",
+        "value": "550",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Number Max of Targets",
+        "value": [
+          "12",
+          "16",
+          "20",
+          "24"
+        ]
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "90",
+          "150",
+          "210",
+          "270"
+        ]
+      }
+    ],
+    "name": "Stasis Pillars",
+    "description": "The caster deals damages to some enemies in a line stunning them during 0.5 seconds.",
+    "cooldown": "9",
+    "manacost": [
+      "110",
+      "115",
+      "120",
+      "125"
+    ],
+    "id": 227
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "85",
+          "145",
+          "205",
+          "265"
+        ]
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": [
+          "30",
+          "35",
+          "40",
+          "45"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "1300",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Storm Bolt",
+    "description": "The caster throw a hammer to the targeted unit that will damage it and slow the target during 4 seconds.",
+    "cooldown": "9",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "id": 228
+  },
+  {
     "type": "Passive",
     "targets": [
       "self"
@@ -9219,6 +9405,280 @@ const mySpellsLibrary = [
     "name": "Strength of Arm",
     "description": "Increases the hero maximum life.",
     "id": 225
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "none"
+    ],
+    "params": [
+      {
+        "name": "Duration",
+        "value": [
+          "50",
+          "70",
+          "90",
+          "110"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Life",
+        "value": [
+          "60",
+          "80",
+          "100",
+          "120"
+        ],
+        "temp": "$$ hp"
+      },
+      {
+        "name": "Owl Move Speed",
+        "value": "290",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Owl Armor",
+        "value": "1"
+      }
+    ],
+    "name": "Summon Owl Scout",
+    "description": "Summons a flying owl that can explore the map during a short duration.",
+    "cooldown": "20",
+    "manacost": [
+      "75",
+      "90",
+      "105",
+      "120"
+    ],
+    "id": 229
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "none"
+    ],
+    "params": [
+      {
+        "name": "Summon Duration",
+        "value": "60",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Wolves Damages",
+        "value": [
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "temp": ""
+      },
+      {
+        "name": "Wolves Life",
+        "value": [
+          "220",
+          "260",
+          "300",
+          "340"
+        ],
+        "temp": "$$ hp"
+      },
+      {
+        "name": "Critical Strike Percentage",
+        "value": "30",
+        "temp": "$$% chances"
+      },
+      {
+        "name": "Critical Strike Coeff",
+        "value": "1.7",
+        "temp": "$$x damages"
+      },
+      {
+        "name": "Invisibility Fade Time",
+        "value": "1.7",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Summon Wolves",
+    "ulti": false,
+    "description": "Summons 2 wolves that fight with the hero. These wolves have increased magic resistance and will have special abilities in function of the level. Since the level 3 the wolves are invisible. Level 4 the wolves get critical strike.",
+    "manacost": "115",
+    "cooldown": "25",
+    "id": 230
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Duration",
+        "value": [
+          "40",
+          "50",
+          "60"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Movement Speed Bonus",
+        "value": [
+          "16",
+          "18",
+          "20"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Bonus Damages",
+        "value": [
+          "250",
+          "400",
+          "550"
+        ]
+      }
+    ],
+    "name": "Surprise Attack",
+    "description": "Allow the caster to become invisible, move faster and pass throught every units. The next attack will break the invisibility dealing more damages.",
+    "ulti": true,
+    "cooldown": [
+      "70",
+      "60",
+      "50"
+    ],
+    "manacost": [
+      "140",
+      "200",
+      "260"
+    ],
+    "id": 231
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1000",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Speed",
+        "value": "1500",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Area",
+        "value": "250",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "210",
+          "300",
+          "390"
+        ]
+      },
+      {
+        "name": "Distance",
+        "value": "700 + ( 80 x Intelligence )",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Taranis Fury",
+    "ulti": true,
+    "description": "The caster summons a wave of thunder that deals damages to enemies in a line.",
+    "cooldown": [
+      "80",
+      "75",
+      "70"
+    ],
+    "manacost": [
+      "140",
+      "190",
+      "240"
+    ],
+    "id": 232
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "350",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "1.5",
+          "2",
+          "2.5",
+          "3"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Bonus Armor",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ]
+      }
+    ],
+    "name": "Taunt",
+    "description": "The closest enemies are forced to attack the hero during a short duration. During that time the caster get an increased armor.",
+    "cooldown": "10",
+    "manacost": [
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "id": 233
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "750",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bonus Life",
+        "value": [
+          "100",
+          "200",
+          "300",
+          "400"
+        ],
+        "temp": "$$ hp"
+      }
+    ],
+    "name": "Taurenforce",
+    "description": "The caster increases the maximum hits points of every allied units around him.",
+    "id": 234
   },
   {
     "id": 1,

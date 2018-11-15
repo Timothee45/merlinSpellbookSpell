@@ -6,3 +6,11 @@ body {
 	border: 1px solid black; 
 	border-collapse: collapse;
 }
+
+.small-input {
+	width: 40px;
+}
+
+.line-highlighted {
+	border: 4px solid red;
+}

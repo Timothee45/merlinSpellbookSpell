@@ -393,100 +393,103 @@ Vue.component('heroes', {
 		<input type="checkbox" id="para" v-model="params">
 		<label for="result">Resultat</label>
 		<input type="checkbox" id="result" v-model="result">
-		<table style="margin-top: 10px;">
+		<table style="margin-top: 10px;" class="table-bordered table-striped">
 			<thead>
 				<tr>
 					<th>N°</th>
 					<th>Type</th>
 					<th>Name</th>
-					<th>Histoire</th>
+					<th v-if="showStories">Histoire</th>
 					<th v-if="attr">Capacité Main</th>
-					<th v-if="attr">Agilité</th>
-					<th v-if="attr">Intelligence</th>
+					<th v-if="attr">Agi</th>
+					<th v-if="attr">Inté</th>
 					<th v-if="attr">Force</th>
-					<th v-if="attr">+ Agilité</th>
-					<th v-if="attr">+ Intelligence</th>
+					<th v-if="attr">+ Agi</th>
+					<th v-if="attr">+ Inté</th>
 					<th v-if="attr">+ Force</th>
-					<th v-if="params">Vitesse</th>
-					<th v-if="params">Type d'attaque</th>
+					<th v-if="params">Speed</th>
+					<th v-if="params">Type Attk</th>
 					<th v-if="params">Dégats</th>
-					<th v-if="params">Vitesse Attk</th>
-					<th v-if="params">Armure</th>
+					<th v-if="params">Vit Attk</th>
+					<th v-if="params">Arm</th>
 					<th v-if="params">Vie</th>
-					<th v-if="params">Regen Vie</th>
+					<th v-if="params">Reg Vie</th>
 					<th v-if="params">Mana</th>
-					<th v-if="params">Regen Mana</th>
-					<th v-if="result">Buy Message</th>
+					<th v-if="params">Reg Mana</th>
+					<th v-if="result">Buy</th>
+					<th v-if="result">Pres</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="hero, index in heroes">
+				<tr v-for="hero, index in heroes" :class="{ 'line-highlighted': clicked[index] }" @click="hightlightLine(index)">
 					<td class="hero-cell">{{ index + 1 }}</td>
 					<td class="hero-cell"><input type="text" v-model="hero.type"></td>
 					<td class="hero-cell"><input type="text" v-model="hero.name"></td>
-					<td class="hero-cell"><input type="text" v-model="hero.story"></td>
+					<td v-if="showStories" class="hero-cell"><input type="text" v-model="hero.story"></td>
 					<td v-if="attr" class="hero-cell">
 						<select v-model="hero.mainAttribute">
 							<option v-for="att in attributes">{{ att }}</option>
 						</select>
 					</td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.baseAgi"></td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.baseInt"></td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.baseStr"></td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.bonusAgi"></td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.bonusInt"></td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="hero.bonusStr"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.moveSpeed"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" class="small-input" v-model="hero.baseAgi"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" class="small-input" v-model="hero.baseInt"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" class="small-input" v-model="hero.baseStr"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" class="small-input" v-model="hero.bonusAgi"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" class="small-input" v-model="hero.bonusInt"></td>
+					<td v-if="attr" class="hero-cell"><input type="text" class="small-input" v-model="hero.bonusStr"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.moveSpeed"></td>
 					<td v-if="params" class="hero-cell">
 						<select v-model="hero.typeAttk">
 							<option v-for="typ in typesAttack">{{ typ }}</option>
 						</select>
 					</td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.damages"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.attackRate"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.armor"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.life"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.regenLife"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.mana"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="hero.regenMana"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.damages"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.attackRate"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.armor"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.life"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.regenLife"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.mana"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.regenMana"></td>
 					<td v-if="result" class="hero-cell">{{ renderBuy(hero) }}</td>
+					<td v-if="result" class="hero-cell">{{ renderPresentation(hero) }}</td>
 				</tr>
 				<tr>
 					<td class="hero-cell">
 						<button @click="addHero">+</button>
 					</td>
-					<td class="hero-cell"><input type="text" v-model="newHero.type"></td>
-					<td class="hero-cell"><input type="text" v-model="newHero.name"></td>
-					<td class="hero-cell"><input type="text" v-model="newHero.story"></td>
+					<td class="hero-cell"><input type="text" v-model="newHero.type" placeholder="type..."></td>
+					<td class="hero-cell"><input type="text" v-model="newHero.name" placeholder="name..."></td>
+					<td v-if="showStories" class="hero-cell"><input type="text" v-model="newHero.story" placeholder="story..."></td>
 					<td v-if="attr" class="hero-cell">
 						<select v-model="newHero.mainAttribute">
 							<option v-for="att in attributes">{{ att }}</option>
 						</select>
 					</td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.baseAgi"></td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.baseInt"></td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.baseStr"></td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.bonusAgi"></td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.bonusInt"></td>
-					<td v-if="attr" class="hero-cell"><input type="text" v-model="newHero.bonusStr"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.moveSpeed"></td>
-					<td v-if="params" class="hero-cell">
+					<td v-if="attr" class="hero-cell small-input"><input type="text" class="small-input" v-model="newHero.baseAgi" placeholder="agi"></td>
+					<td v-if="attr" class="hero-cell small-input"><input type="text" class="small-input" v-model="newHero.baseInt" placeholder="int"></td>
+					<td v-if="attr" class="hero-cell small-input"><input type="text" class="small-input" v-model="newHero.baseStr" placeholder="str"></td>
+					<td v-if="attr" class="hero-cell small-input"><input type="text" class="small-input" v-model="newHero.bonusAgi" placeholder="+ agi"></td>
+					<td v-if="attr" class="hero-cell small-input"><input type="text" class="small-input" v-model="newHero.bonusInt" placeholder="+ int"></td>
+					<td v-if="attr" class="hero-cell small-input"><input type="text" class="small-input" v-model="newHero.bonusStr" placeholder="+ str"></td>
+					<td v-if="params" class="hero-cell small-input"><input type="text" class="small-input" v-model="newHero.moveSpeed" placeholder="ms"></td>
+					<td v-if="params" class="hero-cell small-input">
 						<select v-model="newHero.typeAttk">
 							<option v-for="typ in typesAttack">{{ typ }}</option>
 						</select>
 					</td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.damages"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.attackRate"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.armor"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.life"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.regenLife"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.mana"></td>
-					<td v-if="params" class="hero-cell"><input type="text" v-model="newHero.regenMana"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.damages" placeholder="dmg"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.attackRate"  placeholder="as"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.armor" placeholder="arm"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.life" placeholder="hp"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.regenLife" placeholder="r hp"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.mana" placeholder="mp"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.regenMana" placeholder="r mp"></td>
+					<td v-if="result" class="hero-cell"></td>
 					<td v-if="result" class="hero-cell"></td>
 				</tr>
 			</tbody>
 		</table>
-		<textarea type="textarea" cols="60" rows="20" v-model="importHeroes"></textarea>
+		<textarea type="textarea" cols="60" rows="20" v-model="importHeroes" placeholder="to import..."></textarea>
 		<button @click="importDatas">+</button>
 		<textarea type="textarea" cols="60" rows="20">{{ heroes }}</textarea>
 	</div>`,
@@ -496,7 +499,10 @@ Vue.component('heroes', {
 			params: true,
 			result: false,
 			heroes: [],
+			clicked: [],
 			newHero: {},
+			showStories: false,
+			selectedRow: null,
 			importHeroes: "",
 			attributes: ["Agility", "Intelligence", "Strength"],
 			typesAttack: ["Melee", "Ranged"],
@@ -504,10 +510,78 @@ Vue.component('heroes', {
 	},
 	mounted() {
 		this.heroes = defaultHeroes;
+
+		this.clicked = this.emptyClickTable();
 	},
 	methods: {
+		emptyClickTable: function() {
+			var newArray = [];
+			newArray.length = this.heroes.length;
+
+			return newArray.fill(false);
+		},
 		renderBuy: function(hero) {
 			return "Choose |cff7300e6" + hero.name + "|r the |cff00cc00" + hero.type + "|r";
+		},
+		hightlightLine: function(index) {
+			if (index != this.selectedRow) {
+				var newArray = this.emptyClickTable();
+				newArray[index] = true;
+
+				this.clicked = newArray;
+				this.selectedRow = index;
+			}
+		},
+		renderPresentation: function(hero) {
+			var typeColor = "e6e600";
+			var paramColor = "00ccff";
+			var descriptionColor = "b3b3b3";
+			var primaryAttributeColor = "e60000";
+			var myPresentation = "";
+
+			if (hero.story != "") {
+				myPresentation += '|cff' + descriptionColor + hero.story + '|r|n|n';
+			}
+
+			myPresentation += `|cff` + typeColor + `Type|r: ` + hero.typeAttk;
+
+			var agi = `|cff` + typeColor + `Agility|r: ` + hero.baseAgi + ` + ` + hero.bonusAgi + ` per lvl`;
+			var int = `|cff` + typeColor + `Intelligence|r: ` + hero.baseInt + ` + ` + hero.bonusInt + ` per lvl`;
+			var str = `|cff` + typeColor + `Strength|r: ` + hero.baseStr + ` + ` + hero.bonusStr + ` per lvl`;
+
+			myPresentation += `|n`;
+
+			if (hero.mainAttribute == 'Agility') {
+				myPresentation += `|cff` + primaryAttributeColor + agi + `|r`;
+			} else {
+				myPresentation += agi;
+			}
+
+			myPresentation += `|n`;
+
+			if (hero.mainAttribute == 'Intelligence') {
+				myPresentation += `|cff` + primaryAttributeColor + int + `|r`;
+			} else {
+				myPresentation += int;
+			}
+
+			myPresentation += `|n`;
+
+			if (hero.mainAttribute == 'Strength') {
+				myPresentation += `|cff` + primaryAttributeColor + str + `|r`;
+			} else {
+				myPresentation += str;
+			}
+
+			myPresentation += `
+				|n|cff` + paramColor + `Damages|r: ` + hero.damages + `
+				|n|cff` + paramColor + `Attack Rate|r: ` + hero.attackRate + ` seconds
+				|n|cff` + paramColor + `Armor|r: ` + hero.armor + `
+				|n|cff` + paramColor + `Move Speed|r: ` + hero.moveSpeed + ` ranges/s
+				|n|cff` + paramColor + `Life|r: ` + hero.life + ` - ` + hero.regenLife + ` hp/s ` + `
+				|n|cff` + paramColor + `Mana|r: ` + hero.mana + ` - ` + hero.regenMana + ` mana points/s`;
+
+			return myPresentation;
 		},
 		addHero: function() {
 			this.heroes.push(this.newHero);
@@ -553,27 +627,27 @@ const myVue = new Vue({
 			},
 			"basic": {
 				name: "BASIC",
-				show: false
+				show: false,
 			},
 			"edit": {
 				name: "EDIT",
-				show: false
+				show: false,
 			},
 			"new": {
 				name: "NEW",
-				show: false
+				show: false,
 			},
 			"json": {
 				name: "JSON",
-				show: false
+				show: false,
 			},
 			"struct": {
 				name: "STRUCT",
-				show: false
+				show: false,
 			},
 			"heroes": {
 				name: "HEROES",
-				show: false
+				show: false,
 			},
 		},
 		showJson: false,

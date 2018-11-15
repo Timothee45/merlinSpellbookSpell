@@ -399,6 +399,7 @@ Vue.component('heroes', {
 					<th>N°</th>
 					<th>Type</th>
 					<th>Name</th>
+					<th>Icone</th>
 					<th v-if="showStories">Histoire</th>
 					<th v-if="attr">Capacité Main</th>
 					<th v-if="attr">Agi</th>
@@ -407,15 +408,16 @@ Vue.component('heroes', {
 					<th v-if="attr">+ Agi</th>
 					<th v-if="attr">+ Inté</th>
 					<th v-if="attr">+ Force</th>
-					<th v-if="params">Speed</th>
-					<th v-if="params">Type Attk</th>
-					<th v-if="params">Dégats</th>
+					<th v-if="params">Ms</th>
+					<th v-if="params">t Attk</th>
+					<th v-if="params">Dmg</th>
 					<th v-if="params">Vit Attk</th>
+					<th v-if="params">A Rng</th>
 					<th v-if="params">Arm</th>
 					<th v-if="params">Vie</th>
-					<th v-if="params">Reg Vie</th>
+					<th v-if="params">r Vie</th>
 					<th v-if="params">Mana</th>
-					<th v-if="params">Reg Mana</th>
+					<th v-if="params">r Mana</th>
 					<th v-if="result">Buy</th>
 					<th v-if="result">Pres</th>
 				</tr>
@@ -425,6 +427,7 @@ Vue.component('heroes', {
 					<td class="hero-cell">{{ index + 1 }}</td>
 					<td class="hero-cell"><input type="text" v-model="hero.type"></td>
 					<td class="hero-cell"><input type="text" v-model="hero.name"></td>
+					<td class="hero-cell"><input type="text" v-model="hero.iconPath"></td>
 					<td v-if="showStories" class="hero-cell"><input type="text" v-model="hero.story"></td>
 					<td v-if="attr" class="hero-cell">
 						<select v-model="hero.mainAttribute">
@@ -445,6 +448,7 @@ Vue.component('heroes', {
 					</td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.damages"></td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.attackRate"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.attackRange"></td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.armor"></td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.life"></td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.regenLife"></td>
@@ -459,6 +463,7 @@ Vue.component('heroes', {
 					</td>
 					<td class="hero-cell"><input type="text" v-model="newHero.type" placeholder="type..."></td>
 					<td class="hero-cell"><input type="text" v-model="newHero.name" placeholder="name..."></td>
+					<td class="hero-cell"><input type="text" v-model="newHero.iconPath" placeholder="icon path..."></td>
 					<td v-if="showStories" class="hero-cell"><input type="text" v-model="newHero.story" placeholder="story..."></td>
 					<td v-if="attr" class="hero-cell">
 						<select v-model="newHero.mainAttribute">
@@ -478,7 +483,8 @@ Vue.component('heroes', {
 						</select>
 					</td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.damages" placeholder="dmg"></td>
-					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.attackRate"  placeholder="as"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.attackRate" placeholder="as"></td>
+					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.attackRange" placeholder="rng"></td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.armor" placeholder="arm"></td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.life" placeholder="hp"></td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.regenLife" placeholder="r hp"></td>
@@ -491,7 +497,7 @@ Vue.component('heroes', {
 		</table>
 		<textarea type="textarea" cols="60" rows="20" v-model="importHeroes" placeholder="to import..."></textarea>
 		<button @click="importDatas">+</button>
-		<textarea type="textarea" cols="60" rows="20">{{ heroes }}</textarea>
+		<textarea type="textarea" cols="60" rows="20">const defaultHeroes = {{ heroes }}</textarea>
 	</div>`,
 	data() {
 		return {

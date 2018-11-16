@@ -7218,6 +7218,27 @@ const mySpellsLibrary = [
   {
     "type": "Passive",
     "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Regen",
+        "value": [
+          "6",
+          "12",
+          "18",
+          "24"
+        ],
+        "temp": "$$ hp/s"
+      }
+    ],
+    "name": "Photosynthesis",
+    "description": "The caster get an increased life regenration. Only works during the day.",
+    "id": 236
+  },
+  {
+    "type": "Passive",
+    "targets": [
       "enemies",
       "ground",
       "air",
@@ -9729,6 +9750,27 @@ const mySpellsLibrary = [
         "temp": "$$ ranges/s"
       }
     ]
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Life Regeneration",
+        "value": [
+          "4",
+          "6",
+          "8",
+          "10"
+        ],
+        "temp": "$$ hp/s"
+      }
+    ],
+    "name": "Unholy Force",
+    "description": "The hero regenerates faster his life.",
+    "id": 237
   },
   {
     "id": 2,

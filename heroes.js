@@ -21,7 +21,7 @@ const defaultHeroes = [
     "bonusStr": "1.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNKeeperOfTheGrove.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Priestess of the Moon",
@@ -45,7 +45,7 @@ const defaultHeroes = [
     "bonusStr": "1.5",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNShandris.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Demon Hunter",
@@ -141,7 +141,7 @@ const defaultHeroes = [
     "bonusStr": "1.8",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroArchMage.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Mountain King",
@@ -189,7 +189,7 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroBloodElfPrince.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Blademaster",
@@ -237,7 +237,7 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroFarseer.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Tauren Chieftain",
@@ -261,7 +261,7 @@ const defaultHeroes = [
     "bonusStr": "3.2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroTaurenChieftain.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "128"
   },
   {
     "type": "Juggernault",
@@ -309,7 +309,7 @@ const defaultHeroes = [
     "bonusStr": "1.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNShadowHunter.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Death Knight",
@@ -357,7 +357,7 @@ const defaultHeroes = [
     "bonusStr": "1.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Dreadlord",
@@ -405,7 +405,7 @@ const defaultHeroes = [
     "bonusStr": "3.2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroCryptLord.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "128"
   },
   {
     "type": "Eredar",
@@ -429,7 +429,7 @@ const defaultHeroes = [
     "bonusStr": "1.8",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNArchimonde.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Alchemist",
@@ -477,7 +477,7 @@ const defaultHeroes = [
     "bonusStr": "1.7",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNNagaSeaWitch.blp",
     "attackRate": "1.6",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Tinker",
@@ -501,7 +501,7 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroTinker.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Warlock",
@@ -573,7 +573,7 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNKeeperGhostBlue.blp",
     "attackRate": "1.6",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Beastmaster",
@@ -597,7 +597,7 @@ const defaultHeroes = [
     "bonusStr": "2.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNBeastMaster.blp",
     "attackRate": "1.6",
-    "attackRange": "100"
+    "attackRange": "128"
   },
   {
     "type": "Betrayer",
@@ -669,7 +669,7 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNBansheeRanger.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Fierce Knight",
@@ -717,7 +717,7 @@ const defaultHeroes = [
     "bonusStr": "1.8",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroAvatarOfFlame.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "550"
   },
   {
     "type": "Holy Apparition",
@@ -741,7 +741,7 @@ const defaultHeroes = [
     "bonusStr": "1.6",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNGhostMage.blp",
     "attackRate": "1.6",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Maiden",
@@ -765,7 +765,7 @@ const defaultHeroes = [
     "bonusStr": "1.7",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Pandaren Brewmaster",
@@ -837,7 +837,7 @@ const defaultHeroes = [
     "bonusStr": "1.7",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Rampager",
@@ -885,7 +885,7 @@ const defaultHeroes = [
     "bonusStr": "1.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "600"
   },
   {
     "type": "Fel Lord",
@@ -909,7 +909,7 @@ const defaultHeroes = [
     "bonusStr": "3",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNFelGuardBlue.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "128"
   },
   {
     "type": "Spirit Walker",
@@ -933,7 +933,7 @@ const defaultHeroes = [
     "bonusStr": "2.6",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNSpiritWalker.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "128"
   },
   {
     "type": "Draenei Assassin",
@@ -957,7 +957,7 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNDranaiAkama.blp",
     "attackRate": "1.5",
-    "attackRange": "100"
+    "attackRange": "90"
   },
   {
     "type": "Tiggerian Slicer",

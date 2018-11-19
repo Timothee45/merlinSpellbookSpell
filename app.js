@@ -620,7 +620,7 @@ const myVue = new Vue({
 	el: "#app",
 	data: {
 		selectedId: 3,
-		nbrTotalSpells: 271,
+		nbrTotalSpells: 273,
 		spells: [],
 		nbrNewSpells: 0,
 		typesSpell: [],

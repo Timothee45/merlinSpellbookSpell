@@ -3289,6 +3289,46 @@ const mySpellsLibrary = [
     "id": 80
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Move Speed Steal",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ],
+        "temp": "$$ ranges/s on basic move speed"
+      }
+    ],
+    "name": "Energy Steal",
+    "description": "The caster steals some move speed to the target enemy. Last 5 seconds.",
+    "cooldown": [
+      "15",
+      "14",
+      "13",
+      "12"
+    ],
+    "manacost": [
+      "95",
+      "105",
+      "115",
+      "125"
+    ],
+    "id": 273
+  },
+  {
     "type": "Instant",
     "targets": [
       "enemies",
@@ -10509,6 +10549,76 @@ const mySpellsLibrary = [
     "name": "Too Strong to Die",
     "description": "The hero is more resistant to damages from enemies.",
     "id": 247
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "80",
+          "100",
+          "120"
+        ],
+        "temp": "$$ damages per second"
+      },
+      {
+        "name": "Damages Throw",
+        "value": [
+          "120",
+          "140",
+          "160"
+        ]
+      },
+      {
+        "name": "Area",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Tornado Move Speed",
+        "value": [
+          "280",
+          "320",
+          "360"
+        ],
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": "25",
+        "temp": "$$%"
+      },
+      {
+        "name": "Area Captation",
+        "value": "63",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Tornado",
+    "ulti": true,
+    "cooldown": [
+      "70",
+      "65",
+      "60"
+    ],
+    "manacost": [
+      "120",
+      "170",
+      "220"
+    ],
+    "description": "The caster summons a moving tornado that deals damages to enemies around it slowing them. If the tornado pass througth enemies it will throw them in the air dealing additional damages.",
+    "id": 274
   },
   {
     "type": "Passive",

@@ -879,7 +879,7 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Blink",
-    "description": "A short distance teleportation that allows the caster to move in and out of combat. Maximum distance 1200 ranges.",
+    "description": "A short distance teleportation that allows the caster to move in and out of combat. Maximum distance 900 ranges.",
     "manacost": "70",
     "cooldown": [
       "12",
@@ -1187,6 +1187,58 @@ const mySpellsLibrary = [
       "50"
     ],
     "id": 31
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "800",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Mana Burn",
+        "value": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "temp": "$$% of max mana"
+      }
+    ],
+    "name": "Buried Alive",
+    "description": "Burrow a firnd or an enemy during a short duration. During that duration the target is disabled and can't be attacked or target by spells. When the target is unburrowed it burns some of his maximum mana if it's an enemy.",
+    "cooldown": [
+      "20",
+      "18",
+      "16",
+      "14"
+    ],
+    "manacost": [
+      "95",
+      "100",
+      "105",
+      "110"
+    ],
+    "id": 276
   },
   {
     "type": "Instant",
@@ -2641,6 +2693,43 @@ const mySpellsLibrary = [
       "80"
     ],
     "id": 65
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "Global"
+      },
+      {
+        "name": "Fade Time",
+        "value": "0.5",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Max Ranges",
+        "value": [
+          "600",
+          "800",
+          "1000",
+          "1200"
+        ],
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Displace",
+    "description": "The caster moves to the target location after 0.5 seconds. If the target point is too far away from the caster it is recalculated.",
+    "cooldown": "10",
+    "manacost": [
+      "100",
+      "105",
+      "110",
+      "115"
+    ],
+    "id": 275
   },
   {
     "type": "Passive",

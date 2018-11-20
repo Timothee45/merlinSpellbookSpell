@@ -2470,6 +2470,67 @@ const mySpellsLibrary = [
     "id": 58
   },
   {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area Explosion",
+        "value": "175",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area First Damages",
+        "value": "350",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "65",
+          "85",
+          "105"
+        ],
+        "temp": "$$ damages per bolt"
+      },
+      {
+        "name": "Primary Damages",
+        "value": [
+          "100",
+          "140",
+          "180"
+        ]
+      },
+      {
+        "name": "Vines Speed",
+        "value": "750",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Defensive Vines",
+    "ulti": true,
+    "description": "The caster summons some vines around him that will deals damages to enemies around. Firstly the caster will deals damages to enemies around him then he will summon some vines. The vines explodes when they touches their targets.",
+    "cooldown": [
+      "85",
+      "80",
+      "75"
+    ],
+    "manacost": [
+      "150",
+      "190",
+      "230"
+    ],
+    "id": 278
+  },
+  {
     "type": "Autocast",
     "targets": [
       "enemies",
@@ -6393,6 +6454,74 @@ const mySpellsLibrary = [
       "300"
     ],
     "id": 141
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "temp": ""
+      },
+      {
+        "name": "Malus Move Speed Primary Target",
+        "value": "180",
+        "temp": "$$ ranges/s as basic move speed"
+      },
+      {
+        "name": "Malus Move Speed Other Targets",
+        "value": "120",
+        "temp": "$$ ranges/s as basic move speed"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "100",
+          "140",
+          "180",
+          "220"
+        ]
+      },
+      {
+        "name": "Area",
+        "value": "350",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Lightning Strike",
+    "description": "The caster summons a lightning bolt that strike the ground dealing damages in an area around the impact. Slowing the enemies during a short duration, enemies damaged will regain their move speed slowly.",
+    "cooldown": [
+      "14",
+      "12.5",
+      "11",
+      "9.5"
+    ],
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "id": 277
   },
   {
     "type": "Target unit",

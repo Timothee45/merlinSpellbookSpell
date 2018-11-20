@@ -1225,7 +1225,7 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Buried Alive",
-    "description": "Burrow a firnd or an enemy during a short duration. During that duration the target is disabled and can't be attacked or target by spells. When the target is unburrowed it burns some of his maximum mana if it's an enemy.",
+    "description": "Burrow a friend or an enemy during a short duration. During that duration the target is disabled and can't be attacked or targeted by spells. When the target is unburrowed it burns some of his maximum mana if it's an enemy.",
     "cooldown": [
       "20",
       "18",
@@ -2528,7 +2528,7 @@ const mySpellsLibrary = [
       "190",
       "230"
     ],
-    "id": 278
+    "id": 1
   },
   {
     "type": "Autocast",

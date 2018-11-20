@@ -397,6 +397,7 @@ Vue.component('heroes', {
 			<thead>
 				<tr>
 					<th>N°</th>
+					<th>Id</th>
 					<th>Type</th>
 					<th>Name</th>
 					<th>Icone</th>
@@ -425,6 +426,7 @@ Vue.component('heroes', {
 			<tbody>
 				<tr v-for="hero, index in heroes" :class="{ 'line-highlighted': clicked[index] }" @click="hightlightLine(index)">
 					<td class="hero-cell">{{ index + 1 }}</td>
+					<td class="hero-cell"><input type="text" class="small-input" v-model="hero.id"></td>
 					<td class="hero-cell"><input type="text" v-model="hero.type"></td>
 					<td class="hero-cell"><input type="text" v-model="hero.name"></td>
 					<td class="hero-cell"><input type="text" v-model="hero.iconPath"></td>
@@ -461,6 +463,7 @@ Vue.component('heroes', {
 					<td class="hero-cell">
 						<button @click="addHero">+</button>
 					</td>
+					<td class="hero-cell small-input"><input type="text" class="small-input" v-model="newHero.id" placeholder="id"></td>
 					<td class="hero-cell"><input type="text" v-model="newHero.type" placeholder="type..."></td>
 					<td class="hero-cell"><input type="text" v-model="newHero.name" placeholder="name..."></td>
 					<td class="hero-cell"><input type="text" v-model="newHero.iconPath" placeholder="icon path..."></td>

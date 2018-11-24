@@ -209,8 +209,6 @@ Vue.component('formspell', {
 					<input type="checkbox" id="organics" value="organics" v-model="mySpell.targets">
 					<label for="organics">Organics</label>
 				<div>
-				</div>
-				<div>
 					<input type="checkbox" id="air" value="air" v-model="mySpell.targets">
 					<label for="air">Air</label>
 					<input type="checkbox" id="ground" value="ground" v-model="mySpell.targets">
@@ -421,6 +419,7 @@ Vue.component('heroes', {
 					<th v-if="params">r Mana</th>
 					<th v-if="result">Buy</th>
 					<th v-if="result">Pres</th>
+					<th v-if="result">Struct</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -458,6 +457,7 @@ Vue.component('heroes', {
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="hero.regenMana"></td>
 					<td v-if="result" class="hero-cell">{{ renderBuy(hero) }}</td>
 					<td v-if="result" class="hero-cell">{{ renderPresentation(hero) }}</td>
+					<td v-if="result" class="hero-cell">{{ renderStruct(hero) }}</td>
 				</tr>
 				<tr>
 					<td class="hero-cell">
@@ -493,6 +493,7 @@ Vue.component('heroes', {
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.regenLife" placeholder="r hp"></td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.mana" placeholder="mp"></td>
 					<td v-if="params" class="hero-cell"><input type="text" class="small-input" v-model="newHero.regenMana" placeholder="r mp"></td>
+					<td v-if="result" class="hero-cell"></td>
 					<td v-if="result" class="hero-cell"></td>
 					<td v-if="result" class="hero-cell"></td>
 				</tr>
@@ -540,6 +541,11 @@ Vue.component('heroes', {
 				this.clicked = newArray;
 				this.selectedRow = index;
 			}
+		},
+		renderStruct: function(hero) {
+			var result = encodeURI(hero.iconPath);
+
+			return '	call Hero.addHero(\'' + hero.id + '\', "' + hero.mainAttribute + '", "' + decodeURI(result.replace(/%5C/g,"%5C%5C")) + '")	//' + (hero.type).toUpperCase()
 		},
 		renderPresentation: function(hero) {
 			var typeColor = "e6e600";
@@ -623,9 +629,8 @@ const myVue = new Vue({
 	el: "#app",
 	data: {
 		selectedId: 3,
-		nbrTotalSpells: 277,
+		nbrTotalSpells: 291,
 		spells: [],
-		nbrNewSpells: 0,
 		typesSpell: [],
 		defaultSpell: {},
 		heroes: [],
@@ -717,8 +722,6 @@ const myVue = new Vue({
 				newSpell.id = this.getNewId();
 
 				this.spells.push(newSpell);
-
-				this.nbrNewSpells++;
 
 				this.orderSpells();
 

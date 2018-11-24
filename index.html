@@ -14,7 +14,7 @@
 			<select v-model="selectedId">
 				<option v-for="spell in spells" :value="spell.id">{{ spell.name }}</option>
 			</select>
-			{{ (spells.length / nbrTotalSpells * 100).toFixed(2) }}% - {{ nbrNewSpells }}
+			{{ spells.length }}
 
 			<div>
 				<button v-for="item, key in display" @click="onlyShow(key)">{{ item.name }}</button>

@@ -1052,5 +1052,28 @@ const defaultHeroes = [
     "regenLife": "3",
     "mana": "90",
     "regenMana": "0.9"
+  },
+  {
+    "id": "E005",
+    "type": "Werewolf",
+    "name": "Luvox",
+    "iconPath": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+    "mainAttribute": "Agility",
+    "baseAgi": "23",
+    "baseInt": "18",
+    "baseStr": "18",
+    "bonusAgi": "3",
+    "bonusInt": "1.6",
+    "bonusStr": "1.9",
+    "moveSpeed": "310",
+    "typeAttk": "Melee",
+    "damages": "35",
+    "attackRate": "1.65",
+    "attackRange": "100",
+    "armor": "2",
+    "life": "170",
+    "regenLife": "1.5",
+    "mana": "100",
+    "regenMana": "1"
   }
 ]

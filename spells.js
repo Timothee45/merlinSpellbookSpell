@@ -366,6 +366,36 @@ const mySpellsLibrary = [
     "id": 285
   },
   {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "80",
+          "140",
+          "200",
+          "260"
+        ]
+      },
+      {
+        "name": "Slow",
+        "value": "75",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Avernus Curse",
+    "description": "The hero is protected by the tempars. When an enemy casts a spell near the caster it deals some damages and slow the target during 2 seconds. The target will get back his move speed slowly.",
+    "id": 294
+  },
+  {
     "type": "Target unit",
     "targets": [
       "enemies",
@@ -862,6 +892,48 @@ const mySpellsLibrary = [
       "50"
     ],
     "id": 22
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Duration",
+        "value": "12",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Area Blast",
+        "value": "400",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "120",
+          "190",
+          "260",
+          "330"
+        ]
+      }
+    ],
+    "name": "Blast Defense",
+    "description": "The caster increases the power of his weapon to deals a huge blast of damages to the next attacked enemy and the enemies around.",
+    "cooldown": [
+      "15",
+      "13",
+      "11",
+      "9"
+    ],
+    "manacost": [
+      "95",
+      "100",
+      "105",
+      "110"
+    ],
+    "id": 293
   },
   {
     "type": "Target unit",
@@ -3333,6 +3405,71 @@ const mySpellsLibrary = [
     "id": 270
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "800",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "1500",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Duration Hero",
+        "value": "5",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Duration Unit",
+        "value": "9",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Miss Attacks",
+        "value": [
+          "40",
+          "50",
+          "60",
+          "70"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Drunken Haze",
+    "description": "Drenches enemy units in alcohol, causing their movement speed to be reduced, and have a chance to miss on attacks.",
+    "cooldown": [
+      "10",
+      "8",
+      "6",
+      "4"
+    ],
+    "manacost": [
+      "70",
+      "75",
+      "80",
+      "85"
+    ],
+    "id": 296
+  },
+  {
     "type": "Target point",
     "targets": [
       "enemies",
@@ -3390,6 +3527,78 @@ const mySpellsLibrary = [
     ],
     "cooldown": "11",
     "id": 74
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Spell Area",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Period Slam",
+        "value": "0.2",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Area Slam",
+        "value": "250",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "100",
+          "120",
+          "140"
+        ],
+        "temp": "$$ damages per slam"
+      },
+      {
+        "name": "Slow Duration",
+        "value": "4",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Attack Speed Slow",
+        "value": "40",
+        "temp": "$$%"
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": "50",
+        "temp": "$$%"
+      },
+      {
+        "name": "Nbr Slams",
+        "value": [
+          "8",
+          "12",
+          "16"
+        ],
+        "temp": ""
+      }
+    ],
+    "name": "Earthquake",
+    "description": "The caster summons an earthquake in the target area. That will summons some quakes in random points in the target area. Each quake will damages and slow enemies during a short duration.",
+    "cooldown": [
+      "140",
+      "130",
+      "120"
+    ],
+    "manacost": [
+      "200",
+      "275",
+      "350"
+    ],
+    "id": 295,
+    "ulti": true
   },
   {
     "type": "Instant",
@@ -4307,6 +4516,59 @@ const mySpellsLibrary = [
       "50"
     ],
     "id": 94
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "300",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Nbr Max Targets",
+        "value": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ]
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "90",
+          "165",
+          "240",
+          "315"
+        ]
+      }
+    ],
+    "name": "Forked Lightning",
+    "description": "The caster summons some lightnings bolts that deals damages to some targets around the primary one.",
+    "manacost": [
+      "95",
+      "105",
+      "115",
+      "125"
+    ],
+    "cooldown": [
+      "14",
+      "12",
+      "10",
+      "8"
+    ],
+    "id": 292
   },
   {
     "type": "Target unit",

@@ -554,7 +554,7 @@ Vue.component('heroes', {
 			var primaryAttributeColor = "e60000";
 			var myPresentation = "";
 
-			if (hero.story != "") {
+			if (hero.story && hero.story != "") {
 				myPresentation += '|cff' + descriptionColor + hero.story + '|r|n|n';
 			}
 
@@ -629,7 +629,7 @@ const myVue = new Vue({
 	el: "#app",
 	data: {
 		selectedId: 3,
-		nbrTotalSpells: 291,
+		nbrTotalSpells: 293,
 		spells: [],
 		typesSpell: [],
 		defaultSpell: {},

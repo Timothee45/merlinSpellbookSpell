@@ -5526,6 +5526,61 @@ const mySpellsLibrary = [
   {
     "type": "Target unit",
     "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "500",
+          "600",
+          "700",
+          "800"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bolt Speed",
+        "value": [
+          "1300",
+          "1600",
+          "1900",
+          "2200"
+        ],
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "5",
+          "10",
+          "15",
+          "20"
+        ],
+        "temp": "$$% of the target max life"
+      }
+    ],
+    "name": "Heart Piercer",
+    "description": "The caster send a bolt to the target enemy that deals damages equal to a percentage of the target max Life.",
+    "cooldown": [
+      "11",
+      "9.5",
+      "8",
+      "6.5"
+    ],
+    "manacost": [
+      "100",
+      "115",
+      "130",
+      "145"
+    ],
+    "id": 297
+  },
+  {
+    "type": "Target unit",
+    "targets": [
       "ground",
       "air",
       "enemies"
@@ -9012,6 +9067,49 @@ const mySpellsLibrary = [
     "name": "Punishing Blow",
     "description": "When the caster attacks he has 20% chances to deals to enemies around a percentage of his attack damages.",
     "id": 183
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "Global"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "800",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "55",
+          "80",
+          "105",
+          "130"
+        ]
+      }
+    ],
+    "name": "Punishment",
+    "description": "The caster deals damages to a target enemy anywhere on the map.",
+    "cooldown": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "id": 298
   },
   {
     "type": "Target unit",

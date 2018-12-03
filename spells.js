@@ -1056,6 +1056,34 @@ const mySpellsLibrary = [
     "id": 281
   },
   {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "heroes"
+    ],
+    "params": [
+      {
+        "name": "Life Lost",
+        "value": "30"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "30",
+          "60",
+          "90",
+          "120"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Blood Letting",
+    "description": "The caster remove some life to the attacked unit during a short duration.",
+    "id": 309
+  },
+  {
     "type": "Target unit",
     "targets": [
       "ground",
@@ -4571,6 +4599,28 @@ const mySpellsLibrary = [
     "id": 292
   },
   {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Damages",
+        "value": [
+          "40",
+          "60",
+          "80",
+          "100"
+        ]
+      }
+    ],
+    "name": "Four Kisses",
+    "description": "The caster throw the attacked unit in the air every 4 attacks disabling it during 1 second.",
+    "id": 305
+  },
+  {
     "type": "Target unit",
     "targets": [
       "ground",
@@ -6127,7 +6177,7 @@ const mySpellsLibrary = [
     "id": 125
   },
   {
-    "type": "Target unit/point",
+    "type": "Target point",
     "targets": [
       "enemies",
       "ground",
@@ -6136,17 +6186,17 @@ const mySpellsLibrary = [
     "params": [
       {
         "name": "Cast Range",
-        "value": "700",
+        "value": "500",
         "temp": "$$ ranges"
       },
       {
         "name": "Area",
-        "value": "250",
+        "value": "125",
         "temp": "$$ ranges"
       },
       {
         "name": "Distance",
-        "value": "600",
+        "value": "825",
         "temp": "$$ ranges"
       },
       {
@@ -6159,9 +6209,9 @@ const mySpellsLibrary = [
         ]
       },
       {
-        "name": "Wave Duration",
-        "value": "0.33",
-        "temp": "$$ second"
+        "name": "Wave Speed",
+        "value": "1600",
+        "temp": "$$ ranges/s"
       },
       {
         "name": "Fly Time",
@@ -6449,6 +6499,71 @@ const mySpellsLibrary = [
     "id": 130
   },
   {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "700",
+          "800",
+          "900",
+          "1000"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "120",
+          "190",
+          "260",
+          "330"
+        ]
+      },
+      {
+        "name": "Bolt Speed",
+        "value": "1300",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Distance Max",
+        "value": [
+          "850",
+          "1000",
+          "1150",
+          "1300"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "45",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Instant Death",
+    "description": "The caster throw a bolt in a direction that deals some damages to the first enemy touched. The damaged enemy is stunned during 0.5 second. If it target a non hero unit the target is destroyed.",
+    "cooldown": [
+      "20",
+      "17",
+      "14",
+      "11"
+    ],
+    "manacost": [
+      "100",
+      "115",
+      "130",
+      "145"
+    ],
+    "id": 302,
+    "danger": "Does not destroy Arthas."
+  },
+  {
     "type": "Target unit",
     "targets": [
       "ground",
@@ -6683,6 +6798,58 @@ const mySpellsLibrary = [
     ],
     "cooldown": "9",
     "id": 133
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "500",
+          "550",
+          "600",
+          "650"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Jump Duration",
+        "value": "1.5",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Area",
+        "value": "250",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "120",
+          "150",
+          "180",
+          "210"
+        ]
+      }
+    ],
+    "name": "Jump",
+    "description": "The caster moves to the target location. The caster deals damages when it lands.",
+    "cooldown": [
+      "14",
+      "12",
+      "10",
+      "8"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 299
   },
   {
     "type": "Target unit",
@@ -9228,6 +9395,49 @@ const mySpellsLibrary = [
     "id": 184
   },
   {
+    "type": "Instant",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Duration",
+        "value": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Attack Speed Bonus",
+        "value": [
+          "40",
+          "50",
+          "60",
+          "70"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Rage",
+    "description": "The caster has an increased attack speed and magic immunity during a short duration.",
+    "cooldown": [
+      "20",
+      "18",
+      "16",
+      "14"
+    ],
+    "manacost": [
+      "70",
+      "80",
+      "90",
+      "100"
+    ],
+    "id": 301
+  },
+  {
     "type": "Target point",
     "targets": [
       "enemies",
@@ -9738,6 +9948,33 @@ const mySpellsLibrary = [
   {
     "type": "Instant",
     "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Life Regeneration",
+        "value": "15",
+        "temp": "$$% of the caster's max life per second"
+      }
+    ],
+    "name": "Restore Soul",
+    "ulti": true,
+    "description": "The caster regenerates a percentage of his max life every seconds, last 8 seconds.",
+    "cooldown": [
+      "90",
+      "75",
+      "60"
+    ],
+    "manacost": [
+      "130",
+      "150",
+      "170"
+    ],
+    "id": 308
+  },
+  {
+    "type": "Instant",
+    "targets": [
       "ground",
       "air",
       "enemies",
@@ -10194,6 +10431,27 @@ const mySpellsLibrary = [
     "id": 209
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Regeneration",
+        "value": [
+          "40",
+          "60",
+          "80",
+          "100"
+        ],
+        "temp": "$$% of hero armor"
+      }
+    ],
+    "name": "Seal of Salvation",
+    "description": "The caster get a percentage of his base armor as life regeneration.",
+    "id": 304
+  },
+  {
     "type": "Passive",
     "targets": [
       "ground",
@@ -10250,6 +10508,71 @@ const mySpellsLibrary = [
     "manacost": "8",
     "danger": "Orb effect does not stack.",
     "id": 211
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bolt Speed",
+        "value": "600",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Area Explosion",
+        "value": "225",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Nbr Bounces Max",
+        "value": [
+          "5",
+          "7",
+          "9"
+        ]
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "120",
+          "160",
+          "190"
+        ]
+      },
+      {
+        "name": "Area Search",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration Slow",
+        "value": "5",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Searing Chain",
+    "ulti": true,
+    "description": "The caster send a bolt of fire that will bounces between some enemies dealing area damages each impacts.",
+    "manacost": [
+      "140",
+      "190",
+      "240"
+    ],
+    "cooldown": [
+      "110",
+      "100",
+      "90"
+    ],
+    "id": 303
   },
   {
     "type": "Target unit",
@@ -11050,6 +11373,50 @@ const mySpellsLibrary = [
       "125"
     ],
     "id": 227
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages Stolen",
+        "value": [
+          "30",
+          "45",
+          "60",
+          "75"
+        ]
+      },
+      {
+        "name": "Duration",
+        "value": "7",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Steals Vitality",
+    "description": "The caster steals some damages to the target enemy.",
+    "cooldown": [
+      "15",
+      "13",
+      "11",
+      "9"
+    ],
+    "manacost": [
+      "100",
+      "105",
+      "110",
+      "115"
+    ],
+    "id": 307
   },
   {
     "type": "Target unit",
@@ -11872,6 +12239,62 @@ const mySpellsLibrary = [
     "id": 274
   },
   {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Radius Catch",
+        "value": "350",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Speed",
+        "value": "550",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "130",
+          "180",
+          "230",
+          "280"
+        ]
+      },
+      {
+        "name": "Area Slam",
+        "value": "300",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Toss",
+    "description": "The caster throw in the air a unit around him to the target location.",
+    "cooldown": [
+      "12",
+      "11",
+      "10",
+      "9"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 300,
+    "danger": "Can't throw himself."
+  },
+  {
     "type": "Passive",
     "targets": [
       "self"
@@ -12104,6 +12527,51 @@ const mySpellsLibrary = [
       "115"
     ],
     "id": 253
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "150",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Fly Duration",
+        "value": "2",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "80",
+          "110",
+          "140",
+          "170"
+        ],
+        "temp": "$$ each damages instance"
+      }
+    ],
+    "name": "Uppercut",
+    "description": "The caster throw an enemy in the air dealing damages to the target around when it lands. The main target is damaged when it is punched and when it lands.",
+    "cooldown": [
+      "12",
+      "11",
+      "10",
+      "9"
+    ],
+    "manacost": [
+      "90",
+      "105",
+      "120",
+      "135"
+    ],
+    "id": 306
   },
   {
     "type": "Passive",

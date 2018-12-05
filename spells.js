@@ -9930,7 +9930,7 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Restore Chakra",
-    "description": "Restore the man of a target allied or yourself.",
+    "description": "Restore the mana of a target allied or yourself.",
     "manacost": [
       "70",
       "80",

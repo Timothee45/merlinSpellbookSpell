@@ -168,7 +168,7 @@ Vue.component('formspell', {
 	data() {
 		return {
 			types: [],
-      mySpell: {},
+      		mySpell: {},
 			newParam: {},
 		}
 	},
@@ -200,14 +200,14 @@ Vue.component('formspell', {
 					<input type="checkbox" id="none" value="none" v-model="mySpell.targets">
 					<label for="none">None</label>
 				</div>
-					<input type="checkbox" id="heroes" value="heroes" v-model="mySpell.targets">
-					<label for="heroes">Heroes</label>
-					<input type="checkbox" id="nonheroes" value="non heroes" v-model="mySpell.targets">
-					<label for="nonheroes">Non Heroes</label>
-					<input type="checkbox" id="buildings" value="buildings" v-model="mySpell.targets">
-					<label for="buildings">Buildings</label>
-					<input type="checkbox" id="organics" value="organics" v-model="mySpell.targets">
-					<label for="organics">Organics</label>
+				<input type="checkbox" id="heroes" value="heroes" v-model="mySpell.targets">
+				<label for="heroes">Heroes</label>
+				<input type="checkbox" id="nonheroes" value="non heroes" v-model="mySpell.targets">
+				<label for="nonheroes">Non Heroes</label>
+				<input type="checkbox" id="buildings" value="buildings" v-model="mySpell.targets">
+				<label for="buildings">Buildings</label>
+				<input type="checkbox" id="organics" value="organics" v-model="mySpell.targets">
+				<label for="organics">Organics</label>
 				<div>
 					<input type="checkbox" id="air" value="air" v-model="mySpell.targets">
 					<label for="air">Air</label>
@@ -235,7 +235,9 @@ Vue.component('formspell', {
 					<input type="text" v-model="param.name">
 					<input type="text" v-model="param.value">
 					<input type="text" v-model="param.temp">
+					<button type="button" @click="moveParam(index, index-1, param)">Up</button>
 					<button type="button" @click="removeParam(index)">X</button>
+					<button type="button" @click="moveParam(index, index+1, param)">Do</button>
 				</div>
 				<div>
 					<input type="text" id="paramName" v-model="newParam.name">
@@ -271,6 +273,23 @@ Vue.component('formspell', {
 				this.resetNewParam();
 
 				document.getElementById("paramName").focus();
+			}
+		},
+		moveParam: function(index, targetIndex, param) {
+			let paramsTable = [];
+			const nbrParams = this.mySpell.params.length;
+
+			if (nbrParams > 1 && targetIndex >= 0 && targetIndex < nbrParams) {
+				for (var i = 0; i < nbrParams; i++) {
+					if (i == index) {
+						paramsTable.push(this.mySpell.params[targetIndex]);
+					} else if (i == targetIndex) {
+						paramsTable.push(param);
+					} else {
+						paramsTable.push(this.mySpell.params[i]);
+					}
+				}
+				this.mySpell.params = paramsTable;
 			}
 		},
 		removeParam: function(index) {

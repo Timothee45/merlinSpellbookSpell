@@ -8366,6 +8366,53 @@ const mySpellsLibrary = [
     "id": 272
   },
   {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Max Damages",
+        "value": [
+          "280",
+          "400",
+          "520"
+        ]
+      },
+      {
+        "name": "Effect Delay",
+        "value": "2",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Nuclear Strike",
+    "ulti": true,
+    "description": "The caster send a missile in the target area that will deals damages to enemies in the area in function of the distance from the impact location.",
+    "cooldown": [
+      "140",
+      "130",
+      "120"
+    ],
+    "manacost": [
+      "150",
+      "200",
+      "250"
+    ],
+    "id": 310
+  },
+  {
     "type": "Target unit",
     "targets": [
       "ground",
@@ -10573,6 +10620,59 @@ const mySpellsLibrary = [
       "90"
     ],
     "id": 303
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "Global"
+      },
+      {
+        "name": "Nbr Max Targets",
+        "value": [
+          "10",
+          "15",
+          "20"
+        ]
+      },
+      {
+        "name": "Basic Damages",
+        "value": [
+          "120",
+          "160",
+          "200"
+        ]
+      },
+      {
+        "name": "Bolt Speed",
+        "value": "9500",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Area",
+        "value": "Global"
+      }
+    ],
+    "name": "Senbonzakura Kageyoshi",
+    "ulti": true,
+    "description": "The caster summon a group of small blades that deals damages to random enemies in the entire map. Each time it hits a target the damages increases by 15%.",
+    "cooldown": [
+      "90",
+      "80",
+      "70"
+    ],
+    "manacost": [
+      "180",
+      "220",
+      "260"
+    ],
+    "id": 311
   },
   {
     "type": "Target unit",

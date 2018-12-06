@@ -8379,6 +8379,11 @@ const mySpellsLibrary = [
         "temp": "$$ ranges"
       },
       {
+        "name": "Effect Delay",
+        "value": "2",
+        "temp": "$$ seconds"
+      },
+      {
         "name": "Area",
         "value": "700",
         "temp": "$$ ranges"
@@ -8390,11 +8395,6 @@ const mySpellsLibrary = [
           "400",
           "520"
         ]
-      },
-      {
-        "name": "Effect Delay",
-        "value": "2",
-        "temp": "$$ seconds"
       }
     ],
     "name": "Nuclear Strike",

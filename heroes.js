@@ -1056,7 +1056,7 @@ const defaultHeroes = [
   {
     "id": "E005",
     "type": "Werewolf",
-    "name": "Luvox",
+    "name": "Anat'ir",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
     "mainAttribute": "Agility",
     "baseAgi": "23",

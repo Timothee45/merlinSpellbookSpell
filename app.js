@@ -567,23 +567,25 @@ Vue.component('heroes', {
 			return '	call Hero.addHero(\'' + hero.id + '\', "' + hero.mainAttribute + '", "' + decodeURI(result.replace(/%5C/g,"%5C%5C")) + '")	//' + (hero.type).toUpperCase()
 		},
 		renderPresentation: function(hero) {
-			var typeColor = "e6e600";
-			var paramColor = "00ccff";
+			var typeAttackColor = "99ccff";
+			var attrColor = "ff9933";
+			var paramColor = "1aff8c";
+			var msColor = "ff6699";
 			var descriptionColor = "b3b3b3";
-			var primaryAttributeColor = "e60000";
+			var primaryAttributeColor = "FFD700";
 			var myPresentation = "";
 
 			if (hero.story && hero.story != "") {
 				myPresentation += '|cff' + descriptionColor + hero.story + '|r|n|n';
 			}
 
-			myPresentation += `|cff` + typeColor + `Type|r: ` + hero.typeAttk;
+			myPresentation += `|cff` + typeAttackColor + `Type|r: ` + hero.typeAttk;
 
-			var agi = `|cff` + typeColor + `Agility|r: ` + hero.baseAgi + ` + ` + hero.bonusAgi + ` per lvl`;
-			var int = `|cff` + typeColor + `Intelligence|r: ` + hero.baseInt + ` + ` + hero.bonusInt + ` per lvl`;
-			var str = `|cff` + typeColor + `Strength|r: ` + hero.baseStr + ` + ` + hero.bonusStr + ` per lvl`;
+			var agi = `|cff` + attrColor + `Agility|r: ` + hero.baseAgi + ` + ` + hero.bonusAgi + ` per lvl`;
+			var int = `|cff` + attrColor + `Intelligence|r: ` + hero.baseInt + ` + ` + hero.bonusInt + ` per lvl`;
+			var str = `|cff` + attrColor + `Strength|r: ` + hero.baseStr + ` + ` + hero.bonusStr + ` per lvl`;
 
-			myPresentation += `|n`;
+			myPresentation += `|n|n`;
 
 			if (hero.mainAttribute == 'Agility') {
 				myPresentation += `|cff` + primaryAttributeColor + agi + `|r`;
@@ -608,12 +610,12 @@ Vue.component('heroes', {
 			}
 
 			myPresentation += `
-				|n|cff` + paramColor + `Damages|r: ` + hero.damages + `
+				|n|n|cff` + paramColor + `Damages|r: ` + hero.damages + `
 				|n|cff` + paramColor + `Attack Rate|r: ` + hero.attackRate + ` seconds
 				|n|cff` + paramColor + `Armor|r: ` + hero.armor + `
-				|n|cff` + paramColor + `Move Speed|r: ` + hero.moveSpeed + ` ranges/s
 				|n|cff` + paramColor + `Life|r: ` + hero.life + ` - ` + hero.regenLife + ` hp/s ` + `
-				|n|cff` + paramColor + `Mana|r: ` + hero.mana + ` - ` + hero.regenMana + ` mana points/s`;
+				|n|cff` + paramColor + `Mana|r: ` + hero.mana + ` - ` + hero.regenMana + ` mana points/s` + `
+				|n|n|cff` + msColor + `Move Speed|r: ` + hero.moveSpeed + ` ranges/s`;
 
 			return myPresentation;
 		},

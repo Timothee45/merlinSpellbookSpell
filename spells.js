@@ -11231,7 +11231,7 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Sparing",
-    "description": "The caster dodges every attacks during a short duration.",
+    "description": "The target dodges every attacks during a short duration.",
     "cooldown": [
       "18",
       "16",
@@ -12480,6 +12480,15 @@ const mySpellsLibrary = [
           "7"
         ],
         "temp": "$$ seconds"
+      },
+      {
+        "name": "Life Regeneration",
+        "value": [
+          "20",
+          "30",
+          "40"
+        ],
+        "temp": "$$ hp/s"
       }
     ],
     "name": "Unbeatable",

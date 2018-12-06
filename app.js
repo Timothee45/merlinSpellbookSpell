@@ -333,7 +333,7 @@ Vue.component('learning', {
 				result += template.replace("$$", param.value);
 			}
 
-      return result;
+      		return result;
 		},
 		renderMana: function(data) {
 			var result = "|cff00C2ECManacost|r: ";

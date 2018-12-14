@@ -1075,5 +1075,28 @@ const defaultHeroes = [
     "regenLife": "1.5",
     "mana": "100",
     "regenMana": "1"
+  },
+  {
+    "id": "H09I",
+    "type": "Butcher",
+    "name": "Golg",
+    "iconPath": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+    "mainAttribute": "Strength",
+    "baseAgi": "16",
+    "baseInt": "14",
+    "baseStr": "25",
+    "bonusAgi": "1",
+    "bonusInt": "0.9",
+    "bonusStr": "3.1",
+    "moveSpeed": "290",
+    "typeAttk": "Melee",
+    "damages": "32",
+    "attackRate": "1.7",
+    "attackRange": "128",
+    "armor": "0",
+    "life": "230",
+    "regenLife": "2.2",
+    "mana": "95",
+    "regenMana": "0.9"
   }
 ]

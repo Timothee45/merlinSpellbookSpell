@@ -13737,7 +13737,7 @@ const mySpellsLibrary = [
           "44"
         ],
         "temp": "$$%"
-      },
+      }, 
       {
         "name": "Fading Time",
         "value": "0.6",

@@ -634,6 +634,60 @@ const mySpellsLibrary = [
     "id": 16
   },
   {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "350",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "90",
+          "140",
+          "190",
+          "240"
+        ]
+      },
+      {
+        "name": "Bonus Damages",
+        "value": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "temp": "$$ per unit in the target area"
+      }
+    ],
+    "name": "Battle Rush",
+    "description": "The caster teleport himself to the target location dealing damages to enemies in the area. When it appears it get some damages in function of the number of enemies in the target area. Last 7 seconds.",
+    "cooldown": [
+      "20",
+      "18",
+      "16",
+      "14"
+    ],
+    "manacost": [
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "id": 330
+  },
+  {
     "type": "Instant",
     "targets": [
       "ground",
@@ -1211,7 +1265,7 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Blood Thirst",
-    "description": "When an enemy has les than a certain amount of life of life the hero get an increased movespeed.",
+    "description": "When an enemy has less than a certain amount of life of life the hero get an increased movespeed.",
     "id": 28
   },
   {
@@ -1522,6 +1576,55 @@ const mySpellsLibrary = [
     "name": "Burton World",
     "description": "The caster increases his life regeneration in function of his max mana.",
     "id": 326
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "600",
+          "650",
+          "700",
+          "750"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "90",
+          "160",
+          "230",
+          "300"
+        ]
+      }
+    ],
+    "name": "Call Down",
+    "description": "The caster moves to the target location from the sky after 1 second falling time. When the caster lands it deals some damages and stunns the enemies in the area during 1 second.",
+    "cooldown": [
+      "20",
+      "18",
+      "16",
+      "14"
+    ],
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "id": 329
   },
   {
     "type": "Target point",
@@ -7307,7 +7410,7 @@ const mySpellsLibrary = [
     "params": [
       {
         "name": "Cast Range",
-        "value": "500",
+        "value": "800",
         "temp": "$$ ranges"
       },
       {
@@ -13737,7 +13840,7 @@ const mySpellsLibrary = [
           "44"
         ],
         "temp": "$$%"
-      }, 
+      },
       {
         "name": "Fading Time",
         "value": "0.6",

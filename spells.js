@@ -2141,6 +2141,52 @@ const mySpellsLibrary = [
     "id": 42
   },
   {
+    "type": "Instant",
+    "targets": [
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Fade Time",
+        "value": "1",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Cloaking Field",
+    "description": "The caster cloaks only the allied units around him during a short duration. If an allied goes too far away from the caster it becomes visible again. Attack and casts spell breaks invisibility too.",
+    "cooldown": [
+      "55",
+      "50",
+      "45",
+      "40"
+    ],
+    "manacost": [
+      "120",
+      "130",
+      "140",
+      "150"
+    ],
+    "danger": "Does not cloaks lane creeps.",
+    "id": 336
+  },
+  {
     "type": "Passive",
     "targets": [
       "ground",
@@ -3272,6 +3318,48 @@ const mySpellsLibrary = [
     "name": "Dissuasive Protection",
     "description": "When the caster is attacked, he deals damages to the attacking unit.",
     "id": 66
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "Global"
+      },
+      {
+        "name": "Area",
+        "value": "350",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Delay",
+        "value": [
+          "1.8",
+          "1.5",
+          "1.2"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Distortion",
+    "ulti": true,
+    "description": "The caster teleports to his location every allied units in the target area after a short duration. This spell does not teleport lane creeps.",
+    "cooldown": [
+      "140",
+      "130",
+      "120"
+    ],
+    "manacost": [
+      "200",
+      "250",
+      "300"
+    ],
+    "id": 335
   },
   {
     "type": "Instant",
@@ -10441,6 +10529,26 @@ const mySpellsLibrary = [
     "id": 194
   },
   {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Armor Bonus",
+        "value": [
+          "4",
+          "6",
+          "8",
+          "10"
+        ]
+      }
+    ],
+    "name": "Repulse Nuisance",
+    "description": "Gives to the hero a permanent bonus of armor.",
+    "id": 334
+  },
+  {
     "type": "Target unit",
     "targets": [
       "enemies",
@@ -10737,6 +10845,70 @@ const mySpellsLibrary = [
     ],
     "cooldown": "10",
     "id": 201
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "800",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Distance",
+        "value": "1200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Speed",
+        "value": "1100",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Area",
+        "value": "150",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "80",
+          "130",
+          "180",
+          "230"
+        ]
+      },
+      {
+        "name": "Damages Loss",
+        "value": "100",
+        "temp": "$$% basic damages"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "2.5",
+          "3.25",
+          "4",
+          "4.75"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Ripple of Force",
+    "description": "The caster summons a wave that will deals damages to enemies in a line decreasing their damages during a short duration.",
+    "cooldown": "10",
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 333
   },
   {
     "type": "Instant",
@@ -11232,6 +11404,51 @@ const mySpellsLibrary = [
       "260"
     ],
     "id": 311
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "organics"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "400",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ]
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "1",
+          "1.5",
+          "2",
+          "2.5"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Shackles",
+    "description": "Magically binds a target enemy unit, so that it cannot move or attack and takes damage per second.",
+    "cooldown": "10",
+    "manacost": [
+      "120",
+      "130",
+      "140",
+      "150"
+    ],
+    "id": 332
   },
   {
     "type": "Target unit",
@@ -13227,6 +13444,39 @@ const mySpellsLibrary = [
     "name": "Trueshot Aura",
     "description": "Increases the ranged around allied units damages.",
     "id": 315
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Armor Malus",
+        "value": [
+          "0.5",
+          "1",
+          "1.5",
+          "2"
+        ],
+        "temp": "$$ per stack"
+      },
+      {
+        "name": "Duration",
+        "value": "6",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Ugly Vodoo",
+    "description": "Each time the hero casts a spell it decreases the enemies around's armor during a short duration. Multiples instances stacks additively.",
+    "id": 331
   },
   {
     "type": "Instant",

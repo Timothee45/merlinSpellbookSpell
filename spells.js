@@ -5756,6 +5756,32 @@ const mySpellsLibrary = [
   {
     "type": "Passive",
     "targets": [
+      "enemies"
+    ],
+    "params": [
+      {
+        "name": "Damages Loss",
+        "value": [
+          "5",
+          "7",
+          "9",
+          "11"
+        ],
+        "temp": "$$ per attack"
+      },
+      {
+        "name": "Duration",
+        "value": "7",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Hardened Skin",
+    "description": "Each time the hero is attacked it decreases the attacking unit damages during a short duration. The multiple malus stacks and the duration is reset each attacks. The spell can't put enemies damages to null or negative values.",
+    "id": 339
+  },
+  {
+    "type": "Passive",
+    "targets": [
       "ground",
       "air",
       "allies",
@@ -6619,6 +6645,51 @@ const mySpellsLibrary = [
       "320"
     ],
     "id": 125
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "300",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": "10",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "50",
+          "100",
+          "150",
+          "200"
+        ]
+      }
+    ],
+    "name": "Imbue Weapon",
+    "description": "The caster imbue the target's weapon with energy increasing his damages for the next attack.",
+    "cooldown": [
+      "12",
+      "10",
+      "8",
+      "6"
+    ],
+    "manacost": [
+      "100",
+      "115",
+      "130",
+      "145"
+    ],
+    "id": 338
   },
   {
     "type": "Target point",
@@ -8770,10 +8841,38 @@ const mySpellsLibrary = [
         "name": "Cast Range",
         "value": "800",
         "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages Base",
+        "value": "21"
+      },
+      {
+        "name": "Attack Rate",
+        "value": "1.75",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Armor",
+        "value": "1"
+      },
+      {
+        "name": "Move Speed",
+        "value": "290",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Life",
+        "temp": "$$ hp",
+        "value": "340"
+      },
+      {
+        "temp": "$$ hp/s",
+        "name": "Life Regeneration",
+        "value": "4"
       }
     ],
     "name": "Natural Evolution",
-    "description": "Summons some traents with the trees in an area, that fight with the caster during 60 seconds.",
+    "description": "Summons some traents with the trees in an area, that fight with the caster during 60 seconds. Traents regenerates their life only during the night.",
     "manacost": [
       "125",
       "135",
@@ -9503,16 +9602,6 @@ const mySpellsLibrary = [
         ]
       },
       {
-        "name": "Ward Life",
-        "value": [
-          "75",
-          "175",
-          "275",
-          "375"
-        ],
-        "temp": "$$ hp"
-      },
-      {
         "name": "Ward Attack Range",
         "value": "600",
         "temp": "$$ ranges"
@@ -9521,6 +9610,16 @@ const mySpellsLibrary = [
         "name": "Ward Attack Rate",
         "value": "1.5",
         "temp": "$$ seconds"
+      },
+      {
+        "name": "Ward Life",
+        "value": [
+          "75",
+          "175",
+          "275",
+          "375"
+        ],
+        "temp": "$$ hp"
       }
     ],
     "name": "Plant Serpent Ward",
@@ -10547,6 +10646,52 @@ const mySpellsLibrary = [
     "name": "Repulse Nuisance",
     "description": "Gives to the hero a permanent bonus of armor.",
     "id": 334
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": "8",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Mana Restaured",
+        "value": [
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "temp": "$$ mana points per second"
+      }
+    ],
+    "name": "Resplenish Mana",
+    "description": "The caster places a buff on the target ally or himself that restore his mana over the time.",
+    "cooldown": [
+      "15",
+      "12",
+      "9",
+      "6"
+    ],
+    "manacost": [
+      "50",
+      "60",
+      "70",
+      "80"
+    ],
+    "id": 337
   },
   {
     "type": "Target unit",
@@ -14018,6 +14163,11 @@ const mySpellsLibrary = [
           "36",
           "48"
         ]
+      },
+      {
+        "name": "Bolt Speed",
+        "value": "600",
+        "temp": "$$ ranges/s"
       }
     ],
     "name": "Weapon Mastery",

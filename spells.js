@@ -2141,6 +2141,52 @@ const mySpellsLibrary = [
     "id": 42
   },
   {
+    "type": "Instant",
+    "targets": [
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Fade Time",
+        "value": "1",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Cloaking Field",
+    "description": "The caster cloaks only the allied units around him during a short duration. If an allied goes too far away from the caster it becomes visible again. Attack and casts spell breaks invisibility too.",
+    "cooldown": [
+      "55",
+      "50",
+      "45",
+      "40"
+    ],
+    "manacost": [
+      "120",
+      "130",
+      "140",
+      "150"
+    ],
+    "danger": "Does not cloaks lane creeps.",
+    "id": 336
+  },
+  {
     "type": "Passive",
     "targets": [
       "ground",
@@ -3272,6 +3318,48 @@ const mySpellsLibrary = [
     "name": "Dissuasive Protection",
     "description": "When the caster is attacked, he deals damages to the attacking unit.",
     "id": 66
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "Global"
+      },
+      {
+        "name": "Area",
+        "value": "350",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Delay",
+        "value": [
+          "1.8",
+          "1.5",
+          "1.2"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Distortion",
+    "ulti": true,
+    "description": "The caster teleports to his location every allied units in the target area after a short duration. This spell does not teleport lane creeps.",
+    "cooldown": [
+      "140",
+      "130",
+      "120"
+    ],
+    "manacost": [
+      "200",
+      "250",
+      "300"
+    ],
+    "id": 335
   },
   {
     "type": "Instant",
@@ -5668,6 +5756,32 @@ const mySpellsLibrary = [
   {
     "type": "Passive",
     "targets": [
+      "enemies"
+    ],
+    "params": [
+      {
+        "name": "Damages Loss",
+        "value": [
+          "5",
+          "7",
+          "9",
+          "11"
+        ],
+        "temp": "$$ per attack"
+      },
+      {
+        "name": "Duration",
+        "value": "7",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Hardened Skin",
+    "description": "Each time the hero is attacked it decreases the attacking unit damages during a short duration. The multiple malus stacks and the duration is reset each attacks. The spell can't put enemies damages to null or negative values.",
+    "id": 339
+  },
+  {
+    "type": "Passive",
+    "targets": [
       "ground",
       "air",
       "allies",
@@ -6531,6 +6645,51 @@ const mySpellsLibrary = [
       "320"
     ],
     "id": 125
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "300",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": "10",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "50",
+          "100",
+          "150",
+          "200"
+        ]
+      }
+    ],
+    "name": "Imbue Weapon",
+    "description": "The caster imbue the target's weapon with energy increasing his damages for the next attack.",
+    "cooldown": [
+      "12",
+      "10",
+      "8",
+      "6"
+    ],
+    "manacost": [
+      "100",
+      "115",
+      "130",
+      "145"
+    ],
+    "id": 338
   },
   {
     "type": "Target point",
@@ -8682,10 +8841,38 @@ const mySpellsLibrary = [
         "name": "Cast Range",
         "value": "800",
         "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages Base",
+        "value": "21"
+      },
+      {
+        "name": "Attack Rate",
+        "value": "1.75",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Armor",
+        "value": "1"
+      },
+      {
+        "name": "Move Speed",
+        "value": "290",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Life",
+        "temp": "$$ hp",
+        "value": "340"
+      },
+      {
+        "temp": "$$ hp/s",
+        "name": "Life Regeneration",
+        "value": "4"
       }
     ],
     "name": "Natural Evolution",
-    "description": "Summons some traents with the trees in an area, that fight with the caster during 60 seconds.",
+    "description": "Summons some traents with the trees in an area, that fight with the caster during 60 seconds. Traents regenerates their life only during the night.",
     "manacost": [
       "125",
       "135",
@@ -9415,16 +9602,6 @@ const mySpellsLibrary = [
         ]
       },
       {
-        "name": "Ward Life",
-        "value": [
-          "75",
-          "175",
-          "275",
-          "375"
-        ],
-        "temp": "$$ hp"
-      },
-      {
         "name": "Ward Attack Range",
         "value": "600",
         "temp": "$$ ranges"
@@ -9433,6 +9610,16 @@ const mySpellsLibrary = [
         "name": "Ward Attack Rate",
         "value": "1.5",
         "temp": "$$ seconds"
+      },
+      {
+        "name": "Ward Life",
+        "value": [
+          "75",
+          "175",
+          "275",
+          "375"
+        ],
+        "temp": "$$ hp"
       }
     ],
     "name": "Plant Serpent Ward",
@@ -10441,6 +10628,72 @@ const mySpellsLibrary = [
     "id": 194
   },
   {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Armor Bonus",
+        "value": [
+          "4",
+          "6",
+          "8",
+          "10"
+        ]
+      }
+    ],
+    "name": "Repulse Nuisance",
+    "description": "Gives to the hero a permanent bonus of armor.",
+    "id": 334
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": "8",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Mana Restaured",
+        "value": [
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "temp": "$$ mana points per second"
+      }
+    ],
+    "name": "Resplenish Mana",
+    "description": "The caster places a buff on the target ally or himself that restore his mana over the time.",
+    "cooldown": [
+      "15",
+      "12",
+      "9",
+      "6"
+    ],
+    "manacost": [
+      "50",
+      "60",
+      "70",
+      "80"
+    ],
+    "id": 337
+  },
+  {
     "type": "Target unit",
     "targets": [
       "enemies",
@@ -10737,6 +10990,70 @@ const mySpellsLibrary = [
     ],
     "cooldown": "10",
     "id": 201
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "800",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Distance",
+        "value": "1200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Speed",
+        "value": "1100",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Area",
+        "value": "150",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "80",
+          "130",
+          "180",
+          "230"
+        ]
+      },
+      {
+        "name": "Damages Loss",
+        "value": "100",
+        "temp": "$$% basic damages"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "2.5",
+          "3.25",
+          "4",
+          "4.75"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Ripple of Force",
+    "description": "The caster summons a wave that will deals damages to enemies in a line decreasing their damages during a short duration.",
+    "cooldown": "10",
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 333
   },
   {
     "type": "Instant",
@@ -11232,6 +11549,51 @@ const mySpellsLibrary = [
       "260"
     ],
     "id": 311
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "organics"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "400",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ]
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "1",
+          "1.5",
+          "2",
+          "2.5"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Shackles",
+    "description": "Magically binds a target enemy unit, so that it cannot move or attack and takes damage per second.",
+    "cooldown": "10",
+    "manacost": [
+      "120",
+      "130",
+      "140",
+      "150"
+    ],
+    "id": 332
   },
   {
     "type": "Target unit",
@@ -13229,6 +13591,39 @@ const mySpellsLibrary = [
     "id": 315
   },
   {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Armor Malus",
+        "value": [
+          "0.5",
+          "1",
+          "1.5",
+          "2"
+        ],
+        "temp": "$$ per stack"
+      },
+      {
+        "name": "Duration",
+        "value": "6",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Ugly Vodoo",
+    "description": "Each time the hero casts a spell it decreases the enemies around's armor during a short duration. Multiples instances stacks additively.",
+    "id": 331
+  },
+  {
     "type": "Instant",
     "targets": [
       "enemies",
@@ -13768,6 +14163,11 @@ const mySpellsLibrary = [
           "36",
           "48"
         ]
+      },
+      {
+        "name": "Bolt Speed",
+        "value": "600",
+        "temp": "$$ ranges/s"
       }
     ],
     "name": "Weapon Mastery",

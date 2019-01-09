@@ -21,7 +21,8 @@ const defaultHeroes = [
     "bonusStr": "1.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNKeeperOfTheGrove.blp",
     "attackRate": "1.7",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\nightelf\\HeroKeeperoftheGrove\\HeroKeeperoftheGrove.mdl"
   },
   {
     "type": "Priestess of the Moon",
@@ -45,7 +46,8 @@ const defaultHeroes = [
     "bonusStr": "1.5",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNShandris.blp",
     "attackRate": "1.65",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\nightelf\\HeroMoonPriestess\\HeroMoonPriestess.mdl"
   },
   {
     "type": "Demon Hunter",
@@ -69,7 +71,8 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroDemonHunter.blp",
     "attackRate": "1.6",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\nightelf\\HeroDemonHunter\\HeroDemonHunter.mdl"
   },
   {
     "type": "Warden",
@@ -93,7 +96,8 @@ const defaultHeroes = [
     "bonusStr": "2.2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroWarden.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\nightelf\\herowarden\\herowarden.mdl"
   },
   {
     "type": "Paladin",
@@ -117,7 +121,8 @@ const defaultHeroes = [
     "bonusStr": "2.7",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\human\\Uther\\Uther.mdl"
   },
   {
     "type": "Archmage",
@@ -141,7 +146,8 @@ const defaultHeroes = [
     "bonusStr": "1.8",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroArchMage.blp",
     "attackRate": "1.65",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\human\\HeroArchMage\\HeroArchMage.mdl"
   },
   {
     "type": "Mountain King",
@@ -165,7 +171,8 @@ const defaultHeroes = [
     "bonusStr": "3",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroMountainKing.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\human\\HeroMountainKing\\HeroMountainKing.mdl"
   },
   {
     "type": "Blood Mage",
@@ -189,7 +196,8 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroBloodElfPrince.blp",
     "attackRate": "1.7",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\human\\HeroBloodElf\\HeroBloodElf.mdl"
   },
   {
     "type": "Blademaster",
@@ -213,7 +221,8 @@ const defaultHeroes = [
     "bonusStr": "2.2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroBlademaster.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\orc\\HeroBladeMaster\\HeroBladeMaster.mdl"
   },
   {
     "type": "Far Seer",
@@ -237,7 +246,8 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroFarseer.blp",
     "attackRate": "1.7",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\orc\\HeroFarSeer\\HeroFarSeer.mdl"
   },
   {
     "type": "Tauren Chieftain",
@@ -261,7 +271,8 @@ const defaultHeroes = [
     "bonusStr": "3.2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroTaurenChieftain.blp",
     "attackRate": "1.7",
-    "attackRange": "128"
+    "attackRange": "128",
+    "modelPath": "units\\orc\\HeroTaurenChieftain\\HeroTaurenChieftain.mdl"
   },
   {
     "type": "Juggernault",
@@ -285,7 +296,8 @@ const defaultHeroes = [
     "bonusStr": "2.3",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNChaosBlademaster.blp",
     "attackRate": "1.6",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\demon\\HeroChaosBladeMaster\\HeroChaosBladeMaster.mdl"
   },
   {
     "type": "Shadow Hunter",
@@ -309,7 +321,8 @@ const defaultHeroes = [
     "bonusStr": "1.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNShadowHunter.blp",
     "attackRate": "1.7",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\orc\\HeroShadowHunter\\HeroShadowHunter.mdl"
   },
   {
     "type": "Death Knight",
@@ -333,7 +346,8 @@ const defaultHeroes = [
     "bonusStr": "2.7",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroDeathKnight.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\undead\\HeroDeathKnight\\HeroDeathKnight.mdl"
   },
   {
     "type": "Lich",
@@ -357,7 +371,8 @@ const defaultHeroes = [
     "bonusStr": "1.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp",
     "attackRate": "1.7",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\undead\\HeroLich\\HeroLich.mdl"
   },
   {
     "type": "Dreadlord",
@@ -381,7 +396,8 @@ const defaultHeroes = [
     "bonusStr": "2.6",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNTichondrius.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\undead\\Tichondrius\\Tichondrius.mdl"
   },
   {
     "type": "Crypt Lord",
@@ -405,7 +421,8 @@ const defaultHeroes = [
     "bonusStr": "3.2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroCryptLord.blp",
     "attackRate": "1.7",
-    "attackRange": "128"
+    "attackRange": "128",
+    "modelPath": "units\\undead\\HeroCryptLord\\HeroCryptLord.mdl"
   },
   {
     "type": "Eredar",
@@ -429,7 +446,8 @@ const defaultHeroes = [
     "bonusStr": "1.8",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNArchimonde.blp",
     "attackRate": "1.7",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\demon\\Warlock\\Warlock.mdl"
   },
   {
     "type": "Alchemist",
@@ -453,7 +471,8 @@ const defaultHeroes = [
     "bonusStr": "3",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroAlchemist.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "Units\\Creeps\\HeroGoblinAlchemist\\HeroGoblinAlchemist.mdl"
   },
   {
     "type": "Naga Sea Witch",
@@ -477,7 +496,8 @@ const defaultHeroes = [
     "bonusStr": "1.7",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNNagaSeaWitch.blp",
     "attackRate": "1.6",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\naga\\HeroNagaSeawitch\\HeroNagaSeawitch.mdl"
   },
   {
     "type": "Tinker",
@@ -501,7 +521,8 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroTinker.blp",
     "attackRate": "1.65",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "Units\\Creeps\\HeroTinker\\HeroTinker.mdl"
   },
   {
     "type": "Warlock",
@@ -525,7 +546,8 @@ const defaultHeroes = [
     "bonusStr": "3.5",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNKiljaedin.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\demon\\Kiljaeden\\Kiljaeden.mdl"
   },
   {
     "type": "Admiral",
@@ -549,7 +571,8 @@ const defaultHeroes = [
     "bonusStr": "2.8",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNProudmoore.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\other\\Proudmoore\\Proudmoore.mdl"
   },
   {
     "type": "Ancient Apparition",
@@ -573,7 +596,8 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNKeeperGhostBlue.blp",
     "attackRate": "1.6",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\nightelf\\HeroKeeperoftheGroveGhost\\HeroKeeperoftheGroveGhost.mdl"
   },
   {
     "type": "Beastmaster",
@@ -597,7 +621,8 @@ const defaultHeroes = [
     "bonusStr": "2.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNBeastMaster.blp",
     "attackRate": "1.6",
-    "attackRange": "128"
+    "attackRange": "128",
+    "modelPath": "Units\\Creeps\\Beastmaster\\Beastmaster.mdl"
   },
   {
     "type": "Betrayer",
@@ -621,7 +646,8 @@ const defaultHeroes = [
     "bonusStr": "1.3",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNEvilIllidan.blp",
     "attackRate": "1.5",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\nightelf\\EvilIllidan\\IllidanEvil.mdl"
   },
   {
     "type": "Dark Knight",
@@ -645,7 +671,8 @@ const defaultHeroes = [
     "bonusStr": "4.5",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNGarithos.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\creeps\\LordGarithos\\LordGarithos.mdl"
   },
   {
     "type": "Dark Ranger",
@@ -669,7 +696,8 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNBansheeRanger.blp",
     "attackRate": "1.65",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "Units\\Creeps\\BansheeRanger\\BansheeRanger.mdl"
   },
   {
     "type": "Fierce Knight",
@@ -693,7 +721,8 @@ const defaultHeroes = [
     "bonusStr": "2.8",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNArthas.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\human\\ArthaswithSword\\ArthaswithSword.mdl"
   },
   {
     "type": "Firelord",
@@ -717,7 +746,8 @@ const defaultHeroes = [
     "bonusStr": "1.8",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNHeroAvatarOfFlame.blp",
     "attackRate": "1.65",
-    "attackRange": "550"
+    "attackRange": "550",
+    "modelPath": "Units\\Creeps\\HeroFlameLord\\HeroFlameLord.mdl"
   },
   {
     "type": "Holy Apparition",
@@ -741,7 +771,8 @@ const defaultHeroes = [
     "bonusStr": "1.6",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNGhostMage.blp",
     "attackRate": "1.6",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\other\\HeroArchMageGhost\\HeroArchMageGhost.mdl"
   },
   {
     "type": "Maiden",
@@ -765,7 +796,8 @@ const defaultHeroes = [
     "bonusStr": "1.7",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNJaina.blp",
     "attackRate": "1.7",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\human\\Jaina\\Jaina.mdl"
   },
   {
     "type": "Pandaren Brewmaster",
@@ -789,7 +821,8 @@ const defaultHeroes = [
     "bonusStr": "2.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNPandarenBrewmaster.blp",
     "attackRate": "1.6",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "Units\\Creeps\\PandarenBrewmaster\\PandarenBrewmaster.mdl"
   },
   {
     "type": "Pit Lord",
@@ -813,7 +846,8 @@ const defaultHeroes = [
     "bonusStr": "3.2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNPitLord.blp",
     "attackRate": "1.7",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\demon\\HeroPitLord\\HeroPitLord.mdl"
   },
   {
     "type": "Prophet",
@@ -837,7 +871,8 @@ const defaultHeroes = [
     "bonusStr": "1.7",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNFurion.blp",
     "attackRate": "1.65",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\nightelf\\MalFurion\\MalFurion.mdl"
   },
   {
     "type": "Rampager",
@@ -861,7 +896,8 @@ const defaultHeroes = [
     "bonusStr": "2.6",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNChaosGrom.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "units\\demon\\ChaosHellscream\\ChaosHellscream.mdl"
   },
   {
     "type": "Ranger",
@@ -885,7 +921,8 @@ const defaultHeroes = [
     "bonusStr": "1.9",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNSylvanusWindrunner.blp",
     "attackRate": "1.65",
-    "attackRange": "600"
+    "attackRange": "600",
+    "modelPath": "units\\creeps\\SylvanusWindrunner\\SylvanusWindrunner.mdl"
   },
   {
     "type": "Fel Lord",
@@ -909,7 +946,8 @@ const defaultHeroes = [
     "bonusStr": "3",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNFelGuardBlue.blp",
     "attackRate": "1.7",
-    "attackRange": "128"
+    "attackRange": "128",
+    "modelPath": "Unit\\FerSZFelLord.mdl"
   },
   {
     "type": "Spirit Walker",
@@ -933,7 +971,8 @@ const defaultHeroes = [
     "bonusStr": "2.6",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNSpiritWalker.blp",
     "attackRate": "1.65",
-    "attackRange": "128"
+    "attackRange": "128",
+    "modelPath": "Unit\\HeroWhiteManeDruidX.mdl"
   },
   {
     "type": "Draenei Assassin",
@@ -957,7 +996,8 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNDranaiAkama.blp",
     "attackRate": "1.5",
-    "attackRange": "90"
+    "attackRange": "90",
+    "modelPath": "units\\other\\DranaiAkama\\DranaiAkama.mdl"
   },
   {
     "type": "Tiggerian Slicer",
@@ -981,7 +1021,8 @@ const defaultHeroes = [
     "bonusStr": "2",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTNPriestessOfTheMoon.blp",
     "attackRate": "1.45",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "Unit\\HeroTigerianSlicer.mdl"
   },
   {
     "type": "Judgment Clerc",
@@ -1005,7 +1046,8 @@ const defaultHeroes = [
     "bonusStr": "2.7",
     "iconPath": "ReplaceableTextures\\CommandButtons\\BTN_JudgmentClerc.blp",
     "attackRate": "1.65",
-    "attackRange": "100"
+    "attackRange": "100",
+    "modelPath": "Unit\\Judgment Paladin.mdl"
   },
   {
     "id": "H08L",
@@ -1028,7 +1070,8 @@ const defaultHeroes = [
     "life": "175",
     "regenLife": "2",
     "mana": "105",
-    "regenMana": "1.1"
+    "regenMana": "1.1",
+    "modelPath": "Unit\\GryphonHero.mdl"
   },
   {
     "type": "Titan Hyperion",
@@ -1051,7 +1094,8 @@ const defaultHeroes = [
     "life": "225",
     "regenLife": "3",
     "mana": "90",
-    "regenMana": "0.9"
+    "regenMana": "0.9",
+    "modelPath": "Unit\\Titan_LordHyperion.mdl"
   },
   {
     "id": "E005",
@@ -1074,7 +1118,8 @@ const defaultHeroes = [
     "life": "170",
     "regenLife": "1.5",
     "mana": "100",
-    "regenMana": "1"
+    "regenMana": "1",
+    "modelPath": "Unit\\Werewolf.mdl"
   },
   {
     "id": "H09I",
@@ -1097,6 +1142,7 @@ const defaultHeroes = [
     "life": "230",
     "regenLife": "2.2",
     "mana": "95",
-    "regenMana": "0.9"
+    "regenMana": "0.9",
+    "modelPath": "Unit\\Butcher.mdl"
   }
 ]

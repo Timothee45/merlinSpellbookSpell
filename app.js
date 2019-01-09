@@ -418,6 +418,7 @@ Vue.component('heroes', {
 					<th>Type</th>
 					<th>Name</th>
 					<th>Icone</th>
+					<th>Model</th>
 					<th v-if="showStories">Histoire</th>
 					<th v-if="attr">Capacité Main</th>
 					<th v-if="attr">Agi</th>
@@ -448,6 +449,7 @@ Vue.component('heroes', {
 					<td class="hero-cell"><input type="text" v-model="hero.type"></td>
 					<td class="hero-cell"><input type="text" v-model="hero.name"></td>
 					<td class="hero-cell"><input type="text" v-model="hero.iconPath"></td>
+					<td class="hero-cell"><input type="text" v-model="hero.modelPath"></td>
 					<td v-if="showStories" class="hero-cell"><input type="text" v-model="hero.story"></td>
 					<td v-if="attr" class="hero-cell">
 						<select v-model="hero.mainAttribute">
@@ -521,6 +523,9 @@ Vue.component('heroes', {
 		<textarea type="textarea" cols="60" rows="20" v-model="importHeroes" placeholder="to import..."></textarea>
 		<button @click="importDatas">+</button>
 		<textarea type="textarea" cols="60" rows="20">const defaultHeroes = {{ heroes }}</textarea>
+		<div>
+			<div v-for="hero in heroes">{{ renderStruct(hero) }}</div>
+		</div>
 	</div>`,
 	data() {
 		return {
@@ -563,8 +568,9 @@ Vue.component('heroes', {
 		},
 		renderStruct: function(hero) {
 			var result = encodeURI(hero.iconPath);
+			var resultModel = encodeURI(hero.modelPath);
 
-			return '	call Hero.addHero(\'' + hero.id + '\', "' + hero.mainAttribute + '", "' + decodeURI(result.replace(/%5C/g,"%5C%5C")) + '")	//' + (hero.type).toUpperCase()
+			return '	call Hero.addHero("' + hero.type + '", \'' + hero.id + '\', "' + hero.mainAttribute + '", "' + decodeURI(result.replace(/%5C/g,"%5C%5C")) + '", "' + decodeURI(resultModel.replace(/%5C/g,"%5C%5C")) + '")	//' + (hero.type).toUpperCase()
 		},
 		renderPresentation: function(hero) {
 			var typeAttackColor = "99ccff";

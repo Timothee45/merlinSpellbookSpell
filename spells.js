@@ -5576,7 +5576,7 @@ const mySpellsLibrary = [
     ],
     "name": "Growing Power",
     "ulti": true,
-    "description": "Gives a permanent bonus to the hero damages. ",
+    "description": "Gives a permanent bonus to the hero damages.",
     "id": 107
   },
   {
@@ -5626,7 +5626,7 @@ const mySpellsLibrary = [
       {
         "name": "Life Limit",
         "value": "25",
-        "temp": "$$% maximumlife"
+        "temp": "$$% maximum life"
       },
       {
         "name": "Cast Range",
@@ -5691,7 +5691,7 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Haste",
-    "description": "Increases the movement speed of nearby allies units.",
+    "description": "Increases the movement speed of nearby allied units.",
     "id": 110
   },
   {

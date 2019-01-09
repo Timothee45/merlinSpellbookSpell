@@ -749,15 +749,15 @@ const myVue = new Vue({
 			}
 		},
 		getNewId: function() {
-			var newId = 0;
+			var maxId = 0;
 
 			this.spells.forEach(item => {
-				if (item.id > newId) {
-					newId = item.id;
+				if (item.id > maxId) {
+					maxId = item.id;
 				}
 			});
 
-			return newId + 1;
+			return maxId + 1;
 		},
 		orderSpells: function() {
 			this.spells.sort(this.compare);

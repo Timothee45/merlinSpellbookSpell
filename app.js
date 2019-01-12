@@ -488,6 +488,7 @@ Vue.component('heroes', {
 					<td class="hero-cell"><input type="text" v-model="newHero.type" placeholder="type..."></td>
 					<td class="hero-cell"><input type="text" v-model="newHero.name" placeholder="name..."></td>
 					<td class="hero-cell"><input type="text" v-model="newHero.iconPath" placeholder="icon path..."></td>
+					<td class="hero-cell"><input type="text" v-model="newHero.modelPath" placeholder="model path..."></td>
 					<td v-if="showStories" class="hero-cell"><input type="text" v-model="newHero.story" placeholder="story..."></td>
 					<td v-if="attr" class="hero-cell">
 						<select v-model="newHero.mainAttribute">
@@ -523,6 +524,8 @@ Vue.component('heroes', {
 		<textarea type="textarea" cols="60" rows="20" v-model="importHeroes" placeholder="to import..."></textarea>
 		<button @click="importDatas">+</button>
 		<textarea type="textarea" cols="60" rows="20">const defaultHeroes = {{ heroes }}</textarea>
+		<table class="table-bordered table-striped" v-html="renderRepartition()">
+		</table>
 		<div>
 			<div v-for="hero in heroes">{{ renderStruct(hero) }}</div>
 		</div>
@@ -537,6 +540,7 @@ Vue.component('heroes', {
 			newHero: {},
 			showStories: false,
 			selectedRow: null,
+			attributeRepartition: {},
 			importHeroes: "",
 			attributes: ["Agility", "Intelligence", "Strength"],
 			typesAttack: ["Melee", "Ranged"],
@@ -546,6 +550,8 @@ Vue.component('heroes', {
 		this.heroes = defaultHeroes;
 
 		this.clicked = this.emptyClickTable();
+
+		this.getRepartition();
 	},
 	methods: {
 		emptyClickTable: function() {
@@ -565,6 +571,21 @@ Vue.component('heroes', {
 				this.clicked = newArray;
 				this.selectedRow = index;
 			}
+		},
+		getRepartition: function() {
+			var repartition = {};
+
+			this.heroes.forEach(hero => {
+				attr = hero.mainAttribute;
+
+				if (repartition[attr]) {
+					repartition[attr] = repartition[attr] + 1;
+				} else {
+					repartition[attr] = 1;
+				}
+			});
+
+			this.attributeRepartition = repartition;
 		},
 		renderStruct: function(hero) {
 			var result = encodeURI(hero.iconPath);
@@ -625,9 +646,21 @@ Vue.component('heroes', {
 
 			return myPresentation;
 		},
+		renderRepartition: function() {
+			var repart = "";
+			var keys = Object.keys(this.attributeRepartition);
+
+			keys.forEach(key => {
+				repart += '<tr><th class="hero-cell">' + key + '</th><td class="hero-cell">' + this.attributeRepartition[key] + '</td></tr>';
+			});
+
+			return repart;
+		},
 		addHero: function() {
 			this.heroes.push(this.newHero);
 			this.newHero = {};
+
+			this.getRepartition();
 		},
 		importDatas: function() {
 			var dataLines = this.importHeroes.split("\n");
@@ -755,15 +788,15 @@ const myVue = new Vue({
 			}
 		},
 		getNewId: function() {
-			var newId = 0;
+			var maxId = 0;
 
 			this.spells.forEach(item => {
-				if (item.id > newId) {
-					newId = item.id;
+				if (item.id > maxId) {
+					maxId = item.id;
 				}
 			});
 
-			return newId + 1;
+			return maxId + 1;
 		},
 		orderSpells: function() {
 			this.spells.sort(this.compare);

@@ -4485,9 +4485,9 @@ const mySpellsLibrary = [
         "name": "Probability",
         "value": [
           "10",
+          "15",
           "20",
-          "30",
-          "40"
+          "25"
         ],
         "temp": "$$% chances"
       }
@@ -6541,6 +6541,65 @@ const mySpellsLibrary = [
     "name": "Holy Seal",
     "description": "When the caster is damaged it has 20% chances to restores a percentage of his max life.",
     "id": 122
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "750",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": "12",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Armor Malus",
+        "value": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      {
+        "name": "Damage",
+        "value": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ],
+        "temp": "$$ per second"
+      }
+    ],
+    "name": "Hopelessness",
+    "description": "The caster places a seal in the targeted area during a short duration. Every enemies in the area are damage and their armor are reduced. When they leave the area the buff is lost.",
+    "cooldown": [
+      "14",
+      "12",
+      "10",
+      "8"
+    ],
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "id": 340
   },
   {
     "type": "Instant",
@@ -11755,16 +11814,11 @@ const mySpellsLibrary = [
       {
         "name": "Damages",
         "value": [
-          "50",
-          "70",
-          "90"
+          "60",
+          "80",
+          "100"
         ],
         "temp": "$$ damages per slam"
-      },
-      {
-        "name": "Period Sheep Slam",
-        "value": "1",
-        "temp": "$$ second"
       },
       {
         "name": "Area Slam",
@@ -11772,8 +11826,13 @@ const mySpellsLibrary = [
         "temp": "$$ ranges"
       },
       {
+        "name": "Period Sheep Slam",
+        "value": "0.5",
+        "temp": "$$ second"
+      },
+      {
         "name": "Sheeps Speed",
-        "value": "400",
+        "value": "750",
         "temp": "$$ ranges/s"
       },
       {
@@ -11784,7 +11843,7 @@ const mySpellsLibrary = [
     ],
     "name": "Sheep Chop",
     "ulti": true,
-    "description": "The caster summons some sheeps around him that will bounces in random direction. Every 400 ranges moved they will slam the ground, dealing damages to enemies when they lands.",
+    "description": "The caster summons some sheeps around him that will bounces in random direction. Every 350 ranges travelled they will slam the ground, dealing damages to enemies when they lands.",
     "cooldown": [
       "80",
       "80",

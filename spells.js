@@ -2156,10 +2156,10 @@ const mySpellsLibrary = [
       {
         "name": "Duration",
         "value": [
-          "4",
-          "5",
           "6",
-          "7"
+          "8",
+          "10",
+          "12"
         ],
         "temp": "$$ seconds"
       },
@@ -2172,10 +2172,10 @@ const mySpellsLibrary = [
     "name": "Cloaking Field",
     "description": "The caster cloaks only the allied units around him during a short duration. If an allied goes too far away from the caster it becomes visible again. Attack and casts spell breaks invisibility too.",
     "cooldown": [
+      "65",
+      "60",
       "55",
-      "50",
-      "45",
-      "40"
+      "50"
     ],
     "manacost": [
       "120",
@@ -3410,6 +3410,35 @@ const mySpellsLibrary = [
     "id": 67
   },
   {
+    "type": "Passive",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "750",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Life Regeneration",
+        "value": [
+          "3",
+          "5",
+          "7",
+          "9"
+        ],
+        "temp": "$$ hp/s"
+      }
+    ],
+    "name": "Divine Hymn",
+    "description": "The hero increases the nearby units life regeneration.",
+    "id": 341
+  },
+  {
     "type": "Instant",
     "targets": [
       "enemies",
@@ -4115,7 +4144,7 @@ const mySpellsLibrary = [
     "id": 78
   },
   {
-    "type": "Target unit",
+    "type": "Passive",
     "targets": [
       "self"
     ],
@@ -4331,9 +4360,19 @@ const mySpellsLibrary = [
       "ground",
       "air"
     ],
-    "params": [],
+    "params": [
+      {
+        "name": "Max Number of Attacks",
+        "value": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    ],
     "name": "Enrage",
-    "description": "The caster get a huge attackspeed bonus for a short number of attacks. If the caster attacks a certain number of times the buff is lost. Last 15 seconds.",
+    "description": "The caster get a huge attack speed bonus for a short number of attacks. If the caster attacks a certain number of times the buff is lost. Last 15 seconds.",
     "manacost": [
       "80",
       "85",
@@ -11368,6 +11407,11 @@ const mySpellsLibrary = [
     ],
     "params": [
       {
+        "name": "Area",
+        "value": "750",
+        "temp": "$$ ranges"
+      },
+      {
         "name": "Attack Speed Bonus",
         "value": [
           "15",
@@ -11376,11 +11420,6 @@ const mySpellsLibrary = [
           "45"
         ],
         "temp": "$$%"
-      },
-      {
-        "name": "Area",
-        "value": "750",
-        "temp": "$$ ranges"
       }
     ],
     "name": "Savagery Aura",
@@ -11762,7 +11801,8 @@ const mySpellsLibrary = [
       "200",
       "250"
     ],
-    "id": 213
+    "id": 213,
+    "ulti": true
   },
   {
     "type": "Passive",
@@ -12150,7 +12190,8 @@ const mySpellsLibrary = [
       "175",
       "200"
     ],
-    "id": 222
+    "id": 222,
+    "ulti": true
   },
   {
     "type": "Instant",

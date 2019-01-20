@@ -877,7 +877,7 @@ const defaultHeroes = [
   {
     "type": "Rampager",
     "id": "Opgh",
-    "typeAttk": "Ranged",
+    "typeAttk": "Melee",
     "mainAttribute": "Strength",
     "damages": "18",
     "armor": "4",
@@ -976,7 +976,7 @@ const defaultHeroes = [
   },
   {
     "type": "Draenei Assassin",
-    "id": "Naka",
+    "id": "O00Q",
     "typeAttk": "Melee",
     "mainAttribute": "Agility",
     "damages": "25",

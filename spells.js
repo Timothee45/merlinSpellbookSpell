@@ -1134,8 +1134,9 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Blood Letting",
-    "description": "The caster remove some life to the attacked unit during a short duration.",
-    "id": 309
+    "description": "Each time the hero attacks a target it removes some max life during a short duration.",
+    "id": 309,
+    "danger": "Only works against heroes."
   },
   {
     "type": "Target unit",
@@ -1565,10 +1566,10 @@ const mySpellsLibrary = [
       {
         "name": "Life Regeneration",
         "value": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "0.75",
+          "1.25",
+          "1.75",
+          "2.25"
         ],
         "temp": "$$% of max mana"
       }
@@ -1698,10 +1699,10 @@ const mySpellsLibrary = [
       {
         "name": "Bonus Damages",
         "value": [
-          "30",
           "40",
-          "50",
-          "60"
+          "55",
+          "70",
+          "85"
         ]
       },
       {
@@ -1713,10 +1714,10 @@ const mySpellsLibrary = [
     "name": "Canonball",
     "description": "Adds some bonus damage to the hero's attack and causes his attacks to do area of effect damage.",
     "manacost": [
-      "35",
-      "45",
-      "55",
-      "65"
+      "20",
+      "25",
+      "30",
+      "35"
     ],
     "id": 34,
     "danger": "Orb effect does not stack."
@@ -1836,20 +1837,20 @@ const mySpellsLibrary = [
       {
         "name": "Damages",
         "value": [
+          "20",
+          "30",
           "40",
-          "50",
-          "60",
-          "70"
+          "50"
         ],
         "temp": "$$ damages/s"
       },
       {
         "name": "Damages Impaled",
         "value": [
+          "1.5",
           "2.5",
           "3.5",
-          "4.5",
-          "5.5"
+          "4.5"
         ],
         "temp": "$$% target max life as damages"
       },
@@ -1957,7 +1958,7 @@ const mySpellsLibrary = [
     "id": 238
   },
   {
-    "type": "Instant",
+    "type": "Target unit",
     "targets": [
       "ground",
       "air",
@@ -2224,10 +2225,10 @@ const mySpellsLibrary = [
       {
         "name": "Mana Regeneration",
         "value": [
+          "0.5",
+          "1",
           "1.5",
-          "2.5",
-          "3.5",
-          "4.5"
+          "2"
         ],
         "temp": "$$% of max mana"
       }
@@ -2806,11 +2807,6 @@ const mySpellsLibrary = [
     ],
     "params": [
       {
-        "name": "Duration",
-        "value": "12",
-        "temp": "$$ seconds per stack"
-      },
-      {
         "name": "Area",
         "value": "500",
         "temp": "$$ ranges"
@@ -2818,12 +2814,17 @@ const mySpellsLibrary = [
       {
         "name": "Damages",
         "value": [
-          "25",
-          "30",
-          "35",
-          "40"
+          "10",
+          "15",
+          "20",
+          "25"
         ],
         "temp": "$$ damages per second"
+      },
+      {
+        "name": "Duration",
+        "value": "12",
+        "temp": "$$ seconds per stack"
       }
     ],
     "name": "Death Fumes",
@@ -2956,10 +2957,10 @@ const mySpellsLibrary = [
       {
         "name": "Bonus Damages",
         "value": [
+          "10",
           "15",
           "20",
-          "25",
-          "30"
+          "25"
         ],
         "temp": "$$ stacked each attack"
       },
@@ -2970,8 +2971,9 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Deep Wounds",
-    "description": "Each attack deals more damages than the previous attack to the foe's body. |n|cffff0000Orb effect does not stack.|r",
-    "id": 58
+    "description": "Each attack deals more damages than the previous attack to the foe's body. The buff stacks on each target attacked by the hero. On each new attacked unit the buff starts with 0 stacks and after the max duration the stacks are removed.",
+    "id": 58,
+    "danger": "Orb effect does not stack."
   },
   {
     "type": "Instant",
@@ -3066,10 +3068,10 @@ const mySpellsLibrary = [
     "name": "Demolisher Missile",
     "description": "The caster burns the target on attacks dealing damages over the time during 8 seconds. The buff stack indefinitly and are independant.",
     "manacost": [
+      "30",
       "40",
       "50",
-      "60",
-      "70"
+      "60"
     ],
     "id": 59,
     "danger": "Orb effect does not stack."
@@ -4007,7 +4009,7 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Eclipse",
-    "description": "The caster summons some light reay that deals damages to enemies around.",
+    "description": "The caster summons some light rays that deals damages to enemies around.",
     "cooldown": [
       "110",
       "95",
@@ -4865,7 +4867,8 @@ const mySpellsLibrary = [
       "110",
       "100"
     ],
-    "id": 93
+    "id": 93,
+    "ulti": true
   },
   {
     "type": "Instant",
@@ -5452,9 +5455,9 @@ const mySpellsLibrary = [
         "name": "Life Regeneration",
         "value": [
           "0.5",
-          "1",
-          "1.5",
-          "2"
+          "0.7",
+          "0.9",
+          "1.1"
         ],
         "temp": "$$% of max life per second"
       }
@@ -5618,10 +5621,10 @@ const mySpellsLibrary = [
       {
         "name": "Life Bonus",
         "value": [
-          "150",
+          "100",
+          "200",
           "300",
-          "450",
-          "600"
+          "400"
         ],
         "temp": "$$ hp"
       }
@@ -6071,6 +6074,11 @@ const mySpellsLibrary = [
           "25"
         ],
         "temp": "$$% damages dealt"
+      },
+      {
+        "name": "Duration",
+        "value": "7",
+        "temp": "$$ seconds"
       }
     ],
     "name": "Heartstopper Curse",
@@ -6278,9 +6286,9 @@ const mySpellsLibrary = [
       {
         "name": "Damages",
         "value": [
+          "60",
           "70",
-          "90",
-          "110"
+          "80"
         ],
         "temp": "$$ damages/s"
       },
@@ -6303,9 +6311,9 @@ const mySpellsLibrary = [
     "ulti": true,
     "description": "The caster summons a nova of plague that deals damages to enemies around during a short duration.",
     "manacost": [
-      "140",
-      "200",
-      "260"
+      "160",
+      "220",
+      "280"
     ],
     "cooldown": [
       "100",
@@ -7698,6 +7706,16 @@ const mySpellsLibrary = [
         "name": "Radius Blades",
         "value": "63",
         "temp": "$$ ranges"
+      },
+      {
+        "name": "Damage",
+        "value": [
+          "30",
+          "40",
+          "50",
+          "60"
+        ],
+        "temp": "$$ per blade"
       }
     ],
     "name": "Laguna Blades",
@@ -8350,20 +8368,20 @@ const mySpellsLibrary = [
       {
         "name": "Mana Burn",
         "value": [
+          "10",
+          "20",
           "30",
-          "40",
-          "50",
-          "60"
+          "40"
         ],
         "temp": "$$ mana points/s"
       },
       {
         "name": "Damages",
         "value": [
+          "10",
+          "20",
           "30",
-          "40",
-          "50",
-          "60"
+          "40"
         ],
         "temp": "$$ damages/s"
       }
@@ -9265,16 +9283,21 @@ const mySpellsLibrary = [
       {
         "name": "Damage Bonus",
         "value": [
-          "10",
           "15",
-          "20"
+          "20",
+          "25"
         ],
         "temp": "$$ damages per attack"
+      },
+      {
+        "name": "Duration",
+        "value": "10",
+        "temp": "$$ seconds"
       }
     ],
     "name": "Overpower",
     "ulti": true,
-    "description": "The caster deals more damages each attacks on non-building units, last 10 seconds.",
+    "description": "Each time the caster attacks an enemy, it gets a base attack damage bonus. Attacking buildings grants no bonuses.",
     "manacost": [
       "80",
       "95",
@@ -12422,7 +12445,7 @@ const mySpellsLibrary = [
       }
     ],
     "name": "Spiked Carapace",
-    "ulti": true,
+    "ulti": false,
     "description": "Reduces all damages from attacks on the hero.",
     "id": 224
   },
@@ -12642,10 +12665,10 @@ const mySpellsLibrary = [
       {
         "name": "Damages Stolen",
         "value": [
+          "20",
           "30",
-          "45",
-          "60",
-          "75"
+          "40",
+          "50"
         ]
       },
       {
@@ -12654,19 +12677,19 @@ const mySpellsLibrary = [
         "temp": "$$ seconds"
       }
     ],
-    "name": "Steals Vitality",
-    "description": "The caster steals some damages to the target enemy.",
+    "name": "Steal Vitality",
+    "description": "The caster steals some damages to the targeted enemy.",
     "cooldown": [
-      "15",
-      "13",
-      "11",
-      "9"
+      "16",
+      "14",
+      "12",
+      "10"
     ],
     "manacost": [
+      "90",
       "100",
-      "105",
       "110",
-      "115"
+      "120"
     ],
     "id": 307
   },
@@ -13081,7 +13104,19 @@ const mySpellsLibrary = [
     ],
     "name": "Teleportation",
     "description": "Teleport the caster to the target location on the map after 3 seconds of delay.",
-    "id": 242
+    "id": 242,
+    "cooldown": [
+      "50",
+      "40",
+      "30",
+      "20"
+    ],
+    "manacost": [
+      "40",
+      "45",
+      "50",
+      "55"
+    ]
   },
   {
     "type": "Target unit",
@@ -13413,16 +13448,16 @@ const mySpellsLibrary = [
       },
       {
         "name": "Duration",
-        "value": "5",
+        "value": "6",
         "temp": "$$ seconds"
       },
       {
         "name": "Life Regeneration",
         "value": [
-          "40",
-          "50",
-          "60",
-          "70"
+          "15",
+          "20",
+          "25",
+          "30"
         ],
         "temp": "$$ hp/s"
       },

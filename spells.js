@@ -1524,9 +1524,9 @@ const mySpellsLibrary = [
         "name": "Damages",
         "value": [
           "35",
-          "50",
-          "65",
-          "80"
+          "45",
+          "55",
+          "65"
         ],
         "temp": "$$ damages/s"
       },
@@ -9001,6 +9001,27 @@ const mySpellsLibrary = [
   {
     "type": "Passive",
     "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Mana Restoration",
+        "value": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "temp": "$$% of damages dealt"
+      }
+    ],
+    "name": "Natural Order",
+    "description": "When the hero deals damage to non building units it restore his mana in function of a percentage of the damages dealt.",
+    "id": 342
+  },
+  {
+    "type": "Passive",
+    "targets": [
       "enemies",
       "ground",
       "air"
@@ -13891,7 +13912,7 @@ const mySpellsLibrary = [
         "temp": "$$% of the caster's max mana"
       },
       {
-        "name": "AREA",
+        "name": "Area",
         "value": "800",
         "temp": "$$ ranges"
       }

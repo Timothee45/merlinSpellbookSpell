@@ -722,7 +722,7 @@ const mySpellsLibrary = [
     "id": 17
   },
   {
-    "type": "Passive",
+    "type": "Instant",
     "targets": [
       "self",
       "ground",
@@ -758,6 +758,27 @@ const mySpellsLibrary = [
     ],
     "cooldown": "30",
     "id": 18
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Max Attack Speed",
+        "value": [
+          "125",
+          "175",
+          "225",
+          "275"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Berzerker Blood",
+    "description": "The hero get more attack speed in function of the life lost.",
+    "id": 347
   },
   {
     "type": "Target point channel",
@@ -1029,6 +1050,51 @@ const mySpellsLibrary = [
       "19"
     ],
     "id": 23
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Miss Chance",
+        "value": [
+          "20",
+          "28",
+          "36",
+          "44"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Hero Duration",
+        "value": "12",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Units Duration",
+        "value": "25",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Blind",
+    "description": "A searing light blinds the vision of a target enemy unit, making it miss on some attacks.",
+    "cooldown": [
+      "15",
+      "12",
+      "9",
+      "6"
+    ],
+    "manacost": "20",
+    "id": 345
   },
   {
     "type": "Target point",
@@ -4873,6 +4939,118 @@ const mySpellsLibrary = [
   {
     "type": "Instant",
     "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Life Lost",
+        "value": [
+          "4",
+          "5",
+          "6"
+        ],
+        "temp": "$$% of max life"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "6",
+          "7",
+          "8"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Period Damages",
+        "value": "1",
+        "temp": "$$ second"
+      }
+    ],
+    "name": "Fire Shocks",
+    "ulti": true,
+    "description": "The caster summons a burning field aroud him that deals damages to enemies around the caster. The damages dealt are percentages of enemies max life. The damages are pure.",
+    "cooldown": [
+      "90",
+      "80",
+      "70"
+    ],
+    "manacost": [
+      "130",
+      "170",
+      "210"
+    ],
+    "id": 350
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "700",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Duration",
+        "value": "12",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$ damages/s"
+      },
+      {
+        "name": "Slow",
+        "value": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ],
+        "temp": "$$% move speed"
+      }
+    ],
+    "name": "Flux",
+    "description": "The caster throw a magical potion on the target enemy that slows it during a short duration. Each time the enemy is attacked it removes 2 seconds to the current duration of the spell. If the current duration us below 2 seconds it is set to 0 instead.",
+    "cooldown": [
+      "12",
+      "10",
+      "8",
+      "6"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 349
+  },
+  {
+    "type": "Instant",
+    "targets": [
       "ground",
       "air",
       "enemies"
@@ -7619,6 +7797,62 @@ const mySpellsLibrary = [
     "id": 134
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages Bonus",
+        "value": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Damages Cleaved",
+        "value": [
+          "15",
+          "25",
+          "35",
+          "45"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Duration",
+        "value": "12",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Kilruk Reave",
+    "description": "Increases the target damages and gives him the ability to cleave on attacks during a short duration.",
+    "cooldown": [
+      "14",
+      "12",
+      "10",
+      "8"
+    ],
+    "manacost": [
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "id": 348
+  },
+  {
     "type": "Passive",
     "targets": [
       "enemies",
@@ -7769,6 +8003,56 @@ const mySpellsLibrary = [
     "ulti": true,
     "description": "When activated deals a massive amount of damages each attacks to to attacked unit.",
     "id": 64
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "organics"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "2500",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "100",
+          "180",
+          "260",
+          "340"
+        ]
+      },
+      {
+        "name": "Blind Duration",
+        "value": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Laser Ray",
+    "description": "The caster throw a ray of light on the target enemy that deals damages and blind enemies during a short duration.",
+    "cooldown": "10",
+    "manacost": [
+      "110",
+      "120",
+      "130",
+      "140"
+    ],
+    "id": 344
   },
   {
     "type": "Target unit",
@@ -12934,6 +13218,51 @@ const mySpellsLibrary = [
     "id": 231
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "heroes",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "750",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Minimum Life Transferred",
+        "value": [
+          "25",
+          "20",
+          "15"
+        ],
+        "temp": "$$% of maximum life"
+      }
+    ],
+    "name": "Swap Life",
+    "ulti": true,
+    "description": "The caster swap his life with the targeted allied or enemy hero. The proportions of remaining life is swapped between the two units.",
+    "cooldown": [
+      "80",
+      "70",
+      "60"
+    ],
+    "manacost": [
+      "150",
+      "190",
+      "230"
+    ],
+    "id": 346
+  },
+  {
     "type": "Target point",
     "targets": [
       "enemies",
@@ -14099,6 +14428,33 @@ const mySpellsLibrary = [
       "160"
     ],
     "id": 256
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "heroes"
+    ],
+    "params": [
+      {
+        "name": "Agility Bonus",
+        "value": "3",
+        "temp": "$$ per attack"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "30",
+          "50",
+          "70",
+          "90"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Versatility",
+    "description": "The caster increases his agility each time it attacks an enemy hero.",
+    "id": 343
   },
   {
     "type": "Target point",

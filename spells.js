@@ -4950,36 +4950,36 @@ const mySpellsLibrary = [
         "temp": "$$ ranges"
       },
       {
-        "name": "Life Lost",
-        "value": [
-          "4",
-          "5",
-          "6"
-        ],
-        "temp": "$$% of max life"
+        "name": "Period Damages",
+        "value": "1.5",
+        "temp": "$$ second"
       },
       {
-        "name": "Duration",
+        "name": "Life Lost",
+        "value": [
+          "5",
+          "6",
+          "7"
+        ],
+        "temp": "$$% of enemies max life"
+      },
+      {
+        "name": "Nbr Pulses",
         "value": [
           "6",
           "7",
           "8"
         ],
-        "temp": "$$ seconds"
-      },
-      {
-        "name": "Period Damages",
-        "value": "1",
-        "temp": "$$ second"
+        "temp": ""
       }
     ],
     "name": "Fire Shocks",
     "ulti": true,
     "description": "The caster summons a burning field aroud him that deals damages to enemies around the caster. The damages dealt are percentages of enemies max life. The damages are pure.",
     "cooldown": [
-      "90",
-      "80",
-      "70"
+      "85",
+      "75",
+      "65"
     ],
     "manacost": [
       "130",
@@ -8968,6 +8968,83 @@ const mySpellsLibrary = [
     ],
     "params": [
       {
+        "name": "Duration",
+        "value": "20",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Attack Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Attack Rate",
+        "value": "1.7",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Projectile Speed",
+        "value": "900",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Damages Base",
+        "value": [
+          "38",
+          "58",
+          "78",
+          "98"
+        ]
+      },
+      {
+        "name": "Area Full Damages",
+        "value": "50",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area Medium Damages",
+        "value": "150",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Percentage Medium Damages",
+        "value": "50",
+        "temp": "$$%"
+      },
+      {
+        "name": "Area Small Damages",
+        "value": "250",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Percentage Small Damages",
+        "value": "25",
+        "temp": "$$%"
+      }
+    ],
+    "description": "Transforms the Demon Hunter into a powerful Demon with a ranged attack, a massive attack damages and a splashing attack. The basic damages are the demon's damages at level 1 without items and buffs.",
+    "name": "Metamorphosis",
+    "cooldown": [
+      "65",
+      "60",
+      "55",
+      "50"
+    ],
+    "manacost": [
+      "90",
+      "110",
+      "130",
+      "150"
+    ],
+    "id": 352
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
         "name": "Spawn Delay",
         "value": "0.3",
         "temp": "$$ second"
@@ -11054,6 +11131,62 @@ const mySpellsLibrary = [
     "id": 194
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": "20",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damage Dealt",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Damage Taken",
+        "value": [
+          "350",
+          "300",
+          "250",
+          "200"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Replicate",
+    "description": "The caster summons an illusion of the target allied.",
+    "cooldown": [
+      "45",
+      "40",
+      "35",
+      "30"
+    ],
+    "manacost": [
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "id": 353
+  },
+  {
     "type": "Passive",
     "targets": [
       "self"
@@ -11975,6 +12108,44 @@ const mySpellsLibrary = [
       "260"
     ],
     "id": 311
+  },
+  {
+    "type": "Target tree",
+    "targets": [
+      "tree"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Sight Radius",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "1100",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Sentinel",
+    "description": "The caster enchant the target tree with an unattackable owl. The owl reveal an area around the tree. If the trees is destroyed the owl disappear.",
+    "cooldown": [
+      "65",
+      "58",
+      "51",
+      "44"
+    ],
+    "manacost": [
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "id": 351
   },
   {
     "type": "Target unit",
@@ -14009,6 +14180,50 @@ const mySpellsLibrary = [
   {
     "type": "Target unit",
     "targets": [
+      "ground",
+      "air",
+      "allies"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "500",
+          "600",
+          "700",
+          "800"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "1600",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Max Life Transfered",
+        "value": [
+          "100",
+          "190",
+          "280",
+          "370"
+        ]
+      }
+    ],
+    "name": "Transfer Life",
+    "description": "The caster gives some hp to the target allied. If the caster desn't have enough life the spell transfer his current hp minus 1.",
+    "cooldown": [
+      "12",
+      "10",
+      "8",
+      "6"
+    ],
+    "manacost": "90",
+    "id": 355
+  },
+  {
+    "type": "Target unit",
+    "targets": [
       "enemies",
       "ground",
       "air"
@@ -14546,6 +14761,50 @@ const mySpellsLibrary = [
       "140"
     ],
     "id": 258
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "90",
+          "165",
+          "240",
+          "315"
+        ]
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          "0.8",
+          "1.1",
+          "1.4",
+          "1.7"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Void",
+    "description": "The caster deals damages to the target enemy stunning it during a short duration.",
+    "cooldown": "10",
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "id": 354
   },
   {
     "id": 2,

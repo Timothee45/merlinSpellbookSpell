@@ -1626,6 +1626,38 @@ const mySpellsLibrary = [
   {
     "type": "Passive",
     "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Percentage Chances",
+        "value": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Spear Speed",
+        "value": "1100",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Damages",
+        "value": "90"
+      }
+    ],
+    "name": "Burning Spear",
+    "description": "When the caster attacks an enemy it has a chance to summon a spear that will deals bonus damages to the attacked unit.",
+    "id": 360
+  },
+  {
+    "type": "Passive",
+    "targets": [
       "self"
     ],
     "params": [
@@ -2304,6 +2336,66 @@ const mySpellsLibrary = [
     "id": 327
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Nbr Max Hits",
+        "value": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "temp": ""
+      },
+      {
+        "name": "Stunn Duration",
+        "value": "1",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Period",
+        "value": "2",
+        "temp": "$$ seconds/hit"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "30",
+          "35",
+          "40",
+          "45"
+        ],
+        "temp": "$$ per hit"
+      }
+    ],
+    "name": "Concussion",
+    "description": "The caster damages the head of the target. After that multiple time the target will be periodically damaged and stunned during a short duration.",
+    "cooldown": [
+      "15",
+      "13",
+      "11",
+      "9"
+    ],
+    "manacost": [
+      "100",
+      "115",
+      "130",
+      "145"
+    ],
+    "id": 362
+  },
+  {
     "type": "Passive",
     "targets": [
       "enemies",
@@ -2447,6 +2539,34 @@ const mySpellsLibrary = [
     ],
     "cooldown": "13",
     "id": 45
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Attack Speed Malus",
+        "value": [
+          "15",
+          "20",
+          "25",
+          "30"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Counter Aggressiveness",
+    "description": "The hero decreases the nearby enemies attack speed.",
+    "id": 356
   },
   {
     "type": "Passive",
@@ -7725,6 +7845,33 @@ const mySpellsLibrary = [
     "id": 299
   },
   {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "500",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "200",
+          "275",
+          "350",
+          "425"
+        ]
+      }
+    ],
+    "name": "Kaioken Release",
+    "description": "When the hero dies it summons an explosion on his position that deals damages to enemies around him. If the target is below 250 ranges away from the hero it takes 50% more damages.",
+    "id": 361
+  },
+  {
     "type": "Target unit",
     "targets": [
       "enemies",
@@ -8492,6 +8639,50 @@ const mySpellsLibrary = [
     "id": 143
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Stunn Duration",
+        "value": "0.2",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "75",
+          "150",
+          "225",
+          "300"
+        ]
+      }
+    ],
+    "name": "Lucent Beam",
+    "description": "Call a beam of lunar energy to burst a target enemy ministunning it.",
+    "cooldown": [
+      "12",
+      "10",
+      "8",
+      "6"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 357
+  },
+  {
     "type": "Target point",
     "targets": [
       "enemies",
@@ -9198,6 +9389,44 @@ const mySpellsLibrary = [
       "70"
     ],
     "id": 158
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "buildings"
+    ],
+    "params": [
+      {
+        "name": "Search Area",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages Reduction",
+        "value": "25",
+        "temp": "$$%"
+      },
+      {
+        "name": "Missile Speed",
+        "value": "900",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Nbr Max Bounces",
+        "value": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    ],
+    "name": "Moon Glaive",
+    "description": "Gives to the hero the ability to strike additional units with her bouncing glaive attacks. Each new target decreases the strength of the missile and his damages.",
+    "id": 359
   },
   {
     "type": "Passive",

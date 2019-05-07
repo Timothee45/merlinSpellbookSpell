@@ -1336,5 +1336,29 @@ const defaultHeroes = [
     "regenLife": "1.7",
     "mana": "100",
     "regenMana": "1.3"
+  },
+  {
+    "id": "N024",
+    "type": "Icy Ghost",
+    "name": "Shaar",
+    "iconPath": "ReplaceableTextures\\CommandButtons\\BTN_IcyGhost.blp",
+    "modelPath": "Unit\\IcyGhost.mdl",
+    "mainAttribute": "Intelligence",
+    "baseAgi": "20",
+    "baseInt": "24",
+    "baseStr": "18",
+    "bonusAgi": "2",
+    "bonusInt": "2.9",
+    "bonusStr": "2",
+    "moveSpeed": "290",
+    "typeAttk": "Ranged",
+    "damages": "20",
+    "attackRate": "1.7",
+    "attackRange": "570",
+    "armor": "1",
+    "life": "110",
+    "regenLife": "1.3",
+    "mana": "120",
+    "regenMana": "1.5"
   }
 ]

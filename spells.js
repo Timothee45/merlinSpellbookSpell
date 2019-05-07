@@ -566,6 +566,34 @@ const mySpellsLibrary = [
     "id": 13
   },
   {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Period",
+        "value": [
+          "7",
+          "6",
+          "5",
+          "4"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Moneky Speed",
+        "value": "100",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Banana Protection",
+    "description": "The hero transforms a random enemy around him into a monkey during 2 seconds. The monkey can't attack or casts spells.",
+    "id": 394
+  },
+  {
     "type": "Target unit",
     "targets": [
       "enemies",
@@ -695,6 +723,49 @@ const mySpellsLibrary = [
     "name": "Bash",
     "description": "Gives 15% chance that an attack will do bonus damage and stuns an opponent for 1 second.",
     "id": 16
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "ground",
+      "air",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Duration",
+        "value": "6",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Life Regeneration",
+        "value": [
+          "8",
+          "11",
+          "14"
+        ],
+        "temp": "$$% of caster's max life"
+      },
+      {
+        "name": "Buff Duration Increase",
+        "value": "0.2",
+        "temp": "$$ second per attack"
+      }
+    ],
+    "name": "Battle Enthusiasm",
+    "description": "The caster get a buff during a short duration. Each attack will regenerate a proportion of the caster's max life and increased the buff duration.",
+    "cooldown": [
+      "70",
+      "65",
+      "60"
+    ],
+    "manacost": [
+      "110",
+      "150",
+      "190"
+    ],
+    "id": 405,
+    "ulti": true
   },
   {
     "type": "Target point",
@@ -842,6 +913,61 @@ const mySpellsLibrary = [
     "name": "Berzerker Blood",
     "description": "The hero get more attack speed in function of the life lost.",
     "id": 347
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "800",
+          "1000",
+          "1200",
+          "1400"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bind Duration",
+        "value": [
+          "2",
+          "2.5",
+          "3",
+          "3.5"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Repulse Speed",
+        "value": "1835",
+        "temp": "$$ ranges/s"
+      }
+    ],
+    "name": "Binding Light",
+    "description": "The caster repulses and bind enemies in an area. The binded enemies misses 100% of their attacks.",
+    "cooldown": [
+      "10",
+      "9",
+      "8",
+      "7"
+    ],
+    "manacost": [
+      "85",
+      "90",
+      "95",
+      "100"
+    ],
+    "id": 395
   },
   {
     "type": "Target point channel",
@@ -1356,6 +1482,70 @@ const mySpellsLibrary = [
     ],
     "cooldown": "10",
     "id": 27
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1300",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Distance",
+        "value": "1600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Speed",
+        "value": "1000",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Area",
+        "value": "200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": "12",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Base Damages",
+        "value": [
+          "30",
+          "35",
+          "40",
+          "45"
+        ]
+      },
+      {
+        "name": "Stacked Damages",
+        "value": [
+          "20",
+          "40",
+          "60",
+          "80"
+        ],
+        "temp": "$$ damage per stack"
+      }
+    ],
+    "name": "Blood Rain",
+    "description": "The caster summons a blood rain that moves in a line adding a buffs to the enemies in the path. Each time an enemy is touched a buff is added on it, the buff can stacks to a maximum of 12 times.",
+    "cooldown": "2.5",
+    "manacost": [
+      "35",
+      "40",
+      "45",
+      "50"
+    ],
+    "id": 392
   },
   {
     "type": "Passive",
@@ -2849,6 +3039,70 @@ const mySpellsLibrary = [
     "name": "Critical Strike",
     "description": "Gives a chance to deals more damage on an attack.",
     "id": 47
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Distance",
+        "value": "1600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Speed",
+        "value": "1400",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Area",
+        "value": "90",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damage5,110",
+        "value": [
+          "55",
+          "110",
+          "165",
+          "210"
+        ]
+      },
+      {
+        "name": "Move Speed Slow",
+        "value": "50",
+        "temp": "$$%"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "1",
+          "1.5",
+          "2",
+          "2.5"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Cross Slash",
+    "description": "The caster slashes the enemies in front of him dealing damage and slowing during a short duration.",
+    "cooldown": [
+      "9",
+      "8",
+      "7",
+      "6"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 406
   },
   {
     "type": "Target point",
@@ -4465,6 +4719,60 @@ const mySpellsLibrary = [
     "targets": [
       "enemies",
       "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1100",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Distance",
+        "value": "1450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "150",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Speed",
+        "value": "1250",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Base Damages",
+        "value": "90"
+      },
+      {
+        "name": "Damage Bonus",
+        "value": [
+          "9",
+          "12",
+          "15",
+          "18"
+        ],
+        "temp": "$$% bonus per target"
+      }
+    ],
+    "name": "El Directo",
+    "description": "The caster summons a wave in a direction that deals damage to enemies. Each enemy damaged will get more damages.",
+    "cooldown": [
+      "10",
+      "9",
+      "8",
+      "7"
+    ],
+    "manacost": "110",
+    "id": 391
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
       "air",
       "allies",
       "self"
@@ -4486,7 +4794,7 @@ const mySpellsLibrary = [
       },
       {
         "name": "Speed",
-        "value": "1200",
+        "value": "950",
         "temp": "$$ ranges/s"
       },
       {
@@ -4581,6 +4889,29 @@ const mySpellsLibrary = [
     ],
     "cooldown": "12",
     "id": 78
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Percentage",
+        "value": [
+          "7",
+          "9",
+          "11",
+          "13"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Enchant",
+    "description": "When the caster deals damages to an enemy it has a chance to deals twice the damages to the damaged unit.",
+    "id": 388
   },
   {
     "type": "Passive",
@@ -5039,6 +5370,55 @@ const mySpellsLibrary = [
     "name": "Eye of Dalaran",
     "description": "When an enemy around casts a spell it becomes silenced and slowed during a short duration.",
     "id": 86
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "400",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "90",
+          "150",
+          "210",
+          "270"
+        ]
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "2",
+          "2.5",
+          "3",
+          "3.5"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Faerie Fire",
+    "description": "The caster deals damages to enemies around silencing them during a short duration.",
+    "cooldown": [
+      "10",
+      "9",
+      "8",
+      "7"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 384
   },
   {
     "type": "Instant",
@@ -7279,6 +7659,37 @@ const mySpellsLibrary = [
     "id": 340
   },
   {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Attack Speed Bonus",
+        "value": [
+          "30",
+          "50",
+          "70",
+          "90"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Move Speed Bonus",
+        "value": [
+          "20",
+          "30",
+          "40",
+          "50"
+        ],
+        "temp": "$$%"
+      }
+    ],
+    "name": "Hunter in The Night",
+    "description": "The hero get an increased attack and move speed during the night.",
+    "id": 400
+  },
+  {
     "type": "Instant",
     "targets": [
       "self"
@@ -8177,6 +8588,60 @@ const mySpellsLibrary = [
     "id": 299
   },
   {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "75",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Small Area",
+        "value": "300",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damages Small Area",
+        "value": [
+          "300",
+          "400",
+          "500",
+          "600"
+        ],
+        "temp": ""
+      },
+      {
+        "name": "Damages Base",
+        "value": [
+          "150",
+          "250",
+          "350",
+          "450"
+        ]
+      }
+    ],
+    "name": "Kaboom",
+    "description": "The caster sacrifices himself at the target location. Dealing damage to enemies around. More damages are dealt to enemies really close to the explode point.",
+    "cooldown": [
+      "60",
+      "55",
+      "50",
+      "45"
+    ],
+    "manacost": "100",
+    "id": 402
+  },
+  {
     "type": "Passive",
     "targets": [
       "enemies",
@@ -8202,6 +8667,115 @@ const mySpellsLibrary = [
     "name": "Kaioken Release",
     "description": "When the hero dies it summons an explosion on his position that deals damages to enemies around him. If the target is below 250 ranges away from the hero it takes 50% more damages.",
     "id": 361
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "250",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": "5",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damages",
+        "value": [
+          "100",
+          "120",
+          "140",
+          "160"
+        ],
+        "temp": "$$ damage/s"
+      }
+    ],
+    "name": "Ki Hurricane",
+    "description": "Causes a hurricane of destructive force around the caster, rendering him immune to magic and dealing damage per second to nearby enemy units.",
+    "cooldown": [
+      "30",
+      "28",
+      "26",
+      "24"
+    ],
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "id": 389
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "500",
+          "600",
+          "700",
+          "800"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": [
+          "250",
+          "300",
+          "350",
+          "400"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Base Damage",
+        "value": [
+          "30",
+          "40",
+          "50",
+          "60"
+        ],
+        "temp": ""
+      },
+      {
+        "name": "Bonus Damage",
+        "value": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ],
+        "temp": "$$ per ally around"
+      },
+      {
+        "name": "Max Damage",
+        "value": "550"
+      }
+    ],
+    "name": "Kill Instigator",
+    "description": "The caster deals damage to a unit in function of the number of his allies around him.",
+    "cooldown": [
+      "9",
+      "8",
+      "7",
+      "6"
+    ],
+    "manacost": "110",
+    "id": 401
   },
   {
     "type": "Target unit",
@@ -9256,6 +9830,49 @@ const mySpellsLibrary = [
     "id": 147
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "350",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "250",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Coeff Damage",
+        "value": [
+          "0.8",
+          "1",
+          "1.2"
+        ],
+        "temp": "$$x missing mana"
+      }
+    ],
+    "name": "Magic Release",
+    "ulti": true,
+    "description": "The caster deals damage to a target and the enemy around. In function of the target's missing mana. The primary target is mini-stunned during the spell.",
+    "cooldown": [
+      "50",
+      "40",
+      "30"
+    ],
+    "manacost": [
+      "125",
+      "175",
+      "225"
+    ],
+    "id": 390
+  },
+  {
     "type": "Instant",
     "targets": [
       "enemies",
@@ -9927,6 +10544,48 @@ const mySpellsLibrary = [
   {
     "type": "Passive",
     "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damage of Attack",
+        "value": [
+          "30",
+          "40",
+          "50",
+          "60"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Bullet Speed",
+        "value": "700",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Nbr Additional Targets",
+        "value": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    ],
+    "name": "Multi Shots",
+    "description": "Each time the hero attacks an enemy, it fires some bullets to random enemies around.",
+    "id": 397
+  },
+  {
+    "type": "Passive",
+    "targets": [
       "self"
     ],
     "params": [
@@ -10271,6 +10930,65 @@ const mySpellsLibrary = [
     "name": "Necrotic Strike",
     "description": "The caster restore some life and mana each time the hero attack.",
     "id": 316
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "500",
+          "550",
+          "600",
+          "650"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Nbr Bolts",
+        "value": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "name": "Bolt Speed",
+        "value": [
+          "400",
+          "400-600",
+          "400-600-800",
+          "400-600-800-1000"
+        ],
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Damage",
+        "value": "75",
+        "temp": "$$ per bolt"
+      }
+    ],
+    "name": "Nether Shots",
+    "description": "The caster send multiple bolts to the target enemy. Each level allow the caster to send one more bolt.",
+    "cooldown": [
+      "10",
+      "9",
+      "8",
+      "7"
+    ],
+    "manacost": [
+      "100",
+      "105",
+      "110",
+      "115"
+    ],
+    "id": 403
   },
   {
     "type": "Passive",
@@ -11212,6 +11930,54 @@ const mySpellsLibrary = [
     "id": 180
   },
   {
+    "type": "Target point",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "500",
+          "700",
+          "900",
+          "1100"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Move Speed",
+        "value": [
+          "450",
+          "550",
+          "650",
+          "750"
+        ],
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Percentage Life",
+        "value": "12",
+        "temp": "$$% of distance travelled"
+      }
+    ],
+    "name": "Pouncing Bolt",
+    "description": "The caster moves to the target location using a bolt of fire. During that form the caster can't be attacked or targeted by anyone and regenerates his life in function of the distance travelled.",
+    "cooldown": [
+      "13",
+      "11",
+      "9",
+      "7"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 398
+  },
+  {
     "type": "Passive",
     "targets": [
       "self"
@@ -11778,6 +12544,42 @@ const mySpellsLibrary = [
       "110"
     ],
     "id": 278
+  },
+  {
+    "type": "Passive",
+    "targets": [
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Chance",
+        "value": [
+          "10",
+          "20",
+          "30"
+        ],
+        "temp": "$$% on attacks"
+      },
+      {
+        "name": "Attack Speed Bonus",
+        "value": "150",
+        "temp": "$$%"
+      },
+      {
+        "name": "Move Speed Bonus",
+        "value": "30",
+        "temp": "$$%"
+      },
+      {
+        "name": "Duration",
+        "value": "10",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Rampage Mode",
+    "ulti": true,
+    "description": "When the caster attacks a non-building enemy it has a chance to enter in a rampage mode. In this mode the hero attacks and moves faster. Multiple proc on that passive doesn't stacks and doesn't reset the duration.",
+    "id": 386
   },
   {
     "type": "Target unit",
@@ -12504,6 +13306,67 @@ const mySpellsLibrary = [
     "id": 333
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "125",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Percentage Regen Life",
+        "value": [
+          "50",
+          "65",
+          "80"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Percentage Regen Mana",
+        "value": [
+          "40",
+          "50",
+          "60"
+        ],
+        "temp": "$$%"
+      },
+      {
+        "name": "Max Life Regenerated",
+        "value": "800"
+      },
+      {
+        "name": "Max Mana Regenerated",
+        "value": "600"
+      },
+      {
+        "name": "Duration",
+        "value": "5",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Ritual of Sacrifice",
+    "ulti": true,
+    "description": "The caster destroy the target and regenerates his life and mana in function of the target's life remaining.",
+    "cooldown": [
+      "65",
+      "60",
+      "55"
+    ],
+    "manacost": [
+      "140",
+      "200",
+      "260"
+    ],
+    "danger": "Does not works against Arthas.",
+    "id": 404
+  },
+  {
     "type": "Instant",
     "targets": [
       "ground",
@@ -13103,6 +13966,55 @@ const mySpellsLibrary = [
   {
     "type": "Target unit",
     "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Nbr Min Spirits",
+        "value": "2"
+      },
+      {
+        "name": "Nbr Max Spirits",
+        "value": [
+          "4",
+          "6",
+          "8",
+          "10"
+        ]
+      },
+      {
+        "name": "Duration",
+        "value": "10",
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Serious Mode",
+    "description": "The caster increases randomly the damages of the target ally or himself during a short duration. The target will be blessed by a random number of spirit, each one will give him a number of damages.",
+    "cooldown": [
+      "11",
+      "10",
+      "9",
+      "8"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 387
+  },
+  {
+    "type": "Target unit",
+    "targets": [
       "enemies",
       "ground",
       "air",
@@ -13446,6 +14358,63 @@ const mySpellsLibrary = [
     "cooldown": "8",
     "manacost": "100",
     "id": 216
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "350",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Base Damages",
+        "value": [
+          "30",
+          "50",
+          "70",
+          "90"
+        ]
+      },
+      {
+        "name": "Stacked Damages",
+        "value": [
+          "15",
+          "20",
+          "25",
+          "30"
+        ]
+      },
+      {
+        "name": "Duration",
+        "value": "12",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Max Damage",
+        "value": "440"
+      }
+    ],
+    "name": "Shrapnels",
+    "description": "The caster send some shrapnels that deals damage to enemies around. The targets takes more damages each time the spell is done.",
+    "cooldown": [
+      "5",
+      "4",
+      "3",
+      "2"
+    ],
+    "manacost": [
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "id": 385
   },
   {
     "type": "Target point",
@@ -14287,6 +15256,70 @@ const mySpellsLibrary = [
       "130"
     ],
     "id": 228
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "1500",
+          "1700",
+          "1900",
+          "2100"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Nbr Impacts",
+        "value": [
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "temp": ""
+      },
+      {
+        "name": "Impact Delay",
+        "value": "0.2",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Impact Distance",
+        "value": "200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "250",
+        "temp": "$$ ranges per thunderstrike"
+      },
+      {
+        "name": "Damage",
+        "value": [
+          "90",
+          "130",
+          "170",
+          "210"
+        ]
+      }
+    ],
+    "name": "Stormfall",
+    "cooldown": "6",
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "description": "The caster summon multiples thunderstikes in a direction that will deals damage to enemies each times the thunder blasts the ground.",
+    "id": 396
   },
   {
     "type": "Passive",
@@ -15303,6 +16336,54 @@ const mySpellsLibrary = [
     "id": 265
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "400",
+          "500",
+          "600"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "5",
+          "6",
+          "7"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damage Reduction",
+        "value": "10",
+        "temp": "$$%"
+      }
+    ],
+    "name": "Tombstone",
+    "ulti": true,
+    "description": "The caster enchant an ally with dark energy allowing him to survive during a short duration. Every damages instances are blocked during the spell duration and will be infliceted to the target at the end of the spell.",
+    "cooldown": [
+      "60",
+      "55",
+      "50"
+    ],
+    "manacost": [
+      "150",
+      "200",
+      "250"
+    ],
+    "id": 393
+  },
+  {
     "type": "Passive",
     "targets": [
       "self"
@@ -15901,6 +16982,66 @@ const mySpellsLibrary = [
       "135"
     ],
     "id": 306
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Distance",
+        "value": "1000",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Speed",
+        "value": [
+          "600",
+          "800",
+          "1000",
+          "1200"
+        ],
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Stunn Duration",
+        "value": "1",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Damage",
+        "value": [
+          "3",
+          "5",
+          "7",
+          "9"
+        ],
+        "temp": "$$% of your max life"
+      },
+      {
+        "name": "Area",
+        "value": "90",
+        "temp": "$$ ranges"
+      }
+    ],
+    "name": "Valiant Charge",
+    "description": "The caster moves forward dealing damage and stunning enemies it encounters.",
+    "cooldown": [
+      "12",
+      "10",
+      "8",
+      "6"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 399
   },
   {
     "type": "Passive",

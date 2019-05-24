@@ -1666,6 +1666,52 @@ const mySpellsLibrary = [
     "id": 30
   },
   {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Area",
+        "value": "450",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damage",
+        "value": [
+          "100",
+          "200",
+          "300"
+        ]
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          "2",
+          "2.5",
+          "3"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Body Attraction",
+    "ulti": true,
+    "description": "The caster attracts every enemies around him damaging and stunning them during a short duration.",
+    "cooldown": [
+      "90",
+      "85",
+      "80"
+    ],
+    "manacost": [
+      "250",
+      "325",
+      "400"
+    ],
+    "id": 408
+  },
+  {
     "type": "Target unit",
     "targets": [
       "enemies",
@@ -4101,6 +4147,83 @@ const mySpellsLibrary = [
       "70"
     ],
     "id": 67
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "allies",
+      "self"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1400",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Period Detection",
+        "value": "0.1",
+        "temp": "$$ second"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "4",
+          "5",
+          "6"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Caster Heal",
+        "value": [
+          "35",
+          "45",
+          "55"
+        ],
+        "temp": "$$ hp/s"
+      },
+      {
+        "name": "Allies Heal",
+        "value": [
+          "15",
+          "20",
+          "25"
+        ],
+        "temp": "$$ per strike"
+      },
+      {
+        "name": "Enemies Damage Burst",
+        "value": [
+          "20",
+          "25",
+          "30"
+        ],
+        "temp": "$$ per strike"
+      }
+    ],
+    "name": "Divine Edict",
+    "ulti": true,
+    "description": "The caster summon a holy area where light blesses the allied and burst the enemies. A pillar of light will fall on a random unit in the area dealing damage if it's a foe and healing if it's an ally. If the caster is in the area he get an increased life regeneration.",
+    "cooldown": [
+      "110",
+      "100",
+      "90"
+    ],
+    "manacost": [
+      "200",
+      "300",
+      "400"
+    ],
+    "id": 412
   },
   {
     "type": "Passive",
@@ -7092,6 +7215,80 @@ const mySpellsLibrary = [
       "13"
     ],
     "id": 114
+  },
+  {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "550",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bolt Speed",
+        "value": "900",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Stunn Duration",
+        "value": [
+          "1.25",
+          "1.75",
+          "2.25",
+          "2.75"
+        ],
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Slow Duration",
+        "value": "3",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Base Damage",
+        "value": [
+          "80",
+          "130",
+          "180",
+          "230"
+        ]
+      },
+      {
+        "name": "Dot Damage",
+        "value": [
+          "25",
+          "30",
+          "35",
+          "40"
+        ],
+        "temp": "$$ damage/s"
+      },
+      {
+        "name": "Slow",
+        "value": "25",
+        "temp": "$$% move speed"
+      }
+    ],
+    "name": "Hell Fire Blast",
+    "description": "The caster send a bolt to the target enemy that will stunn it during a short duration. When the bolt touches the target it deals base damage and some damages over the time to the target. After the stunn duration the target is slowed.",
+    "cooldown": [
+      "12",
+      "11",
+      "10",
+      "9"
+    ],
+    "manacost": [
+      "100",
+      "105",
+      "110",
+      "115"
+    ],
+    "id": 409
   },
   {
     "type": "Instant",
@@ -10642,6 +10839,65 @@ const mySpellsLibrary = [
     "id": 368
   },
   {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Wave Speed",
+        "value": "1000",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Distance Wave",
+        "value": "1200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area Wave",
+        "value": "175",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bolts Speed",
+        "value": "600",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Damage",
+        "value": [
+          "120",
+          "160",
+          "200",
+          "240"
+        ]
+      }
+    ],
+    "name": "Mythic Wrath",
+    "description": "The caster send some bolts to enemies in a line that deals damage on the impact.",
+    "cooldown": [
+      "11",
+      "10",
+      "9",
+      "8"
+    ],
+    "manacost": [
+      "100",
+      "110",
+      "120",
+      "130"
+    ],
+    "id": 407
+  },
+  {
     "type": "Instant",
     "targets": [
       "enemies",
@@ -11749,6 +12005,65 @@ const mySpellsLibrary = [
     "id": 177
   },
   {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Nbr Bolts Spawned",
+        "value": "10",
+        "temp": ""
+      },
+      {
+        "name": "Distance Per Bolt",
+        "value": "200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Bolt Speed",
+        "value": "1200",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Radius Explosion",
+        "value": "200",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Damage",
+        "value": [
+          "90",
+          "140",
+          "190",
+          "240"
+        ]
+      }
+    ],
+    "name": "Plasma Wave",
+    "description": "The caster summons some bolts that will explode and deals damages to enemies in a wave.",
+    "cooldown": [
+      "10",
+      "9",
+      "8",
+      "7"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 410
+  },
+  {
     "type": "Autocast",
     "targets": [
       "enemies",
@@ -12303,6 +12618,49 @@ const mySpellsLibrary = [
       "140"
     ],
     "id": 184
+  },
+  {
+    "type": "Instant",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Max Preparation Time",
+        "value": "5",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Area",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Max Damages",
+        "value": [
+          "450",
+          "600",
+          "750"
+        ]
+      }
+    ],
+    "name": "Pyroclastic Flow",
+    "ulti": true,
+    "description": "The caster prepares an explosion during a short duration. At any time it can breaks the channeling or let it go until the end to release a powerful explosion around him that deals massive damage. The damage are calculated in proportion of the time spent to prepare the spell.",
+    "danger": "Channelling Spell",
+    "cooldown": [
+      "110",
+      "90",
+      "70"
+    ],
+    "manacost": [
+      "200",
+      "250",
+      "300"
+    ],
+    "id": 413
   },
   {
     "type": "Instant",
@@ -14611,6 +14969,76 @@ const mySpellsLibrary = [
     "name": "Soul Reaper",
     "description": "Increases the move speed of the caster. Every 5 seconds the caser summons a blast that deals damages to enemies around him.",
     "id": 221
+  },
+  {
+    "type": "Target point",
+    "targets": [
+      "enemies",
+      "ground",
+      "air"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": "1600",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Area",
+        "value": "650",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Soul Detection Radius",
+        "value": "35",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Soul Damage Radius",
+        "value": "65",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Soul Speed",
+        "value": "500",
+        "temp": "$$ ranges/s"
+      },
+      {
+        "name": "Nbr Souls Spawn",
+        "value": "8",
+        "temp": "$$ per second"
+      },
+      {
+        "name": "Duration",
+        "value": "7",
+        "temp": "$$ seconds"
+      },
+      {
+        "name": "Damage",
+        "value": [
+          "30",
+          "35",
+          "40",
+          "45"
+        ],
+        "temp": "$$ per soul"
+      }
+    ],
+    "name": "Souls Charge",
+    "description": "The caster summons some souls on the target area. The souls are moving and deals damages to the first enemy touched.",
+    "cooldown": [
+      "25",
+      "23",
+      "21",
+      "19"
+    ],
+    "manacost": [
+      "90",
+      "100",
+      "110",
+      "120"
+    ],
+    "id": 411
   },
   {
     "type": "Target unit",

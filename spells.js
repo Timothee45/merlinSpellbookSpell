@@ -13540,6 +13540,80 @@ const mySpellsLibrary = [
     "id": 200
   },
   {
+    "type": "Target unit",
+    "targets": [
+      "enemies",
+      "ground",
+      "air",
+      "heroes"
+    ],
+    "params": [
+      {
+        "name": "Cast Range",
+        "value": [
+          "600",
+          "700",
+          "800"
+        ],
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Caster Bonus Gold",
+        "value": [
+          "100",
+          "200",
+          "300"
+        ]
+      },
+      {
+        "name": "Allies Bonus Gold",
+        "value": [
+          "50",
+          "100",
+          "150"
+        ]
+      },
+      {
+        "name": "Area Bounty Given",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Move Speed Bonus",
+        "value": "20",
+        "temp": "$$%"
+      },
+      {
+        "name": "Area Bonus",
+        "value": "700",
+        "temp": "$$ ranges"
+      },
+      {
+        "name": "Duration",
+        "value": [
+          "13",
+          "16",
+          "19"
+        ],
+        "temp": "$$ seconds"
+      }
+    ],
+    "name": "Reward Hero",
+    "ulti": true,
+    "description": "The caster places a reward on the target hero. If the target is killed the caster and nearby allies will obtain a bonus gold. The allies near to the target will get their move speed increased. The target can't is visible anytime during the spell.",
+    "cooldown": [
+      "10",
+      "8",
+      "6"
+    ],
+    "manacost": [
+      "50",
+      "75",
+      "100"
+    ],
+    "id": 414
+  },
+  {
     "type": "Target point",
     "targets": [
       "enemies",

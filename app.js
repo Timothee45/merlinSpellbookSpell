@@ -76,6 +76,23 @@ private struct $name$
 
 	endmethod
 
+	private method findTargets takes nothing returns nothing
+		local unit U2
+
+		call GroupEnumUnitsInRange(G, .x, .y, AREA, Condition(function isAliveNonImmuneNon))
+
+		loop
+			set U2 = FirstOfGroup(G)
+			exitwhen U2 == null
+			call GroupRemoveUnit(G, U2)
+
+			if IsUnitEnemy(U2, .P) then
+				call magicDamage(.caster, U2, .damage)
+			endif
+		endloop
+
+	endmethod
+
 	static method update takes nothing returns nothing
 		local $name$ $variable$
 		local integer I = 0

@@ -22,7 +22,7 @@ const addStruct = `
 		endif
 `;
 
-const addStructSingle = `		local $name$ $variable$
+const addStructSingle = `	local $name$ $variable$
 		local boolean found = false
 		local integer I = 1
 

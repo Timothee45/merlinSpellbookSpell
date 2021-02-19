@@ -22,8 +22,7 @@ const addStruct = `
 		endif
 `;
 
-const addStructSingle = `
-		local $name$ $variable$
+const addStructSingle = `		local $name$ $variable$
 		local boolean found = false
 		local integer I = 1
 
@@ -86,7 +85,7 @@ private struct $name$
 			exitwhen U2 == null
 			call GroupRemoveUnit(G, U2)
 
-			if IsUnitEnemy(U2, .P) then
+			if isAliveNotMagicImmune(U2) and IsUnitEnemy(U2, .P) then
 				call magicDamage(.caster, U2, .damage)
 			endif
 		endloop

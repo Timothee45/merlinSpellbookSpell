@@ -6,7 +6,8 @@ const defaultSpell = {
 	params: [],
 };
 
-const addStruct = `	local $name$ $variable$ = $name$.allocate()
+const addStruct = `
+		local $name$ $variable$ = $name$.allocate()
 
 		set $variable$.caster = U
 		set $variable$.target = U1
@@ -84,7 +85,7 @@ private struct $name$
 			exitwhen U2 == null
 			call GroupRemoveUnit(G, U2)
 
-			if isAliveNotBuildingNotImmune(U2) and IsUnitEnemy(U2, .P) then
+			if isAliveNotMagicImmune(U2) and IsUnitEnemy(U2, .P) then
 				call magicDamage(.caster, U2, .damage)
 			endif
 		endloop

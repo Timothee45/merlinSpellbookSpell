@@ -1339,7 +1339,7 @@ const mySpellsLibrary = [
     ],
     "name": "Berzerker Charge",
     "ulti": true,
-    "description": "The caster leaps to the target ennemy. When the caster  reaches the target hero, it deals damage and slows it during a short duration. The caster is magic immune during the leap.",
+    "description": "The caster leaps to the target ennemy. When the caster reaches the target hero, it deals damage and slows it during a short duration. The caster is magic immune during the leap.",
     "id": 567,
     "cooldown": [
       "45",

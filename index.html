@@ -12,7 +12,7 @@
 	<body>
 		<div id="app">
 			<select v-model="selectedId">
-				<option v-for="spell in spells" :value="spell.id">{{ spell.name }}</option>
+				<option v-for="spell in spells" :value="spell.id">{{ spell.name }}</option>
 			</select>
 			{{ spells.length }}
 
@@ -52,7 +52,7 @@
 			</div>
 		</div>
 
-		<script src="https://unpkg.com/vue"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="spells.js"></script>
 		<script src="heroes.js"></script>
 	    <script src="app.js"></script>

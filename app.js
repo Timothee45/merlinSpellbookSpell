@@ -8,120 +8,120 @@ const defaultSpell = {
 
 const addStruct = `	local $name$ $variable$ = $name$.allocate()
 
-		set $variable$.caster = U
-		set $variable$.target = U1
-		set $variable$.lvl = lvl
-		set $variable$.duration = 0
+    set $variable$.caster = U
+    set $variable$.target = U1
+    set $variable$.lvl = lvl
+    set $variable$.duration = 0
 
-		set .$staticVariable$T = .$staticVariable$T + 1
-		set .$staticVariable$[.$staticVariable$T] = $variable$
+    set .$staticVariable$T = .$staticVariable$T + 1
+    set .$staticVariable$[.$staticVariable$T] = $variable$
 
-		if .$staticVariable$T == 1 then
-			call TimerStart(.T, INTERVAL, true, function $name$.update)
-		endif
+    if .$staticVariable$T == 1 then
+      call TimerStart(.T, INTERVAL, true, function $name$.update)
+    endif
 `;
 
-const addStructSingle = `	local $name$ $variable$
-		local boolean found = false
-		local integer I = 1
+const addStructSingle = `  local $name$ $variable$
+    local boolean found = false
+    local integer I = 1
 
-		loop
-			exitwhen I > .$staticVariable$T
-			set $variable$ = .$staticVariable$[I]
+    loop
+      exitwhen I > .$staticVariable$T
+      set $variable$ = .$staticVariable$[I]
 
-			if $variable$.target == U1 then
-				set I = .$staticVariable$T
-				set found = true
+      if $variable$.target == U1 then
+        set I = .$staticVariable$T
+        set found = true
 
-				set $variable$.duration = 0
-				set $variable$.lvl = lvl
-			endif
+        set $variable$.duration = 0
+        set $variable$.lvl = lvl
+      endif
 
-			set I = I + 1
-		endloop
+      set I = I + 1
+    endloop
 
-		if not(found) then
-			set $variable$ = $name$.allocate()
+    if not(found) then
+      set $variable$ = $name$.allocate()
 
-			set $variable$.caster = U
-			set $variable$.target = U1
-			set $variable$.lvl = lvl
-			set $variable$.duration = 0
+      set $variable$.caster = U
+      set $variable$.target = U1
+      set $variable$.lvl = lvl
+      set $variable$.duration = 0
 
-			set .$staticVariable$T = .$staticVariable$T + 1
-			set .$staticVariable$[.$staticVariable$T] = $variable$
+      set .$staticVariable$T = .$staticVariable$T + 1
+      set .$staticVariable$[.$staticVariable$T] = $variable$
 
-			if .$staticVariable$T == 1 then
-				call TimerStart(.T, INTERVAL, true, function $name$.update)
-			endif
-		endif
+      if .$staticVariable$T == 1 then
+        call TimerStart(.T, INTERVAL, true, function $name$.update)
+      endif
+    endif
 `;
 
 const basicTemplate = `
 private struct $name$
-	static $name$ array $staticVariable$
-	static integer $staticVariable$T = 0
-	static timer T = null
+  static $name$ array $staticVariable$
+  static integer $staticVariable$T = 0
+  static timer T = null
 
-	unit caster
-	unit target
-	real lvl
-	real duration
+  unit caster
+  unit target
+  real lvl
+  real duration
 
-	private method onDestroy takes nothing returns nothing
-		set .caster = null
-		set .target = null
+  private method onDestroy takes nothing returns nothing
+    set .caster = null
+    set .target = null
 
-	endmethod
+  endmethod
 
-	private method findTargets takes nothing returns nothing
-		local unit U2
+  private method findTargets takes nothing returns nothing
+    local unit U2
 
-		call GroupEnumUnitsInRange(G, .x, .y, AREA, Condition(function nullFilter))
+    call GroupEnumUnitsInRange(G, .x, .y, AREA, Condition(function nullFilter))
 
-		loop
-			set U2 = FirstOfGroup(G)
-			exitwhen U2 == null
-			call GroupRemoveUnit(G, U2)
+    loop
+      set U2 = FirstOfGroup(G)
+      exitwhen U2 == null
+      call GroupRemoveUnit(G, U2)
 
-			if isAliveNotBuildingNotImmune(U2) and IsUnitEnemy(U2, .P) then
-				call magicDamage(.caster, U2, .damage)
-			endif
-		endloop
+      if isAliveNotBuildingNotImmune(U2) and IsUnitEnemy(U2, .P) then
+        call magicDamage(.caster, U2, .damage)
+      endif
+    endloop
 
-	endmethod
+  endmethod
 
-	static method update takes nothing returns nothing
-		local $name$ $variable$
-		local integer I = 0
+  static method update takes nothing returns nothing
+    local $name$ $variable$
+    local integer I = 0
 
-		loop
-			set I = I + 1
-			set $variable$ = .$staticVariable$[I]
+    loop
+      set I = I + 1
+      set $variable$ = .$staticVariable$[I]
 
-			set $variable$.duration = $variable$.duration + INTERVAL
+      set $variable$.duration = $variable$.duration + INTERVAL
 
-			if $variable$.duration >= DURATION or not(isAlive($variable$.target)) then
-				call $variable$.destroy()
+      if $variable$.duration >= DURATION or not(isAlive($variable$.target)) then
+        call $variable$.destroy()
 
-				set .$staticVariable$[I] = .$staticVariable$[.$staticVariable$T]
-				set .$staticVariable$T = .$staticVariable$T - 1
-				set I = I - 1
-			endif
+        set .$staticVariable$[I] = .$staticVariable$[.$staticVariable$T]
+        set .$staticVariable$T = .$staticVariable$T - 1
+        set I = I - 1
+      endif
 
-			exitwhen I >= .$staticVariable$T
-		endloop
+      exitwhen I >= .$staticVariable$T
+    endloop
 
-		if .$staticVariable$T <= 0 then
-			call PauseTimer(.T)
-			set .$staticVariable$T = 0
-		endif
+    if .$staticVariable$T <= 0 then
+      call PauseTimer(.T)
+      set .$staticVariable$T = 0
+    endif
 
-	endmethod
+  endmethod
 
-	static method add$name$ takes unit U, unit U1, real lvl returns nothing
-	$addStruct$
-	endmethod
+  static method add$name$ takes unit U, unit U1, real lvl returns nothing
+  $addStruct$
+  endmethod
 endstruct
 `;
 

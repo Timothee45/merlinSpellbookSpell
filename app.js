@@ -133,6 +133,8 @@ Vue.component('struct', {
 			variable: "",
 			staticVariable: "",
 			singleAddStruct: false,
+			defaultStructLetter: "D",
+			bannedLetters: ["P", "p"],
 		}
 	},
 	template: `
@@ -157,7 +159,13 @@ Vue.component('struct', {
 	},
 	methods: {
 		generateStruct: function() {
-			this.staticVariable = this.name.substr(0, 1);
+			let structLetter = this.name.substr(0, 1).toUpperCase();
+
+			if (this.bannedLetters.includes(structLetter)) {
+				this.staticVariable = this.defaultStructLetter;
+			} else {
+				this.staticVariable = structLetter;
+			}
 			this.variable = this.staticVariable.toLowerCase();
 
 			this.renderTemplate();
@@ -172,8 +180,8 @@ Vue.component('struct', {
 			}
 
 			this.structCode = customTemplate.replace(/\$name\$/g, this.name)
-								.replace(/\$variable\$/g, this.variable)
-								.replace(/\$staticVariable\$/g, this.staticVariable);
+				.replace(/\$variable\$/g, this.variable)
+				.replace(/\$staticVariable\$/g, this.staticVariable);
 		},
 	},
 });

@@ -48,6 +48,7 @@ const addStructSingle = `  local $name$ $variable$
       set $variable$.target = U1
       set $variable$.lvl = lvl
       set $variable$.duration = 0
+      set $variable$.done = false
 
       set .$staticVariable$T = .$staticVariable$T + 1
       set .$staticVariable$[.$staticVariable$T] = $variable$

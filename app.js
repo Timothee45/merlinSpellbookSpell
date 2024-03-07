@@ -6,7 +6,7 @@ const defaultSpell = {
   params: [],
 };
 
-const addStruct = ` local $name$ $variable$ = $name$.allocate()
+const addStruct = `  local $name$ $variable$ = $name$.allocate()
 
     set $variable$.caster = U
     set $variable$.target = U1

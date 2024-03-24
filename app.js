@@ -14,8 +14,8 @@ const addStruct = `  local $name$ $variable$ = $name$.allocate()
     set $variable$.duration = 0
     set $variable$.done = false
 
-    set .$staticVariable$T = .$staticVariable$T + 1
     set .$staticVariable$[.$staticVariable$T] = $variable$
+    set .$staticVariable$T = .$staticVariable$T + 1
 
     if .$staticVariable$T == 1 then
       call TimerStart(.T, INTERVAL, true, function $name$.update)
@@ -24,10 +24,10 @@ const addStruct = `  local $name$ $variable$ = $name$.allocate()
 
 const addStructSingle = `  local $name$ $variable$
     local boolean found = false
-    local integer I = 1
+    local integer I = 0
 
     loop
-      exitwhen I > .$staticVariable$T
+      exitwhen I >= .$staticVariable$T
       set $variable$ = .$staticVariable$[I]
 
       if $variable$.target == U1 then
@@ -50,8 +50,8 @@ const addStructSingle = `  local $name$ $variable$
       set $variable$.duration = 0
       set $variable$.done = false
 
-      set .$staticVariable$T = .$staticVariable$T + 1
       set .$staticVariable$[.$staticVariable$T] = $variable$
+      set .$staticVariable$T = .$staticVariable$T + 1
 
       if .$staticVariable$T == 1 then
         call TimerStart(.T, INTERVAL, true, function $name$.update)
@@ -99,7 +99,7 @@ private struct $name$
     local integer I = 0
 
     loop
-      set I = I + 1
+      exitwhen I >= .$staticVariable$T
       set $variable$ = .$staticVariable$[I]
 
       set $variable$.duration = $variable$.duration + INTERVAL
@@ -112,7 +112,7 @@ private struct $name$
         set I = I - 1
       endif
 
-      exitwhen I >= .$staticVariable$T
+      set I = I + 1
     endloop
 
     if .$staticVariable$T <= 0 then

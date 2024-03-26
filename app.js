@@ -107,8 +107,8 @@ private struct $name$
       if $variable$.done or $variable$.duration >= DURATION or not(isAlive($variable$.target)) then
         call $variable$.destroy()
 
-        set .$staticVariable$[I] = .$staticVariable$[.$staticVariable$T]
         set .$staticVariable$T = .$staticVariable$T - 1
+        set .$staticVariable$[I] = .$staticVariable$[.$staticVariable$T]
         set I = I - 1
       endif
 

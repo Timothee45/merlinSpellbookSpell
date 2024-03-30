@@ -42,7 +42,7 @@ const addStructSingle = `  local thistype $variable$
     endloop
 
     if not(found) then
-      set $variable$ = $name$.allocate()
+      set $variable$ = thistype.allocate()
 
       set $variable$.caster = U
       set $variable$.target = U1
@@ -54,7 +54,7 @@ const addStructSingle = `  local thistype $variable$
       set .$staticVariable$T = .$staticVariable$T + 1
 
       if .$staticVariable$T == 1 then
-        call TimerStart(.T, INTERVAL, true, function $name$.update)
+        call TimerStart(.T, INTERVAL, true, function thistype.update)
       endif
     endif
 `;

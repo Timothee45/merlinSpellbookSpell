@@ -74,6 +74,7 @@ private struct $name$
   private method destroy takes nothing returns nothing
     set .caster = null
     set .target = null
+
     call .deallocate()
   endmethod
 

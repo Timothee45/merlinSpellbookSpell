@@ -6,7 +6,7 @@ const defaultSpell = {
   params: [],
 };
 
-const addStruct = `  local thistype $variable$ = $name$.allocate()
+const addStruct = `  local thistype $variable$ = thistype.allocate()
 
     set $variable$.caster = U
     set $variable$.target = U1
@@ -18,7 +18,7 @@ const addStruct = `  local thistype $variable$ = $name$.allocate()
     set .$staticVariable$T = .$staticVariable$T + 1
 
     if .$staticVariable$T == 1 then
-      call TimerStart(.T, INTERVAL, true, function $name$.update)
+      call TimerStart(.T, INTERVAL, true, function thistype.update)
     endif
 `;
 

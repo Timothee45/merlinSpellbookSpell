@@ -6,7 +6,7 @@ const defaultSpell = {
   params: [],
 };
 
-const addStruct = `  local $name$ $variable$ = $name$.allocate()
+const addStruct = `  local thistype $variable$ = $name$.allocate()
 
     set $variable$.caster = U
     set $variable$.target = U1
@@ -22,7 +22,7 @@ const addStruct = `  local $name$ $variable$ = $name$.allocate()
     endif
 `;
 
-const addStructSingle = `  local $name$ $variable$
+const addStructSingle = `  local thistype $variable$
     local boolean found = false
     local integer I = 0
 
@@ -95,7 +95,7 @@ private struct $name$
   endmethod
 
   static method update takes nothing returns nothing
-    local $name$ $variable$
+    local thistype $variable$
     local integer I = 0
 
     loop

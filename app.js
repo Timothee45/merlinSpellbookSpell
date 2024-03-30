@@ -71,10 +71,9 @@ private struct $name$
   real duration
   boolean done
 
-  private method onDestroy takes nothing returns nothing
+  private method destroy takes nothing returns nothing
     set .caster = null
     set .target = null
-
   endmethod
 
   private method findTargets takes nothing returns nothing
@@ -91,7 +90,6 @@ private struct $name$
         call magicDamage(.caster, U2, .damage)
       endif
     endloop
-
   endmethod
 
   static method update takes nothing returns nothing
@@ -119,7 +117,6 @@ private struct $name$
       call PauseTimer(.T)
       set .$staticVariable$T = 0
     endif
-
   endmethod
 
   static method add$name$ takes unit U, unit U1, real lvl returns nothing

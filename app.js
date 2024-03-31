@@ -63,10 +63,10 @@ const addStructSingle = `  local thistype $variable$
 
 const basicTemplate = `
 private struct $name$ extends array
-  static $name$ array $staticVariable$
+  static thistype array $staticVariable$
   static integer $staticVariable$T = 0
   static timer T = null
-  
+
   unit caster
   unit target
   real lvl

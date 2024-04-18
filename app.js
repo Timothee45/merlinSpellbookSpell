@@ -23,9 +23,9 @@ const addStruct = `  local thistype $variable$ = thistype.allocate()
 
     return $variable$`;
 
-const addStructSingle = `  local thistype $variable$
-    local boolean found = false
+const addStructSingle = `  local boolean notFound = true
     local integer I = 0
+    local thistype $variable$
 
     loop
       exitwhen I >= .$staticVariable$T
@@ -33,7 +33,7 @@ const addStructSingle = `  local thistype $variable$
 
       if $variable$.target == U1 then
         set I = .$staticVariable$T
-        set found = true
+        set notFound = false
 
         set $variable$.duration = 0
         set $variable$.lvl = lvl
@@ -42,7 +42,7 @@ const addStructSingle = `  local thistype $variable$
       set I = I + 1
     endloop
 
-    if not(found) then
+    if notFound then
       set $variable$ = thistype.allocate()
 
       set $variable$.caster = U

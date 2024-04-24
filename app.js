@@ -99,8 +99,8 @@ private struct $name$ extends array
   endmethod
 
   static method update takes nothing returns nothing
-    local thistype $variable$
     local integer I = 0
+    local thistype $variable$
 
     loop
       exitwhen I >= .$staticVariable$T

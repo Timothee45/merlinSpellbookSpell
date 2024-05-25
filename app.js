@@ -225,7 +225,7 @@ Vue.component('struct', {
       staticVariable: "",
       singleAddStruct: false,
       defaultStructLetter: "D",
-      bannedLetters: ["P", "T"],
+      bannedLetters: ["P", "T", "I", "L"],
     }
   },
   template: `
